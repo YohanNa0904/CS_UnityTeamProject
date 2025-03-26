@@ -21,7 +21,7 @@ public class PlayerCam : MonoBehaviour
         rotX = transform.localRotation.eulerAngles.x;
         if (rotX > 180.0f) rotX -= 360.0f;
         targetRotX = rotX;
-        targetRotY = rotY = transform.parent.localRotation.eulerAngles.y;        
+        //targetRotY = rotY = transform.parent.localRotation.eulerAngles.y;        
         
     }
 
