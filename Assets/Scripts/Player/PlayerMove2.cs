@@ -6,8 +6,6 @@ public class PlayerMove2 : AnimProperty
 {
     //------점프할 때 쓰는 변수---------
     public bool onGround { get; set; } = true; // 
-    bool inputJumpKey = false;
-
     bool jumpForce = false; //점프하는 힘을 가할지 결정하는 변수
 
     //-------------------------------
@@ -18,13 +16,11 @@ public class PlayerMove2 : AnimProperty
     public Vector3 inputDir { get; private set; } = Vector3.zero;
     int jumpCount = 2;
     Rigidbody rb = null;
-    CapsuleCollider col = null;
     float maxSpeed = 1.0f;
     [SerializeField] float jumpPower = 6.0f;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<CapsuleCollider>();
     }
     void Update()
     {
@@ -34,10 +30,8 @@ public class PlayerMove2 : AnimProperty
 
         if (jumpCount != 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            inputJumpKey = true;
             jumpForce = true;
             jumpCount--;
-            myAnim.SetTrigger("OnJump");
         }
 
         if (!onGround) // 공중에 있을 때도 조금씩 이동할 수 있게
@@ -59,10 +53,6 @@ public class PlayerMove2 : AnimProperty
                 jumpDir += myModel.forward;
             }
             jumpDir.Normalize();
-
-            float Speed = moveSpeed * Time.deltaTime;
-            transform.Translate(jumpDir * Speed, Space.Self);
-            jumpDir = Vector3.zero;
         }
         
     }
@@ -93,38 +83,41 @@ public class PlayerMove2 : AnimProperty
     {
         if (jumpForce)
         {
+            myAnim.SetTrigger("OnJump");
             rb.linearVelocity = Vector3.zero;
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             jumpForce = false;
+            onGround = false;
+        }
+        if (!onGround)
+        {
+            float Speed = moveSpeed * Time.fixedDeltaTime;
+            transform.Translate(jumpDir * Speed, Space.Self);
+            jumpDir = Vector3.zero;
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (onGround) return;
-        if (Physics.SphereCast(transform.position + Vector3.up * 0.2f, 
-            col.radius - 0.03f, Vector3.down, out RaycastHit hit, 0.3f))
+        if (collision.GetContact(0).normal.y > 0)
         {
             onGround = true; //착지 상태로 판정
-            myAnim.SetBool("OnLanding", true); // jump3 애니메이션 실행
+            myAnim.SetTrigger("OnLanding"); // jump3 애니메이션 실행
             jumpCount = 2;
         }
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (myAnim.GetBool("OnLanding")) myAnim.SetBool("OnLanding", false);
         if (!onGround) return;
-        if (!Physics.SphereCast(transform.position + Vector3.up * 0.2f,
-            col.radius - 0.03f, Vector3.down, out RaycastHit hit, 0.15f))
+
+        float veloY = rb.linearVelocity.y;
+        if (Mathf.Abs(veloY) > 0.1f && jumpCount == 2)
         {
             // 착지 상태일 때 y축으로 떨어진다면
-            onGround = false; // 체공 상태로 판정
-            if (!inputJumpKey)
-            {
-                myAnim.SetTrigger("OnAir");
-                // 점프 상태(점프키를 누른 경우)가 아니라면 jump2 애니메이션 실행
-                jumpCount--;
-            }
-            if (inputJumpKey) inputJumpKey = false; // 점프 상태(점프키를 누른 경우)였을 경우 해제함
+            onGround = false; // 체공 상태로 판정            
+            myAnim.SetTrigger("OnAir");
+            // 점프 상태(점프키를 누른 경우)가 아니라면 jump2 애니메이션 실행
+            jumpCount--;
         }
     }
 }
