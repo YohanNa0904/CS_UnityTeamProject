@@ -101,21 +101,18 @@ public class PlayerMove2 : AnimProperty
     private void OnCollisionEnter(Collision collision)
     {
         if (onGround) return;
-        
-        if (collision.GetContact(0).normal.y > 0)
+        if (Physics.SphereCast(transform.position + Vector3.up * 0.2f, 
+            col.radius - 0.03f, Vector3.down, out RaycastHit hit, 0.3f))
         {
             onGround = true; //착지 상태로 판정
             myAnim.SetBool("OnLanding", true); // jump3 애니메이션 실행
             jumpCount = 2;
         }
-        
     }
     private void OnCollisionExit(Collision collision)
     {
         if (myAnim.GetBool("OnLanding")) myAnim.SetBool("OnLanding", false);
         if (!onGround) return;
-
-        Debug.Log(collision.contactCount);
         if (!Physics.SphereCast(transform.position + Vector3.up * 0.2f,
             col.radius - 0.03f, Vector3.down, out RaycastHit hit, 0.15f))
         {
