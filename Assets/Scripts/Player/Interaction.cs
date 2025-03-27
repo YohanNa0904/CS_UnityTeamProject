@@ -87,8 +87,8 @@ public class Interaction : AnimProperty
     void UseKey() // 애니메이션 이벤트로 호출하는 함수
     {
         if (DoorKeySlot != null) StartCoroutine(UsingKey());
-        else if (GrowSlot != null) StartCoroutine(UsingGrowingPosion());
-        else if (WallSlot != null) StartCoroutine(UsingPickAxe());
+        if (GrowSlot != null) StartCoroutine(UsingGrowingPosion());
+        if (WallSlot != null) StartCoroutine(UsingPickAxe());
     }
 
     IEnumerator KeyCatch(LayerMask layer)

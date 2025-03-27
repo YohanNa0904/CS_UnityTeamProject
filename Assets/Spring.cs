@@ -38,8 +38,6 @@ public class Spring : AnimProperty
     public void OutButton() // �ִϸ��̼� �̺�Ʈ�� ȣ���ϴ� �Լ�
     {
         On = false;
-
-        myAnim.SetTrigger("Spring1Off");
     }
 
 }

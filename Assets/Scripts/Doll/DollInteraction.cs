@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DollInteraction : AnimProperty
@@ -18,8 +19,8 @@ public class DollInteraction : AnimProperty
             // 상호작용 대상이 'Button1' 일 때
             {
                 InteractTarget = col.gameObject;
-                col.GetComponentInParent<Animator>()?.SetTrigger("Spring1On");
-                InteractTarget = null;
+                InteractTarget.GetComponentInParent<Animator>()?.SetBool("Spring1On", !InteractTarget.GetComponentInParent<Animator>().GetBool("Spring1On"));
+                
             }
             if ((1 << col.gameObject.layer & Spring2_Button) != 0)
             // 상호작용 대상이 'Button2' 일 때
