@@ -11,7 +11,7 @@ public class Doll_Yellow : DollInteraction
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             Interact();
         }
