@@ -99,9 +99,9 @@ public class PlayerMove2 : AnimProperty
     private void OnCollisionEnter(Collision collision)
     {
         if (onGround) return;
-        if (collision.GetContact(0).normal.y > 0)
+        if (collision.GetContact(0).normal.y > 0.5f)
         {
-            onGround = true; //착지 상태로 판정
+            onGround = true; //착지 상태로 판정            
             myAnim.SetTrigger("OnLanding"); // jump3 애니메이션 실행
             jumpCount = 2;
         }
@@ -114,7 +114,7 @@ public class PlayerMove2 : AnimProperty
         if (Mathf.Abs(veloY) > 0.1f && jumpCount == 2)
         {
             // 착지 상태일 때 y축으로 떨어진다면
-            onGround = false; // 체공 상태로 판정            
+            onGround = false; // 체공 상태로 판정
             myAnim.SetTrigger("OnAir");
             // 점프 상태(점프키를 누른 경우)가 아니라면 jump2 애니메이션 실행
             jumpCount--;

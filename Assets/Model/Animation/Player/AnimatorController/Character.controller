@@ -415,6 +415,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &1329584442001854339
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66b640614247a3499f8db2b8788412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1102 &3061342922144033497
 AnimatorState:
   serializedVersion: 6
@@ -441,7 +453,7 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: Speed
 --- !u!206 &3426814222445289439
 BlendTree:
   m_ObjectHideFlags: 1
