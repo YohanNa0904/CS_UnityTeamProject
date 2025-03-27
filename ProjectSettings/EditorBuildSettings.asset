@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Personal/MG/Loading.unity
     guid: 890bbb0fe4f590b4b8f98e9336954f3f
   - enabled: 1
+    path: Assets/Scenes/Personal/MG/StartScean.unity
+    guid: 8b08d2291a7b57b49aa2f3499044c0b3
+  - enabled: 1
     path: Assets/Scenes/Main Stage/Level 2.unity
     guid: 8ee50f7701c51a84a87d1d15b823423d
   - enabled: 1
