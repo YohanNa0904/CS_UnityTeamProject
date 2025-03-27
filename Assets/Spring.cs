@@ -17,7 +17,6 @@ public class Spring : AnimProperty
     }
     public IEnumerator OnButton() // �ִϸ��̼� �̺�Ʈ�� ȣ���ϴ� �Լ�
     {
-        myAnim.SetTrigger("Spring1On");
         On = true;
         Collider[] list = Physics.OverlapBox(transform.position + transform.up * 1.5f, new Vector3(0.45f, 0.45f, 0.45f), transform.rotation, pushAble); // �Լ��� ����� �� ���� ���� �͵��� ã��
         // �ǳ� �������� ��ĭ �̵��� ������ü ����� ���� ����� ����
@@ -38,8 +37,9 @@ public class Spring : AnimProperty
 
     public void OutButton() // �ִϸ��̼� �̺�Ʈ�� ȣ���ϴ� �Լ�
     {
-        myAnim.SetTrigger("Spring1Off");
         On = false;
+
+        myAnim.SetTrigger("Spring1Off");
     }
 
 }
