@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StartUi : MonoBehaviour
+public class StartMenuUi : MenuUI
 {
     public void StartButton()
     {

@@ -1,73 +1,36 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour
 {
-    [SerializeField] GameObject menuUi;
-    [SerializeField] GameObject menuButton;
-    [SerializeField] GameObject option;
-    bool isMenu = false;
-    bool isOption = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [field: SerializeField] protected GameObject MenuUiCanvas { get; private set; }
+    [field: SerializeField] protected GameObject OptionCanvas { get; private set; }
+
+    private void Start()
     {
-        menuUi.SetActive(false);
+        MenuUiCanvas.SetActive(false);
+        OptionCanvas.SetActive(false);
+        UIStart();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void UIStart()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isMenu) CloseMenu();
-            else OpenMenu();
-        }
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            if (isOption) CloseMenu();
-            else if (!isOption && !isMenu) OpenOption();
-        }
     }
-
-    private void OpenMenuBackGround()
+    public virtual void OpenOption()
     {
-        menuUi.SetActive(true);
+        MenuUiCanvas.SetActive(true);
+        OptionCanvas.SetActive(true);
         Time.timeScale = 0f;
-        isMenu = true;
-    }
-    public void OpenMenu()
-    {
-        OpenMenuBackGround();
-        menuButton.SetActive(true);
-        option.SetActive(false);
     }
 
-    public void CloseMenu()
+    public virtual void CloseMenu() 
     {
-        menuUi.SetActive(false);
-        Time.timeScale = 1.0f;
-        isMenu = false;
-        isOption = false;
-    }
-
-    public void ToStartScean()
-    {
-        LoadSystem.LoadScene(1);
+        MenuUiCanvas.SetActive(false);
+        OptionCanvas.SetActive(false);
         Time.timeScale = 1.0f;
     }
-
-    public void ResetScean()
+    public void GameExit()
     {
-        LoadSystem.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1.0f;
-    }
 
-    public void OpenOption()
-    {
-        if (!isMenu) OpenMenuBackGround();
-        menuButton.SetActive(false);
-        option.SetActive(true);
-        isOption = true;
     }
 }
