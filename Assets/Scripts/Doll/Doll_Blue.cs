@@ -13,7 +13,7 @@ public class Doll_Blue : DollInteraction
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Interact();
+            DollInteract();
         }
     }
 }

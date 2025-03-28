@@ -10,6 +10,8 @@ public class Interaction : AnimProperty
     public LayerMask Grow;
     public LayerMask PickAxe;
     public LayerMask Wall;
+    public LayerMask dollCase;
+
     public GameObject KeySlot;
     GameObject InteractTarget;
     GameObject DoorKeySlot;
@@ -17,6 +19,13 @@ public class Interaction : AnimProperty
     GameObject WallSlot;
     [SerializeField]
     GameObject wallObj;
+
+
+    public interface IPlayerInteraction
+    {
+        void Interact();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -29,22 +38,26 @@ public class Interaction : AnimProperty
                 if ((1 << col.gameObject.layer & Key ) != 0)
                     // 상호작용 대상이 'key' 일 때
                 {
-                    InteractTarget = col.gameObject;
-                    col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; // 상호작용 성공한 시점에 상호작용한 오브젝트의 움직임을 멈춤
-                    myAnim.SetTrigger("Catch"); //잡는 애니메이션
-
-                    GetComponentInParent<PlayerMove2>().enabled = false; // 잡는 동작 중엔 못 움직이게
-                    myAnim.SetFloat("Speed", 0.0f);
-
+                    IPlayerInteraction Key = col.GetComponent<IPlayerInteraction>();
+                    if ( Key != null )
+                    {
+                        Key.Interact();
+                    }
                 }
                 if ((1 << col.gameObject.layer & PickAxe) != 0)
                 {
                     InteractTarget = col.gameObject;
+
                     col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     myAnim.SetTrigger("Catch");
                     GetComponentInParent<PlayerMove2>().enabled = false;
                     myAnim.SetFloat("Speed", 0.0f);
+
+                    InteractTarget = null;
                 }
+                //----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
                 //----------------------------------------------------------------------------------------------------------------------------------------------------------
 
                 if (InteractTarget != null && (1 << InteractTarget.gameObject.layer & Key) != 0) // 열쇠를 가지고 있다면
@@ -71,8 +84,10 @@ public class Interaction : AnimProperty
                         myAnim.SetTrigger("UseKey");
                     }
                 }
+                //----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
             }
-            //----------------------------------------------------------------------------------------------------------------------------------------------------------
         }
     }
     void KeyInteract() // 애니메이션 이벤트로 호출하는 함수

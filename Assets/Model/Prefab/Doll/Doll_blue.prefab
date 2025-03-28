@@ -18,31 +18,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.010374
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 0.98963064
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: -0.0000007152557
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -520,7 +520,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spring1_Button:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   Spring2_Button:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
+  DollCaseMask:
+    serializedVersion: 2
+    m_Bits: 512

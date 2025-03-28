@@ -1,9 +1,15 @@
 using UnityEngine;
+using static DollInteraction;
 
-public class Spring2 : MonoBehaviour
+public class Spring2 : MonoBehaviour, IDollInteraction
 {
     public LayerMask pushLayer;
     [SerializeField] float pushPowar = 900.0f;
+
+    public void Interact()
+    {
+        GetComponent<Animator>()?.SetTrigger("Using");
+    }
 
     public void OnPush() // 애니메이션 이벤트로 호출하는 함수
     {

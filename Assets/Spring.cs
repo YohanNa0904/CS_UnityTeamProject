@@ -1,7 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using static DollInteraction;
 
-public class Spring : AnimProperty
+public class Spring : AnimProperty, IDollInteraction
 
 // ���� ���� ������Ʈ�� ���̴� ��ũ��Ʈ
 {
@@ -10,6 +11,11 @@ public class Spring : AnimProperty
 
     bool On = false;
 
+
+    public void Interact()
+    {
+        GetComponentInParent<Animator>()?.SetBool("Spring1On", !GetComponentInParent<Animator>().GetBool("Spring1On"));
+    }
 
     public void OnPush()
     {
@@ -39,5 +45,6 @@ public class Spring : AnimProperty
     {
         On = false;
     }
+
 
 }
