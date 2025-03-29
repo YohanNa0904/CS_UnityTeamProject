@@ -1868,7 +1868,6 @@ MonoBehaviour:
   dollCase:
     serializedVersion: 2
     m_Bits: 512
-  KeySlot: {fileID: 1311262631}
   wallObj: {fileID: 0}
 --- !u!114 &291751178
 MonoBehaviour:
@@ -4290,17 +4289,25 @@ PrefabInstance:
       propertyPath: goalCol
       value: 
       objectReference: {fileID: 1397257010}
+    - target: {fileID: 5522826937530134154, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
+      propertyPath: Key
+      value: 
+      objectReference: {fileID: 593569995}
+    - target: {fileID: 5522826937530134154, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 291751175}
     - target: {fileID: 8448342470688142834, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.963
+      value: 5.963001
       objectReference: {fileID: 0}
     - target: {fileID: 8448342470688142834, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8448342470688142834, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.432
+      value: -1.5680013
       objectReference: {fileID: 0}
     - target: {fileID: 8448342470688142834, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5269,6 +5276,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab962cf3255c8f4baa8695aa64d79f3, type: 3}
+--- !u!1 &593569995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8277490570075527202, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
+  m_PrefabInstance: {fileID: 1415049233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &600836086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4595495095368793939, guid: dab962cf3255c8f4baa8695aa64d79f3, type: 3}
@@ -10651,6 +10663,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 291751175}
+    - target: {fileID: 3978301492544800881, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
+      propertyPath: KeySlot
+      value: 
+      objectReference: {fileID: 1311262631}
     - target: {fileID: 8277490570075527202, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_Name
       value: Key Prefab
