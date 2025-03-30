@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class StageMenuUI : MenuUI
 {
     [field: SerializeField] GameObject MenuButtonCanvas { get; set; }
-    bool isMenuUI = false;
     bool isMenuButton = false;
     bool isOption = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

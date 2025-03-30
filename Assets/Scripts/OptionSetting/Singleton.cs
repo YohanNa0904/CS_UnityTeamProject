@@ -1,0 +1,34 @@
+using UnityEngine;
+
+public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+{
+    static T _inst = null;
+    public static T Instance
+    {
+        get
+        {
+            if (_inst == null)
+            {
+                _inst = FindFirstObjectByType<T>();
+                if (_inst == null)
+                {
+                    GameObject obj = new GameObject(typeof(T).ToString());
+                    _inst = obj.AddComponent<T>();
+                }
+            }
+            return _inst;
+        }
+    }
+
+    protected void Initialize()
+    {
+        if (_inst != null && _inst != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+}

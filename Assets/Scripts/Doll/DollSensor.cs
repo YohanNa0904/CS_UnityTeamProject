@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DollSensor : MonoBehaviour
 {
+    public enum DollColor {Red,Blue,Yellow};
+    public DollColor dollCol;
     public LayerMask mask;
     protected KeyCode colorKey; // 인형 색별로 입력키를 받을 변수
     protected Collider[] list;
@@ -24,9 +26,22 @@ public class DollSensor : MonoBehaviour
         }
     }
 
-    protected virtual void SetColorKey() // 인형의 색별로 상속해서 사용
+    void SetColorKey() // 인형의 색별로 상속해서 사용
     {
-        
+        switch (dollCol)
+        {
+            case DollColor.Red:
+            colorKey = KeyCode.E;
+            break;
+
+            case DollColor.Blue:
+            colorKey = KeyCode.R;
+            break;
+
+            case DollColor.Yellow:
+            colorKey = KeyCode.T;
+            break;
+        }   
     }
 
     protected virtual void Operate() //작동시킬 장치별로 상속해서 정의를 다르게 함 

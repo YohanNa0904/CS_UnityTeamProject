@@ -4,7 +4,7 @@ public class MenuUI : MonoBehaviour
 {
     [field: SerializeField] protected GameObject MenuUiCanvas { get; private set; }
     [field: SerializeField] protected GameObject OptionCanvas { get; private set; }
-
+    protected bool isMenuUI = false;
     private void Start()
     {
         MenuUiCanvas.SetActive(false);

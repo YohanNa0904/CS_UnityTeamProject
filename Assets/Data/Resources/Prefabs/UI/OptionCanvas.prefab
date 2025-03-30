@@ -145,6 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1670317779428093012}
+  - component: {fileID: 2138046332701710486}
   - component: {fileID: 1520044468882328888}
   m_Layer: 5
   m_Name: EffectSoundSlider
@@ -175,6 +176,20 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -370}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2138046332701710486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428989515896692576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1d1edcc44bec543be5c6ddbdd3a942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  mySlider: {fileID: 1520044468882328888}
 --- !u!114 &1520044468882328888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,7 +1075,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 40, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3846813191051791249
 CanvasRenderer:
@@ -1368,6 +1383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4337461042343202862}
+  - component: {fileID: 2502582857664901832}
   - component: {fileID: 3771497156600568643}
   m_Layer: 5
   m_Name: BGMSlider
@@ -1398,6 +1414,20 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -240}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2502582857664901832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045246808767580805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1d1edcc44bec543be5c6ddbdd3a942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  mySlider: {fileID: 3771497156600568643}
 --- !u!114 &3771497156600568643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,6 +1490,7 @@ GameObject:
   - component: {fileID: 1362049035181813257}
   - component: {fileID: 1048434418125874619}
   - component: {fileID: 5426456321126068964}
+  - component: {fileID: 1401728989781225452}
   - component: {fileID: 7038495393648842195}
   m_Layer: 5
   m_Name: ResoulDropdown
@@ -1528,6 +1559,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1401728989781225452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6065165683611033148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f851b7f966dca8408c66b1c0d9f57bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7038495393648842195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1627,7 +1670,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 40, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4075014586324362983
 CanvasRenderer:
