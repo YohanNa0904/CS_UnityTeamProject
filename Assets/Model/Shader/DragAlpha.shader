@@ -21,13 +21,11 @@ Shader "TimProject/DragAlpha"
             struct appdata
             {
                 float4 pos : POSITION;
-                float3 color : COLOR;
             };
 
             struct v2f
             {               
-                float4 vertex : SV_POSITION;
-                float3 color : COLOR;
+                float4 vertex : SV_POSITION;                
             };           
 
             fixed4 _Color; 
@@ -37,13 +35,12 @@ Shader "TimProject/DragAlpha"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.pos);
-                o.color = v.color;     
                 return o;
             }            
 
             fixed4 frag (v2f i) : SV_Target
             {                
-                return _Color * _Alpha;
+                return fixed4(_Color.xyz,_Alpha);
             }
             ENDCG
         }

@@ -1490,7 +1490,7 @@ GameObject:
   - component: {fileID: 1362049035181813257}
   - component: {fileID: 1048434418125874619}
   - component: {fileID: 5426456321126068964}
-  - component: {fileID: 1401728989781225452}
+  - component: {fileID: 352039863495652197}
   - component: {fileID: 7038495393648842195}
   m_Layer: 5
   m_Name: ResoulDropdown
@@ -1559,7 +1559,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1401728989781225452
+--- !u!114 &352039863495652197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6065165683611033148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f851b7f966dca8408c66b1c0d9f57bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 32e7f8aff3ed26844ba0df3bd5188e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7038495393648842195
@@ -1622,13 +1622,13 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: FHD
+    - m_Text: 1280 x 720
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: QHD
+    - m_Text: 1920 x 1080
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: UHD
+    - m_Text: 2560 x 1440
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FHD
+  m_text: 1280 x 720
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f1418ea1e6dd5694497f25070896d6ea, type: 2}
   m_sharedMaterial: {fileID: 476793749211810423, guid: f1418ea1e6dd5694497f25070896d6ea, type: 2}
