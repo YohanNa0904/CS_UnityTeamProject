@@ -71,15 +71,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -563,3 +563,6 @@ MonoBehaviour:
   Spring2_Button:
     serializedVersion: 2
     m_Bits: 16384
+  DollCaseMask:
+    serializedVersion: 2
+    m_Bits: 512
