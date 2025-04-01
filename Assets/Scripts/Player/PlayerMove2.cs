@@ -25,6 +25,7 @@ public class PlayerMove2 : AnimProperty
     void Update()
     {
         inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //키보드 입력
+        Debug.Log(inputDir.magnitude);
 
         Move();
 
@@ -60,20 +61,20 @@ public class PlayerMove2 : AnimProperty
     private void Move()
     {
         bool isMove = inputDir.magnitude != 0; //이동중인지 확인
+        Vector3 moveDir = Vector3.zero;
         if (isMove)
         {
             Vector3 lookForward = new Vector3(cameraTransform.forward.x, 0f, cameraTransform.forward.z).normalized; //카메라의 전방 벡터
             Vector3 lookRight = new Vector3(cameraTransform.right.x, 0f, cameraTransform.right.z).normalized;   //카메라의 오른쪽 벡터
-            Vector3 moveDir = lookForward * inputDir.y + lookRight * inputDir.x; //이동 방향 설정
+            moveDir = lookForward * inputDir.y + lookRight * inputDir.x; //이동 방향 설정
 
             Quaternion viewRot = Quaternion.LookRotation(moveDir.normalized); //이동 방향으로 회전
 
-            myModel.rotation = Quaternion.Lerp(myModel.rotation, viewRot, Time.deltaTime * 20.0f); //모델 회전
-
-            float rootMotionSpeed = moveDir.magnitude;
-            rootMotionSpeed = Mathf.Clamp(rootMotionSpeed, 0, maxSpeed);
-            myAnim.SetFloat("Speed", rootMotionSpeed); //애니메이션 속도 설정
+            myModel.rotation = Quaternion.Lerp(myModel.rotation, viewRot, Time.deltaTime * 20.0f); //모델 회전            
         }
+        float rootMotionSpeed = moveDir.magnitude;
+        rootMotionSpeed = Mathf.Clamp(rootMotionSpeed, 0, maxSpeed);
+        myAnim.SetFloat("Speed", rootMotionSpeed); //애니메이션 속도 설정
     }
     public void SetMaxSpeed(float speed)
     {

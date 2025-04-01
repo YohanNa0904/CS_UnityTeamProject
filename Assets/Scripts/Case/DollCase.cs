@@ -4,10 +4,19 @@ using static DollInteraction;
 public class DollCase : AnimProperty, IDollInteraction
 {
     public GameObject door;
+    public GameObject Doll;
 
     public void Interact()
     {
-        if (Physics.Raycast(door.transform.position - new Vector3(0, 1, 0), door.transform.forward, 1.0f)) myAnim.SetTrigger("DollCaseOpen");
+        if (Physics.Raycast(door.transform.position - new Vector3(0, 1, 0), door.transform.forward, 1.0f))
+        {
+            Doll.transform.SetParent(null);
+            myAnim.SetTrigger("DollCaseOpen");
+
+            GetComponent<Collider>().enabled = false;
+            transform.parent.GetComponent<Collider>().enabled = false;
+        }
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

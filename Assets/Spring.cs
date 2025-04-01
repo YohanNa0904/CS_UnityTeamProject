@@ -28,7 +28,7 @@ public class Spring : AnimProperty, IDollInteraction
         // �ǳ� �������� ��ĭ �̵��� ������ü ����� ���� ����� ����
         foreach (Collider col in list)
         {
-            Transform orgTf = col.GetComponentInParent<Transform>().parent;
+            //Transform orgTf = col.gameObject.GetComponentInParent<Transform>().parent;
 
             while (On)
             {
@@ -36,7 +36,7 @@ public class Spring : AnimProperty, IDollInteraction
                 yield return null;
             }
 
-            col.GetComponent<Transform>()?.SetParent(orgTf);
+            col.GetComponent<Transform>()?.SetParent(null);
         }
     }
 
