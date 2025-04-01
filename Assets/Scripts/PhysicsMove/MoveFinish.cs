@@ -13,6 +13,7 @@ public class MoveFinish : MonoBehaviour
         if (!rb.isKinematic && !GameManager.isPuzzle && rb.linearVelocity == Vector3.zero)
         {
             rb.isKinematic = true;
+            rb.useGravity = false;
         }
     }
 }

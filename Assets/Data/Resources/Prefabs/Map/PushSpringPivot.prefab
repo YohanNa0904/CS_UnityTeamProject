@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952924365744550440}
   - component: {fileID: 2010936016317801775}
+  - component: {fileID: 4801666214894719191}
   - component: {fileID: 5515725786589612330}
   - component: {fileID: 5021056694627857905}
   m_Layer: 13
@@ -53,6 +54,18 @@ MonoBehaviour:
     m_Bits: 8712
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+--- !u!114 &4801666214894719191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135808655399599496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &5515725786589612330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97,7 +110,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
