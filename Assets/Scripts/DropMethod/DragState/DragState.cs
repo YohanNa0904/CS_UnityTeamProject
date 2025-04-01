@@ -5,7 +5,6 @@ public class DragState : StopState
     protected Vector3 dragStartPos = Vector3.zero; //드래그 시작할 때 위치 정보
     protected Vector3 dragStartRot = Vector3.zero; //드래그 시작할 때 회전 정보
     public LayerMask dropAble; // 드랍할 수 있는 바닥 레이어
-    public Transform puzzleCameraArm; //퍼즐 캠 암 transform 정보
     //protected float floatYpos = 0.0f; //드래그 시 띄울 y 좌표
     protected bool canDrop = false;
     protected Color ori = default; //색상 정보 
@@ -19,7 +18,6 @@ public class DragState : StopState
         transform.position += Vector3.up * floatDist; // 드래그한 오브젝트를 띄움
         //floatYpos = transform.position.y; // 띄운 y좌표를 저장함
         myCol.enabled = false;
-        // PuzzleCamMove 컴포넌트 정보 저장
         if (!GameManager.isDrag) GameManager.isDrag = true;
         // static 변수 GameManager.isDrag를 변경, drag 상태로 설정.
         //if (floatDist != standardFloatDist) floatDist = standardFloatDist;

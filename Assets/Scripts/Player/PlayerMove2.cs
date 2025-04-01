@@ -25,7 +25,6 @@ public class PlayerMove2 : AnimProperty
     void Update()
     {
         inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //키보드 입력
-        Debug.Log(inputDir.magnitude);
 
         Move();
 

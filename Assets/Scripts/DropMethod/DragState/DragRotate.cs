@@ -3,12 +3,15 @@ using UnityEngine;
 public class DragRotate : DragState
 {
     protected bool IsRotation = false; // 현재 회전 상태 여부 확인
+    Transform puzzleCameraArm = null;
     protected PuzzleCamMove camMove = null; // PuzzleCamMove 활성화 여부 결정
+    
 
     protected override void EnterRotate()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            if (puzzleCameraArm == null) puzzleCameraArm = Camera.allCameras[0].transform.parent;
             IsRotation = !IsRotation;
             if (camMove == null) camMove = puzzleCameraArm.GetComponent<PuzzleCamMove>();
             if (camMove.enabled) camMove.enabled = false;
@@ -22,32 +25,32 @@ public class DragRotate : DragState
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                RotateDir(puzzleCameraArm.transform.right);
+                RotateDir(puzzleCameraArm.right);
             }
 
             else if (Input.GetKeyDown(KeyCode.S))
             {
-                RotateDir(-puzzleCameraArm.transform.right);
+                RotateDir(-puzzleCameraArm.right);
             }
 
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                RotateDir(puzzleCameraArm.transform.up);
+                RotateDir(puzzleCameraArm.up);
             }
 
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                RotateDir(-puzzleCameraArm.transform.up);
+                RotateDir(-puzzleCameraArm.up);
             }
 
             else if (Input.GetKeyDown(KeyCode.Q))
             {
-                RotateDir(puzzleCameraArm.transform.forward);
+                RotateDir(puzzleCameraArm.forward);
             }
 
             else if (Input.GetKeyDown(KeyCode.E))
             {
-                RotateDir(-puzzleCameraArm.transform.forward);
+                RotateDir(-puzzleCameraArm.forward);
             }
 
         }
