@@ -440,8 +440,7 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 8200
-  puzzleCameraArm: {fileID: 0}
+    m_Bits: 8192
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &7664068740599278704

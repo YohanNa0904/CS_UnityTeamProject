@@ -31,8 +31,11 @@ public class DataManager : MonoBehaviour
     }
     void Start()
     {
-        LoadData();
-        Debug.Log(nowMap.clear);
+        if (nowMap.clear != 0)
+        {
+            LoadData();
+            Debug.Log(nowMap.clear);
+        }
     }
     public void SaveData(int stageNum)
     {

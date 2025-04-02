@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
+//using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Cobweb2 : MonoBehaviour
 {
