@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Collections;
 using System.IO;
 
-public class Map
+[System.Serializable]
+public class MapData
 {
     public int clear;
 }
@@ -13,7 +14,7 @@ public class DataManager : MonoBehaviour
 
     string path;
     string filename = "saves";
-    Map nowMap = new Map();
+    MapData nowMap = new MapData();
     private void Awake()
     {
         if(instance == null)
@@ -41,6 +42,6 @@ public class DataManager : MonoBehaviour
     public void LoadData()
     {
         string data = File.ReadAllText(path + filename);
-        nowMap = JsonUtility.FromJson<Map>(data);
+        nowMap = JsonUtility.FromJson<MapData>(data);
     }
 }

@@ -943,11 +943,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1c43e6a3-7c35-4da0-b61d-2444e0c011c5
+  cloudProjectId: c2ce9b01-6237-4b56-ac59-7f165aeefd9f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: CS_TeamProject
-  organizationId: halfde9
+  organizationId: nayohan
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
