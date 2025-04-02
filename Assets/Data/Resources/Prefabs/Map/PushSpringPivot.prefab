@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4801666214894719191}
   - component: {fileID: 5515725786589612330}
   - component: {fileID: 5021056694627857905}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: PushSpringPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 8712
+    m_Bits: 776
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &4801666214894719191

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5663378835349218001}
   - component: {fileID: 1684954887778967421}
   - component: {fileID: 971693476666809419}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: SpringPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 8200
+    m_Bits: 1049344
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &5663378835349218001
@@ -165,10 +165,6 @@ PrefabInstance:
     - target: {fileID: 6423159880643538932, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7451386714616358562, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
-      propertyPath: pushLayer.m_Bits
-      value: 13376
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
