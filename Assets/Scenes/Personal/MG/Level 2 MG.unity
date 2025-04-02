@@ -1289,11 +1289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5665389177024856812, guid: 118e421b8c49c4732a3e4644595bf81a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5665389177024856812, guid: 118e421b8c49c4732a3e4644595bf81a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.000000834465
       objectReference: {fileID: 0}
     - target: {fileID: 5665389177024856812, guid: 118e421b8c49c4732a3e4644595bf81a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6204,6 +6204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291540444}
   - component: {fileID: 291540445}
+  - component: {fileID: 291540446}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6238,6 +6239,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc35510df4cc4a128021172ec0aa790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &291540446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291540443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf4fd80a8fc44fc99eed50b405349ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nowMap:
+    clear: 0
 --- !u!1 &291751175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d75a0af08078a4a5180da225e917e2db, type: 3}
@@ -21281,7 +21296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crashMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   rotSpeed: 10
   zoomSpeed: 10
   zoomRange: {x: 1, y: 10}

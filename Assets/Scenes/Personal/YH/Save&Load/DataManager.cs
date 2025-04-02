@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
 
     string path;
     string filename = "saves";
-    MapData nowMap = new MapData();
+    public MapData nowMap = new MapData();
     private void Awake()
     {
         if(instance == null)
@@ -31,11 +31,12 @@ public class DataManager : MonoBehaviour
     }
     void Start()
     {
-        SaveData();
-        print(path);
+        LoadData();
+        Debug.Log(nowMap.clear);
     }
-    public void SaveData()
+    public void SaveData(int stageNum)
     {
+        nowMap.clear = stageNum;
         string data = JsonUtility.ToJson(nowMap);
         File.WriteAllText(path + filename,data);
     }
@@ -44,4 +45,5 @@ public class DataManager : MonoBehaviour
         string data = File.ReadAllText(path + filename);
         nowMap = JsonUtility.FromJson<MapData>(data);
     }
+
 }
