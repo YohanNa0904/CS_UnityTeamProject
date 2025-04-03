@@ -11068,6 +11068,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1955192702}
+    - target: {fileID: 3785519097943410111, guid: f3df85172c30f472b8905ee3cfa74b48, type: 3}
+      propertyPath: crashMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5566411832753132998, guid: f3df85172c30f472b8905ee3cfa74b48, type: 3}
       propertyPath: Player
       value: 
