@@ -26,11 +26,11 @@ public class Practice : MonoBehaviour
                 int connectSceanNum = Convert.ToInt32(hit.transform.name);
                 if (connectSceanNum <= DataManager.instance.nowMap.clear)
                 {
-                    //Popup UI µî ÇÊ¿äÇÑ ±â´É
+                    //Popup UI ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
                     LoadSystem.LoadScene(connectSceanNum);
                 }
             }
         }
-        //·¹ÀÌÄ³½ºÆ®·Î ·¹ÀÌ¾î¸¦ È®ÀÎÇÏ°í ¿ÀºêÁ§Æ® ÀÌ¸§°ú ÀÌ¾îÁö´Â ½ºÅ×ÀÌÁöÀÇ ¾À³Ñ¹ö¸¦ °°°Ô ÇÔ
+        //ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾î¸¦ È®ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ì¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     }
 }
