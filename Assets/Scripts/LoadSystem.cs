@@ -14,7 +14,7 @@ public class LoadSystem : MonoBehaviour
     public static void LoadScene(int n)
     {
         targetScene = n;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     void Start()

@@ -58,15 +58,21 @@ public class StageMenuUI : MenuUI
         Time.timeScale = 1.0f;
     }
 
-    public void ToStartScean()
-    {
-        LoadSystem.LoadScene(1);
-        Time.timeScale = 1.0f;
-    }
-
     public void ResetScean()
     {
         LoadSystem.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1.0f;
+    }
+
+    public void ToWorldmap()
+    {
+        LoadSystem.LoadScene(2);
+        Time.timeScale = 1.0f;
+    }
+
+    public void ToStartScean()
+    {
+        LoadSystem.LoadScene(1);
         Time.timeScale = 1.0f;
     }
 
