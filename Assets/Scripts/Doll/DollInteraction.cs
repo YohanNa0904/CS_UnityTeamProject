@@ -23,7 +23,7 @@ public class DollInteraction : AnimProperty
             //----------------------------------------------------------------------------------------------------------------------------------------------------------
 
             if ((1 << col.gameObject.layer & Spring1_Button) != 0)
-            // »óÈ£ÀÛ¿ë ´ë»óÀÌ 'Button1' ÀÏ ¶§
+            // ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 'Button1' ï¿½ï¿½ ï¿½ï¿½
             {
                 IDollInteraction spring = col.gameObject.GetComponentInParent<IDollInteraction>();
                 if (spring != null)
@@ -32,7 +32,7 @@ public class DollInteraction : AnimProperty
                 }
             }
             if ((1 << col.gameObject.layer & Spring2_Button) != 0)
-            // »óÈ£ÀÛ¿ë ´ë»óÀÌ 'Button2' ÀÏ ¶§
+            // ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 'Button2' ï¿½ï¿½ ï¿½ï¿½
             {
                 IDollInteraction spring2 = col.gameObject.GetComponentInParent<IDollInteraction>();
                 if (spring2 != null)
@@ -42,7 +42,7 @@ public class DollInteraction : AnimProperty
             }
 
             if ((1 << col.gameObject.layer & DollCaseMask) != 0)
-            // »óÈ£ÀÛ¿ë ´ë»óÀÌ 'dollcase' ÀÏ ¶§
+            // ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 'dollcase' ï¿½ï¿½ ï¿½ï¿½
             {
                 IDollInteraction dollCase = col.GetComponent<IDollInteraction>();
                 if (dollCase != null)
@@ -51,6 +51,4 @@ public class DollInteraction : AnimProperty
                 }
             }
         }
-    }
-    
 }
