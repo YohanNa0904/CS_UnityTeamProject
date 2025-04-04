@@ -4,6 +4,6 @@ public class StartMenuUi : MenuUI
 {
     public void StartButton()
     {
-        LoadSystem.LoadScene(3);
+        LoadSystem.LoadScene(5);
     }
 }
