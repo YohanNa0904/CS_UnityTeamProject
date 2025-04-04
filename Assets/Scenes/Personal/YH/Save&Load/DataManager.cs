@@ -7,6 +7,7 @@ using System.IO;
 public class MapData
 {
     public int clear;
+    public bool isFirst = true;
 }
 public class DataManager : MonoBehaviour
 {

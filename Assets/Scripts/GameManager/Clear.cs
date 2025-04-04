@@ -5,7 +5,12 @@ public class Clear : MonoBehaviour
 {
     public LayerMask playerMask;
     Collider myCol;
-    
+    public int sceneNum;
+
+    private void Awake()
+    {
+        sceneNum = SceneManager.GetActiveScene().buildIndex;
+    }
     private void Start()
     {
         myCol = gameObject.GetComponent<Collider>();
@@ -15,10 +20,13 @@ public class Clear : MonoBehaviour
     {
         if((1<< other.gameObject.layer & playerMask) != 0)
         {
-            int curSceanNum = SceneManager.GetActiveScene().buildIndex;
-            DataManager.instance.SaveData(curSceanNum - 3);
-            Debug.Log(DataManager.instance.nowMap.clear);
-            LoadSystem.LoadScene(curSceanNum + 1);
+            if(DataManager.instance.nowMap.clear <= sceneNum)
+            {
+                DataManager.instance.nowMap.clear = sceneNum+1;
+                DataManager.instance.SaveData(0);
+            }
+
+            LoadSystem.LoadScene(sceneNum + 1);
         }
     }
 }
