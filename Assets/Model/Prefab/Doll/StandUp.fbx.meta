@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7d36755782fd2e84f97933b00bc4654f
+guid: b8e4f3c8d5706442898aa612edc84788
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,18 +31,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: root|rigAction
-      takeName: root|rigAction
-      internalID: -5729030048419175771
+      name: StandUp
+      takeName: root|StandUp
+      internalID: 7845933067188554764
       firstFrame: 0
-      lastFrame: 229
+      lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
