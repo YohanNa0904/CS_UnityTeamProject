@@ -4,8 +4,28 @@ using System.IO;
 [System.Serializable]
 public class MapData2
 {
-    public int clear;
-    public bool isFirst = true;
+    [SerializeField] int clear = 0;
+    [SerializeField] bool isFirst = true;
+
+    public int GetClearNum()
+    {
+        return clear;
+    }
+
+    public void SetClearNum(int num)
+    {
+        clear = num;
+    }
+
+    public bool GetIsFirst()
+    {
+        return isFirst;
+    }
+
+    public void SetIsFisrt(bool tf)
+    {
+        isFirst = tf;
+    }
 }
 
 public class DataManager2 : Singleton<DataManager2>
@@ -18,19 +38,28 @@ public class DataManager2 : Singleton<DataManager2>
     {
         base.Initialize();
         path = Application.persistentDataPath + "/";
-        LoadData();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
+    private void Start()
+    {
+
+    }
+
     public void SaveData(int stageNum)
     {
-        nowMap.clear = stageNum;
+        nowMap.SetClearNum(stageNum);
         string data = JsonUtility.ToJson(nowMap);
+
         File.WriteAllText(path + filename, data);
     }
     public void LoadData()
     {
-        string data = File.ReadAllText(path + filename);
-        nowMap = JsonUtility.FromJson<MapData2>(data);
+        if (File.Exists(path + filename))
+        //세이브가 없을 때 로드하여 버그가 나는 것을 막기 위해서 조건문을 작성
+        {
+            string data = File.ReadAllText(path + filename);
+            nowMap = JsonUtility.FromJson<MapData2>(data);
+        }
     }
 }

@@ -20,9 +20,9 @@ public class Clear : MonoBehaviour
     {
         if((1<< other.gameObject.layer & playerMask) != 0)
         {
-            if(DataManager2.Instance.nowMap.clear <= sceneNum)
+            if(DataManager.instance.nowMap.clear <= sceneNum)
             {
-                DataManager2.Instance.SaveData(sceneNum + 1);
+                DataManager.instance.SaveData(sceneNum + 1);
             }
 
             LoadSystem.LoadScene(sceneNum + 1);

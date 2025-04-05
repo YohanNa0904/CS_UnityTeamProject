@@ -5,15 +5,11 @@ using Image = UnityEngine.UI.Image;
 public class LoadGame : MonoBehaviour
 {
     [SerializeField] Image image;
-    MapData2 saveData;
 
-    private void Awake()
-    {
-        saveData = DataManager2.Instance.nowMap;
-    }
     void Start()
     {
-        if(saveData.isFirst == true)
+        
+        if (DataManager.instance.nowMap.isFirst)
         {
             image.color = new Color(1, 1, 1, 0.3f);
         }
@@ -24,9 +20,10 @@ public class LoadGame : MonoBehaviour
    
     public void LoadScene()
     {
-        if (saveData.isFirst == false)
+        if (!DataManager.instance.nowMap.isFirst)
         {
-            LoadSystem.LoadScene(DataManager2.Instance.nowMap.clear);
+            DataManager.instance.LoadData();
+            LoadSystem.LoadScene(DataManager.instance.nowMap.clear);
         }
     }
 }

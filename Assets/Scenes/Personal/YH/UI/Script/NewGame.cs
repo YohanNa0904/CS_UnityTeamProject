@@ -4,8 +4,8 @@ public class NewGameS : MonoBehaviour
 {
     public void NewGameStart()
     {
-        DataManager2.Instance.nowMap.isFirst = false;
-        DataManager2.Instance.SaveData(3);
+        DataManager.instance.nowMap.isFirst = false;
+        DataManager.instance.SaveData(3);
         SceneManager.LoadScene("tutorial");
     }
 }

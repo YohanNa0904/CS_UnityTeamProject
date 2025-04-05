@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
 using System.IO;
 
 [System.Serializable]
@@ -20,7 +18,12 @@ public class DataManager : MonoBehaviour
     {
         if(instance == null)
         {
-            instance = this;
+            instance = FindFirstObjectByType<DataManager>();
+            DataManager[] dataArray = FindObjectsByType<DataManager>(FindObjectsSortMode.None);
+            if (FindObjectsByType<DataManager>(FindObjectsSortMode.None).Length == 2)
+            {
+                Destroy(dataArray[1].gameObject);
+            }
         }
         else if (instance != this)
         {
@@ -29,14 +32,11 @@ public class DataManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         path = Application.persistentDataPath + "/";
+        LoadData();
     }
     void Start()
     {
-        if (nowMap.clear != 0)
-        {
-            LoadData();
-            Debug.Log(nowMap.clear);
-        }
+        Debug.Log(nowMap.clear);
     }
     public void SaveData(int stageNum)
     {
@@ -46,8 +46,11 @@ public class DataManager : MonoBehaviour
     }
     public void LoadData()
     {
-        string data = File.ReadAllText(path + filename);
-        nowMap = JsonUtility.FromJson<MapData>(data);
+        if (File.Exists(path + filename))
+        {
+            string data = File.ReadAllText(path + filename);
+            nowMap = JsonUtility.FromJson<MapData>(data);
+        }
     }
 
 }
