@@ -16,9 +16,9 @@ public class WorldMapPlayerMove : MonoBehaviour
         onStage = false;
         for (int i = 0; i < stageList.Length; i++)
         {
-            stageList[i].name = $"{i + 2}";
+            stageList[i].name = $"{i + 4}";
         }
-        print(DataManager.instance.nowMap.clear);
+        print(DataManager2.Instance.nowMap.clear);
     }
     // Update is called once per frame
     void Update()
@@ -32,7 +32,7 @@ public class WorldMapPlayerMove : MonoBehaviour
         if(Input.GetKey(KeyCode.D))
         player.Translate(player.right * Speed *Time.deltaTime);
     
-        if(DataManager.instance.nowMap.clear >= connectSceanNum && onStage)
+        if(DataManager2.Instance.nowMap.clear >= connectSceanNum && onStage)
         {
             if(Input.GetKey(KeyCode.Space))
             {

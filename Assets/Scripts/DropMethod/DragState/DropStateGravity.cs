@@ -66,7 +66,13 @@ public class DropStateGravity : DragRotate
             rb.isKinematic = true;
             transform.position = new(transform.position.x, dropTerYpos, transform.position.z);
             //중력으로 이동해서 목표한 y좌표에 정확히 도착하지 않기 때문에 y좌표를 직접 설정해줌
+            LandingTrigger();
+            //인형 애니메이터 트리거 용 가상함수
             ChangeState(State.Stop);
         }
+    }
+    protected virtual void LandingTrigger()
+    {
+
     }
 }

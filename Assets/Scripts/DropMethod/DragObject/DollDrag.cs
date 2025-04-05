@@ -12,4 +12,8 @@ public class DollDrag : DragAlpha
         }
     }
 
+    protected override void LandingTrigger()
+    {
+
+    }
 }

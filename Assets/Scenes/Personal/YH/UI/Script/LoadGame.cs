@@ -1,15 +1,19 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
+
 using Image = UnityEngine.UI.Image;
-using UnityEditor.UI;
+
 public class LoadGame : MonoBehaviour
 {
     [SerializeField] Image image;
+    MapData2 saveData;
+
+    private void Awake()
+    {
+        saveData = DataManager2.Instance.nowMap;
+    }
     void Start()
     {
-        if(DataManager.instance.nowMap.isFirst == true)
+        if(saveData.isFirst == true)
         {
             image.color = new Color(1, 1, 1, 0.3f);
         }
@@ -17,17 +21,12 @@ public class LoadGame : MonoBehaviour
             image.color = new Color(1, 1, 1, 1f);
         
     }
-    void Update()
-    {
-        
-    }
-
+   
     public void LoadScene()
     {
-        if (DataManager.instance.nowMap.isFirst == false)
+        if (saveData.isFirst == false)
         {
-            DataManager.instance.LoadData();
-            LoadSystem.LoadScene(DataManager.instance.nowMap.clear);
+            LoadSystem.LoadScene(DataManager2.Instance.nowMap.clear);
         }
     }
 }

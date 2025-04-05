@@ -72,7 +72,7 @@ public class StageMenuUI : MenuUI
 
     public void ToStartScean()
     {
-        LoadSystem.LoadScene(1);
+        LoadSystem.LoadScene(0);
         Time.timeScale = 1.0f;
     }
 
