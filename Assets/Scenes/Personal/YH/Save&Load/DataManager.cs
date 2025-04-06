@@ -18,16 +18,11 @@ public class DataManager : MonoBehaviour
     {
         if(instance == null)
         {
-            instance = FindFirstObjectByType<DataManager>();
-            DataManager[] dataArray = FindObjectsByType<DataManager>(FindObjectsSortMode.None);
-            if (FindObjectsByType<DataManager>(FindObjectsSortMode.None).Length == 2)
-            {
-                Destroy(dataArray[1].gameObject);
-            }
+            instance = this;
         }
         else if (instance != this)
         {
-            Destroy(instance.gameObject);
+            Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
 

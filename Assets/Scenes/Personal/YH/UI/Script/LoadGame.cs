@@ -22,7 +22,6 @@ public class LoadGame : MonoBehaviour
     {
         if (!DataManager.instance.nowMap.isFirst)
         {
-            DataManager.instance.LoadData();
             LoadSystem.LoadScene(DataManager.instance.nowMap.clear);
         }
     }
