@@ -11535,10 +11535,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 149151541}
     m_Modifications:
-    - target: {fileID: -3482705595067356153, guid: fceb9e66abb50a84eb922f833807a873, type: 3}
-      propertyPath: m_UpdateMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5938125085884560718, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
       propertyPath: m_Name
       value: Spring 2
@@ -11582,6 +11578,10 @@ PrefabInstance:
     - target: {fileID: 6423159880643538932, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3482705595067356153, guid: fceb9e66abb50a84eb922f833807a873, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -109314,6 +109314,7 @@ GameObject:
   - component: {fileID: 2119319419}
   - component: {fileID: 2119319418}
   - component: {fileID: 2119319417}
+  - component: {fileID: 2119319420}
   - component: {fileID: 2119319416}
   - component: {fileID: 2119319415}
   m_Layer: 6
@@ -109421,6 +109422,19 @@ Transform:
   - {fileID: 1606567683}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119319420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119319414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e28be9299bb31946a9edc7f67cdc2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: 281954e697fb875499d8ddc6dc9264c5, type: 3}
 --- !u!1001 &2120586958
 PrefabInstance:
   m_ObjectHideFlags: 0

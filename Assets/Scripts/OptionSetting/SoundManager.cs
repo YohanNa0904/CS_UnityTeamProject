@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    float _bgm = 0f;
+    AudioSource myBGM;
+    
     public float bgmVolume
     {
-        get => _bgm;
+        get => myBGM.volume;
         set 
         {
-            _bgm = Mathf.Clamp(value, 0f, 1f);
-            PlayerPrefs.SetFloat("BGM_VOLUME", _bgm);
+            myBGM.volume = Mathf.Clamp(value, 0f, 1f);
+            PlayerPrefs.SetFloat("BGM_VOLUME", myBGM.volume);
         }
     }
     float _effect = 0f;
@@ -26,7 +26,18 @@ public class SoundManager : Singleton<SoundManager>
     private void Awake()
     {
         base.Initialize();
-        _bgm = PlayerPrefs.GetFloat("BGM_VOLUME");
-        _effect = PlayerPrefs.GetFloat("EFFECT_VOLUME");
+        myBGM = gameObject.AddComponent<AudioSource>();
+        if (!PlayerPrefs.HasKey("BGM_VOLUME")) bgmVolume = 0.5f;
+        else myBGM.volume = PlayerPrefs.GetFloat("BGM_VOLUME");
+        myBGM.loop = true;
+
+        if (!PlayerPrefs.HasKey("EFFECT_VOLUME")) _effect = 0.3f;
+        else _effect = PlayerPrefs.GetFloat("EFFECT_VOLUME");
+    }
+
+    public void PlayBGM(AudioClip clip)
+    {
+        myBGM.clip = clip;
+        myBGM.Play();
     }
 }
