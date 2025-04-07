@@ -3,6 +3,7 @@ using static DollInteraction;
 
 public class IronSpring : MonoBehaviour, IDollInteraction
 {
+    [SerializeField] Rigidbody[] doll;
     public LayerMask pushLayer;
     [SerializeField] float pushPowar = 900.0f;
 
@@ -20,10 +21,14 @@ public class IronSpring : MonoBehaviour, IDollInteraction
             Rigidbody rb = col.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.isKinematic = false; // 힘을 받아 움직이도록 isKinematic을 끔
+                rb.isKinematic = false; // 힘을 받아 움직이도록 isKinematic을 
                 rb.useGravity = true;
                 rb.AddForce(transform.up * pushPowar);  // 찾아진 오브젝트에 릿지드 바디가 있으면 해당 오브젝트를 밈
             } 
+        }
+        foreach(Rigidbody rb in doll)
+        {
+            rb.isKinematic=false;
         }
     }
 }

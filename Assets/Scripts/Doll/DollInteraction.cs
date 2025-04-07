@@ -17,7 +17,7 @@ public class DollInteraction : AnimProperty
     protected void DollInteract()
     {
         if (GameManager.isPuzzle) return;
-        Collider[] list = Physics.OverlapBox(transform.position + transform.up * 0.7f + transform.forward * 0.5f, new Vector3(0.4f, 1.4f, 1.0f) * 0.5f, transform.rotation);
+        Collider[] list = Physics.OverlapBox(transform.position + transform.up * 0.7f + transform.forward * 0.5f, new Vector3(0.4f, 1f, 1.0f) * 0.5f, transform.rotation);
         foreach (Collider col in list)
         {
             //----------------------------------------------------------------------------------------------------------------------------------------------------------
