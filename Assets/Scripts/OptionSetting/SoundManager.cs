@@ -27,9 +27,9 @@ public class SoundManager : Singleton<SoundManager>
     {
         base.Initialize();
         myBGM = gameObject.AddComponent<AudioSource>();
+        myBGM.loop = true;
         if (!PlayerPrefs.HasKey("BGM_VOLUME")) bgmVolume = 0.5f;
         else myBGM.volume = PlayerPrefs.GetFloat("BGM_VOLUME");
-        myBGM.loop = true;
 
         if (!PlayerPrefs.HasKey("EFFECT_VOLUME")) _effect = 0.3f;
         else _effect = PlayerPrefs.GetFloat("EFFECT_VOLUME");

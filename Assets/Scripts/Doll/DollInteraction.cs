@@ -17,7 +17,7 @@ public class DollInteraction : AnimProperty
     protected void DollInteract()
     {
         if (GameManager.isPuzzle) return;
-        Collider[] list = Physics.OverlapBox(transform.position + transform.up * 0.7f + transform.forward * 0.5f, new Vector3(0.4f, 1f, 1.0f) * 0.5f, transform.rotation);
+        Collider[] list = Physics.OverlapBox(transform.position + transform.up * 0.5f + transform.forward * 0.5f, new Vector3(0.4f, 1f, 1.0f) * 0.5f, transform.rotation);
         foreach (Collider col in list)
         {
             //----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ public class DollInteraction : AnimProperty
                 if (spring != null)
                 {
                     spring.Interact();
-                    StartCoroutine(StandUp());
+                    //StartCoroutine(StandUp());
                 }
             }
             if ((1 << col.gameObject.layer & Spring2_Button) != 0)
@@ -39,7 +39,7 @@ public class DollInteraction : AnimProperty
                 if (spring2 != null)
                 {
                     spring2.Interact();
-                    StartCoroutine(StandUp());
+                    //StartCoroutine(StandUp());
                 }
             }
 
@@ -50,16 +50,17 @@ public class DollInteraction : AnimProperty
                 if (dollCase != null)
                 {
                     dollCase.Interact();
-                    StartCoroutine(StandUp());
+                    //StartCoroutine(StandUp());
                 }
             }
         }
     }
 
-
+    /*
     IEnumerator StandUp()
     {
         yield return new WaitForSeconds(1.0f);
         myAnim.SetTrigger("StandUp");
     }
+    */
 }

@@ -156,11 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00bb0a1dab045445aa8f3ba2cef0e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatDist: 1
+  floatDist: 0
   dropAble:
     serializedVersion: 2
     m_Bits: 1048832
-  dragAlpha: {fileID: 0}
+  dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!136 &1833922585034650133
 CapsuleCollider:

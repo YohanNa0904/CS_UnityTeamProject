@@ -42,7 +42,6 @@ public class StateSet : MonoBehaviour
         switch (myState)
         {
             case State.Stop:
-                Reset();
                 break;
 
             case State.Drag:
@@ -59,9 +58,6 @@ public class StateSet : MonoBehaviour
     private void Start()
     {
         ChangeState(State.Stop);
-        sceanOriPosition = transform.position;
-        sceanOriRotation = transform.eulerAngles; // 씬 시작할 때 위치와 회전 정보를 저장함
-        //floatDist = standardFloatDist; // 띄울 높이를 기준 높이로 변경해 줌
         if (rb == null) rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         rb.isKinematic = true; 

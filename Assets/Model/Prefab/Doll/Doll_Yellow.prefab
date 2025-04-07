@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -164,7 +164,7 @@ MonoBehaviour:
   dropAble:
     serializedVersion: 2
     m_Bits: 1048832
-  dragAlpha: {fileID: 0}
+  dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &-1147521435579603898
 MonoBehaviour:

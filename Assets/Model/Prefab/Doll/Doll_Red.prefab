@@ -519,7 +519,7 @@ MonoBehaviour:
   dropAble:
     serializedVersion: 2
     m_Bits: 1048832
-  dragAlpha: {fileID: 0}
+  dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &223137540274683101
 MonoBehaviour:

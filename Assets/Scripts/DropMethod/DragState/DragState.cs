@@ -10,9 +10,11 @@ public class DragState : StopState
     protected Color ori = default; //색상 정보 
     protected float rayHitTopY = 0.0f;
     protected float pivotDist { get; set; } = 0.0f;
+    protected Transform canDropTrans = null;
 
     protected override void OnDragSet()
     {
+        if (transform.parent != null) transform.parent = null;
         dragStartPos = transform.position;
         dragStartRot = transform.eulerAngles; // 드래그 시작할 때의 위치와 회전 정보를 저장 
         transform.position += Vector3.up * floatDist; // 드래그한 오브젝트를 띄움
@@ -30,6 +32,7 @@ public class DragState : StopState
         
         if (Physics.Raycast(ray, out RaycastHit rayHit, Mathf.Infinity, dropAble))
         {
+            canDropTrans = rayHit.transform;
             Vector3 terminalPos = rayHit.transform.position;
             rayHitTopY = rayHit.transform.position.y + 0.5f;
             terminalPos.y = rayHitTopY + floatDist + pivotDist;
@@ -50,16 +53,14 @@ public class DragState : StopState
                 {
                     if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0 || preDragPoint == null)
                     {
-                        newDragPoint.material.color = Color.yellow;
-                        canDrop = true;
-                        DragAlphaTF(true);
+                        //newDragPoint.material.color = Color.green;
+                        DropJudge(true);
                     }
 
                     else
                     {
-                        newDragPoint.material.color = Color.red;
-                        canDrop = false;
-                        DragAlphaTF(false);
+                        //newDragPoint.material.color = Color.red;
+                        DropJudge(false);
                     }
                 }
                 preDragPoint = newDragPoint;
@@ -71,14 +72,12 @@ public class DragState : StopState
                 {
                     if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0 || preDragPoint == null)
                     {
-                        canDrop = true;
-                        DragAlphaTF(true);
+                        DropJudge(true);
                     }
 
                     else
                     {
-                        canDrop = false;
-                        DragAlphaTF(false);
+                        DropJudge(false);
                     }
                 }
 
@@ -95,11 +94,14 @@ public class DragState : StopState
             preDragPoint = null;
             newDragPoint = null;
             //저장한 정보 초기화
-            canDrop = false;
-            DragAlphaTF(false);
+            DropJudge(false);
         }
     }
-
+    private void DropJudge(bool tf)
+    {
+        canDrop = tf;
+        DragAlphaTF(tf);
+    }
     protected virtual void DragAlphaTF(bool tf)
     {
 

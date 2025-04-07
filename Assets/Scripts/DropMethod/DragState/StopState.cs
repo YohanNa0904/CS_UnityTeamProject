@@ -14,11 +14,4 @@ public class StopState : StateSet
         if (GameManager.isDrag) GameManager.isDrag = false;
         // static 변수 GameManager.isDrag를 변경, drag 상태가 아닌 것으로 설정.
     }
-
-    protected override void Reset()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-            transform.SetPositionAndRotation(sceanOriPosition, Quaternion.Euler(sceanOriRotation));
-        // b 키를 누르면 씬 생성 시의 위치와 회전값으로 돌아감
-    }
 }
