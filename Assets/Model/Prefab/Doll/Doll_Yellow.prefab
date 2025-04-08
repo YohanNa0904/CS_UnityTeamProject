@@ -82,22 +82,77 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4005455625329911342}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -8098431588466918461}
+      addedObject: {fileID: 3847757073813868686}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1520930303194271964}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1147521435579603898}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4005455625329911342}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8098431588466918461}
   m_SourcePrefab: {fileID: 100100000, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
 --- !u!1 &8727047049280323759 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8532755a91e5212478f7606c5272aaa1, type: 3}
   m_PrefabInstance: {fileID: 8493185111967448574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3847757073813868686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727047049280323759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivotYpos: 0
+--- !u!114 &1520930303194271964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727047049280323759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00bb0a1dab045445aa8f3ba2cef0e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatDist: 0
+  dropAble:
+    serializedVersion: 2
+    m_Bits: 1048832
+  dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
+  alphaValue: 0.4
+--- !u!114 &-1147521435579603898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727047049280323759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0fdfb34f4425242a819cc1b98a801d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spring1_Button:
+    serializedVersion: 2
+    m_Bits: 8192
+  Spring2_Button:
+    serializedVersion: 2
+    m_Bits: 16384
+  DollCaseMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!136 &4005455625329911342
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -148,42 +203,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1520930303194271964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727047049280323759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00bb0a1dab045445aa8f3ba2cef0e52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatDist: 1
-  dropAble:
-    serializedVersion: 2
-    m_Bits: 1048832
-  dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
-  alphaValue: 0.4
---- !u!114 &-1147521435579603898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727047049280323759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0fdfb34f4425242a819cc1b98a801d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spring1_Button:
-    serializedVersion: 2
-    m_Bits: 8192
-  Spring2_Button:
-    serializedVersion: 2
-    m_Bits: 16384
-  DollCaseMask:
-    serializedVersion: 2
-    m_Bits: 512

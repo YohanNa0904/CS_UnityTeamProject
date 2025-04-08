@@ -5,9 +5,14 @@ public class IronSpring : MonoBehaviour, IDollInteraction
 {
     public LayerMask pushLayer;
     [SerializeField] float pushPowar = 900.0f;
-
+    Rigidbody rb;
+    void Start()
+    {
+        rb = GetComponentInParent<Rigidbody>();
+    }
     public void Interact()
     {
+        if (!rb.isKinematic && rb.transform.parent != null) return;
         GetComponent<Animator>()?.SetTrigger("Using");
     }
 
@@ -32,27 +37,31 @@ public class IronSpring : MonoBehaviour, IDollInteraction
                 {
                     rb.isKinematic = false;
                     rb.useGravity = true;
-                    if(rb.GetComponent<MoveFinish>() != null) 
-                        rb.GetComponent<MoveFinish>().enabled = false;
-                    rb.GetComponent<Collider>().isTrigger = true;
+
+                    BoxCollider boxCol = rb.GetComponent<BoxCollider>();
+                    if(boxCol != null)
+                    {
+                        rb.GetComponent<Collider>().isTrigger = true;
+                        if(boxCol.size == new Vector3(1f, 1f, 1f)) boxCol.size *= 0.95f; 
+                    }
                 }
             }
 
             if (rbArray.Length > 1)
             {
-                FixedJoint[] joints = new FixedJoint[rbArray.Length];
+                FixedJoint[] jointArray = new FixedJoint[rbArray.Length];
                 for (int i = 0; i < rbArray.Length; i++)
                 {
                     if (rbArray[i].GetComponent<FixedJoint>() == null)
-                        joints[i] = rbArray[i].gameObject.AddComponent<FixedJoint>();
-                    else joints[i] = rbArray[i].GetComponent<FixedJoint>();
+                        jointArray[i] = rbArray[i].gameObject.AddComponent<FixedJoint>();
+                    else jointArray[i] = rbArray[i].GetComponent<FixedJoint>();
 
-                    if (i != 0) joints[i].connectedBody = rbArray[0];
+                    if (i != 0) jointArray[i].connectedBody = rbArray[0];
                 }
-                joints[0].connectedBody = rbArray[1];
+                jointArray[0].connectedBody = rbArray[1];
             }
 
-            rbArray[0].AddForce(transform.up * pushPowar,ForceMode.VelocityChange);  // 찾아진 오브젝트에 릿지드 바디가 있으면 해당 오브젝트를 밈
+            rbArray[0].AddForce(transform.up * pushPowar,ForceMode.Impulse);  // 찾아진 오브젝트에 릿지드 바디가 있으면 해당 오브젝트를 밈
              
         }
     }
