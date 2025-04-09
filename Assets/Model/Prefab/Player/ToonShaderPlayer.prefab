@@ -3390,7 +3390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crashMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!135 &2874709866816958025
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3430,8 +3430,19 @@ MonoBehaviour:
   Door:
     serializedVersion: 2
     m_Bits: 2048
-  KeySlot: {fileID: 2052225833422055006}
-  DoorKeySlot: {fileID: 0}
+  Grow:
+    serializedVersion: 2
+    m_Bits: 0
+  PickAxe:
+    serializedVersion: 2
+    m_Bits: 0
+  Wall:
+    serializedVersion: 2
+    m_Bits: 0
+  dollCase:
+    serializedVersion: 2
+    m_Bits: 0
+  wallObj: {fileID: 0}
 --- !u!1 &6736788776540338612
 GameObject:
   m_ObjectHideFlags: 0
