@@ -14,12 +14,13 @@ public class DoorDrop : MonoBehaviour
         col = GetComponentsInChildren<Collider>();
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(!isDrop && rb.isKinematic == false)
+        if (!isDrop && rb.isKinematic == false)
         {
             myAnim.SetTrigger("Drop");
             isDrop = true;
+            rb.isKinematic = true;
             col[1].enabled = true;
         }
     }

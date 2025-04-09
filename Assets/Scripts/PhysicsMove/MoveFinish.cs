@@ -40,9 +40,4 @@ public class MoveFinish : MonoBehaviour
             transform.position = finalPos;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        GetComponent<Collider>().isTrigger = false;
-    }
 }

@@ -40,14 +40,16 @@ public class IronSpring : MonoBehaviour, IDollInteraction
                 {
                     foreach (Rigidbody rb in rbArray)
                     {
+                        MeshCollider meshCol = rb.GetComponent<MeshCollider>();
+                        if (meshCol != null) meshCol.convex = true;
+
                         rb.isKinematic = false;
                         rb.useGravity = true;
 
                         BoxCollider boxCol = rb.GetComponent<BoxCollider>();
-                        if (boxCol != null)
+                        if (boxCol != null && boxCol.size == new Vector3(1f, 1f, 1f))
                         {
-                            rb.GetComponent<Collider>().isTrigger = true;
-                            if (boxCol.size == new Vector3(1f, 1f, 1f)) boxCol.size *= 0.95f;
+                            boxCol.size *= 0.95f;
                         }
                     }
                 }
