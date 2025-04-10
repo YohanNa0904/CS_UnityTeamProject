@@ -55,7 +55,7 @@ public class StateSet : MonoBehaviour
         }
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         ChangeState(State.Stop);
         if (rb == null) rb = GetComponent<Rigidbody>();

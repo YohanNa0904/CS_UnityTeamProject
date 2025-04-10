@@ -13,5 +13,11 @@ public class StopState : StateSet
         if (!myCol.enabled) myCol.enabled = true;
         if (GameManager.isDrag) GameManager.isDrag = false;
         // static 변수 GameManager.isDrag를 변경, drag 상태가 아닌 것으로 설정.
+        DollStandby();
+    }
+
+    protected virtual void DollStandby()
+    {
+
     }
 }

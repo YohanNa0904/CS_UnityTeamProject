@@ -29,7 +29,7 @@ public class DollInteraction : AnimProperty
                 if (spring != null)
                 {
                     spring.Interact();
-                    //StartCoroutine(StandUp());
+                    
                 }
             }
             if ((1 << col.gameObject.layer & Spring2_Button) != 0)
@@ -39,7 +39,7 @@ public class DollInteraction : AnimProperty
                 if (spring2 != null)
                 {
                     spring2.Interact();
-                    //StartCoroutine(StandUp());
+                    
                 }
             }
 
@@ -50,17 +50,10 @@ public class DollInteraction : AnimProperty
                 if (dollCase != null)
                 {
                     dollCase.Interact();
-                    //StartCoroutine(StandUp());
+                    
                 }
             }
         }
     }
 
-    /*
-    IEnumerator StandUp()
-    {
-        yield return new WaitForSeconds(1.0f);
-        myAnim.SetTrigger("StandUp");
-    }
-    */
 }

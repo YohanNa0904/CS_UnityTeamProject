@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DollDrag : DragAlpha
 {
+    DollStandbyAnim dollStan;
+    
     protected override void RotateMove()
     {
         if (IsRotation)
@@ -11,9 +13,9 @@ public class DollDrag : DragAlpha
             
         }
     }
-
-    protected override void LandingTrigger()
+    protected override void DollStandby()
     {
-
+        if (dollStan == null) dollStan = GetComponent<DollStandbyAnim>();
+        dollStan.StandbyCheck();
     }
 }
