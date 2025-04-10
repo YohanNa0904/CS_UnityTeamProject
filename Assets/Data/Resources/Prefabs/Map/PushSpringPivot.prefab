@@ -51,7 +51,7 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 776
+    m_Bits: 768
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &4801666214894719191
@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pivotYpos: 0
 --- !u!65 &5515725786589612330
 BoxCollider:
   m_ObjectHideFlags: 0
