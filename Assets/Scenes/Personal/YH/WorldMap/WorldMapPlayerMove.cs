@@ -7,19 +7,22 @@ using UnityEngine.UI;
 
 public class WorldMapPlayerMove : MonoBehaviour
 {
-    [SerializeField]
-    Transform player;
-    [SerializeField]
-    float Speed;
+    
+   
     public bool onStage;
     public int connectSceanNum;
+    [SerializeField] Animator myAnim;
+    [SerializeField] Transform cameraTransform;
+    [SerializeField] Transform myModel;
     [SerializeField] Transform[] stageList;
     [SerializeField] TextMeshPro[] stageTextList;
     [SerializeField] GameObject[] stageLock;
+    Vector3 inputDir;
 
     int temp;
     void Start()
     {
+
         onStage = false;
         for (int i = 0; i < stageList.Length; i++)
         {
@@ -31,17 +34,11 @@ public class WorldMapPlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        temp = DataManager.instance.nowMap.clear;
+        inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //키보드 입력
+        Move();
 
-        if(Input.GetKey(KeyCode.W))
-        player.Translate(player.forward * Speed *Time.deltaTime);
-        if(Input.GetKey(KeyCode.A))
-        player.Translate(-player.right * Speed * Time.deltaTime);
-        if(Input.GetKey(KeyCode.S))
-        player.Translate(-player.forward * Speed *Time.deltaTime);
-        if(Input.GetKey(KeyCode.D))
-        player.Translate(player.right * Speed *Time.deltaTime);
-        
+
+        temp = DataManager.instance.nowMap.clear;
         StartCoroutine(UnLockStage());
 
         if(DataManager.instance.nowMap.clear >= connectSceanNum && onStage)
@@ -52,6 +49,22 @@ public class WorldMapPlayerMove : MonoBehaviour
             StopCoroutine(UnLockStage());
         }
         
+    }
+    private void Move()
+    {
+        bool isMove =  inputDir.magnitude !=0; //이동중인지 확인
+        if(isMove)
+        {
+            Vector3 lookForward = new Vector3(cameraTransform.forward.x, 0f, cameraTransform.forward.z).normalized; //카메라의 전방 벡터
+            Vector3 lookRight = new Vector3(cameraTransform.right.x, 0f, cameraTransform.right.z).normalized;   //카메라의 오른쪽 벡터
+            Vector3 moveDir = lookForward * inputDir.y + lookRight * inputDir.x; //이동 방향 설정
+        
+            Quaternion viewRot = Quaternion.LookRotation(moveDir.normalized); //이동 방향으로 회전
+
+            myModel.transform.rotation = Quaternion.Lerp(myModel.transform.rotation, viewRot, Time.deltaTime * 20.0f); //모델 회전
+
+            myAnim.SetFloat("Speed", moveDir.magnitude); //애니메이션 속도 설정
+        }
     }
     void OnTriggerEnter(Collider other)
     {
@@ -75,17 +88,4 @@ public class WorldMapPlayerMove : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
     }
 }
-    /*IEnumerator UnLockStage()
-    {
-        while(true)
-        {
-            if (temp <= DataManager.instance.nowMap.clear)
-            {
-                temp ++;
-                stageTextList[temp].enabled = true;
-                stageLock[temp].SetActive(false);
-            }
-            yield return new WaitForSeconds(0.1f);
-        }
-    }*/
 }
