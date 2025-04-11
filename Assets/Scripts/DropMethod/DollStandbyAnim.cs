@@ -3,8 +3,7 @@ using UnityEngine;
 public class DollStandbyAnim : MonoBehaviour
 {
     Animator myAnim;
-    [SerializeField] LayerMask spring1_Button;
-    [SerializeField] LayerMask spring2_Button;
+    [SerializeField] LayerMask button;
     bool isButton = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -19,14 +18,15 @@ public class DollStandbyAnim : MonoBehaviour
 
         foreach(Collider col in list)
         {
-            if ((1 << col.gameObject.layer & spring1_Button) != 0
-                || (1 << col.gameObject.layer & spring2_Button) != 0)
+            if ((1 << col.gameObject.layer & button) != 0)
             {
                 isButton = true;
                 if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle")) myAnim.SetTrigger("Use");
             }
         }
+
         if(myAnim.GetCurrentAnimatorStateInfo(0).IsName("Use") && !isButton) myAnim.SetTrigger("StandUp");
+
         isButton = false;
     }
 }
