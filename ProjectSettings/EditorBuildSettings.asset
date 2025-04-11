@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Personal/MG/Loading.unity
     guid: 890bbb0fe4f590b4b8f98e9336954f3f
   - enabled: 1
-    path: Assets/Scenes/Personal/YH/WorldMap/WorldMap.unity
+    path: Assets/Scenes/Main Stage/WorldMap.unity
     guid: 020cab57a6f5c48518d55d0a7f5d04db
   - enabled: 1
     path: Assets/Scenes/Main Stage/tutorial.unity
