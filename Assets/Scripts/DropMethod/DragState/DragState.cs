@@ -7,8 +7,6 @@ public class DragState : StopState
     public LayerMask dropAble; // 드랍할 수 있는 바닥 레이어
     //protected float floatYpos = 0.0f; //드래그 시 띄울 y 좌표
     protected bool canDrop = false;
-    protected Color ori = default; //색상 정보 
-    protected float rayHitTopY = 0.0f;
     protected float pivotDist { get; set; } = 0.0f;
     protected Transform canDropTrans = null;
 
@@ -34,68 +32,20 @@ public class DragState : StopState
         {
             canDropTrans = rayHit.transform;
             Vector3 terminalPos = rayHit.transform.position;
-            rayHitTopY = rayHit.transform.position.y + 0.5f;
-            terminalPos.y = rayHitTopY + floatDist + pivotDist;
+            terminalPos.y = canDropTrans.position.y + 0.5f + floatDist + pivotDist;
             transform.position = terminalPos;
-            //terminalPos.y = floatYpos;
 
-            if (rayHit.transform.GetComponent<MeshRenderer>() != null)
-            {
-                newDragPoint = rayHit.transform.GetComponent<MeshRenderer>();
-                if (preDragPoint == newDragPoint) return;
-                if (preDragPoint != null) preDragPoint.material.color = ori;
-                ori = newDragPoint.material.color;
-                // 현재 바닥의 색 정보를 저장
-
-                if (Physics.BoxCast(terminalPos + Vector3.up * 2.0f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
+             if (Physics.BoxCast(terminalPos + Vector3.up * 2.0f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
                     out RaycastHit boxHit, Quaternion.identity, Mathf.Infinity)) 
-                        //floatDist + 1.3f;
-                {
-                    if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0 || preDragPoint == null)
-                    {
-                        //newDragPoint.material.color = Color.green;
-                        DropJudge(true);
-                    }
+                        
+             {
+                if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0 ) DropJudge(true);
 
-                    else
-                    {
-                        //newDragPoint.material.color = Color.red;
-                        DropJudge(false);
-                    }
-                }
-                preDragPoint = newDragPoint;
-            }
-            else
-            {
-                if (preDragPoint != null) preDragPoint.material.color = ori;
-                if (Physics.BoxCast(terminalPos, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down, out RaycastHit boxHit, Quaternion.identity, floatDist + 0.3f))
-                {
-                    if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0 || preDragPoint == null)
-                    {
-                        DropJudge(true);
-                    }
-
-                    else
-                    {
-                        DropJudge(false);
-                    }
-                }
-
-                preDragPoint = null;
-                newDragPoint = null;
-            }
+                else DropJudge(false);
+                    
+             }
         }
-
-        else
-        {
-            // 현재 마우스 위치에서 y축 방향으로 레이져를 쐈을 때 일정 좌표 아래까지 지정한 레이어가 없다면
-            if (preDragPoint != null) preDragPoint.material.color = ori;
-            //이전 마우스 커서가 있던 바닥의 색을 원래 색으로 변경
-            preDragPoint = null;
-            newDragPoint = null;
-            //저장한 정보 초기화
-            DropJudge(false);
-        }
+        else DropJudge(false);
     }
     private void DropJudge(bool tf)
     {
@@ -104,7 +54,7 @@ public class DragState : StopState
     }
     protected virtual void DragAlphaTF(bool tf)
     {
-
+        
     }
 
 }

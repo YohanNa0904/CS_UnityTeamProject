@@ -19,12 +19,10 @@ public class DropStateGravity : DragRotate
         if (canDrop)
         {
             ChildFall();
-            if (newDragPoint != null) newDragPoint.material.color = ori;
-            //현재 마우스 커서가 있는 바닥의 색을 원래대로 돌림
             if(!rb.useGravity) rb.useGravity = true;
             if(rb.isKinematic) rb.isKinematic = false;
             //중력을 활성화하기 위해 isKinematic을 비활성화
-            dropTerYpos = rayHitTopY + pivotDist;
+            dropTerYpos = canDropTrans.position.y + 0.5f + pivotDist;
             //목표 y값을 설정
             targetDist = transform.position.y - dropTerYpos;
             // 떨어질 거리 저장
@@ -35,7 +33,6 @@ public class DropStateGravity : DragRotate
         }
         else
         {
-            if(newDragPoint != null) newDragPoint.material.color = ori;
             //현재 마우스 커서의 지정한 거리 아래에, 설정한 레이어를 가진 오브젝트가 없다면
             transform.SetPositionAndRotation(dragStartPos, Quaternion.Euler(dragStartRot));
             // 드래그 시작한 위치와 회전 값으로 되돌림

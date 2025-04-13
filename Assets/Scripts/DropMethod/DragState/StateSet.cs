@@ -5,10 +5,7 @@ using UnityEngine.UIElements;
 public class StateSet : MonoBehaviour
 {
     private State myState = State.Create;
-    protected Vector3 sceanOriPosition = Vector3.zero; //씬 시작할 때 위치 정보
-    protected Vector3 sceanOriRotation = Vector3.zero; //씬 시작할 때 회전 정보
-    [SerializeField] protected float floatDist = 1.0f; // 드래그 시 떠있을 기준 높이를 정함
-    //protected float floatDist = 0.0f; // 드래그 시 띄울 높이를 저장
+    [SerializeField] protected float floatDist = 0f; // 드래그 시 떠있을 기준 높이를 정함
     protected Rigidbody rb = null;
 
     public enum State
