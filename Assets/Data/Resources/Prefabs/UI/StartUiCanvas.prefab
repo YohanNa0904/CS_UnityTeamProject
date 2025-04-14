@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2823682502975339355}
   - component: {fileID: 5770519680631187037}
-  - component: {fileID: 3421444042682307053}
   - component: {fileID: 6237767756722965240}
   - component: {fileID: 3935329277790948839}
   m_Layer: 5
@@ -48,18 +47,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058156079869954477}
   m_CullTransparentMesh: 1
---- !u!114 &3421444042682307053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058156079869954477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a3dbf3c884b4f30be95099f3da2273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6237767756722965240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3421444042682307053}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
         m_MethodName: NewGameStart
         m_Mode: 1

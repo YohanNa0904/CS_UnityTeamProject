@@ -51,9 +51,9 @@ public class LoadSystem : MonoBehaviour
     {
         while (mySlider.value < v)
         {
-            if (mySlider.value < 0.3f) myFill.GetComponent<Image>().color = Color.red;
-            else if (mySlider.value < 0.6f) myFill.GetComponent<Image>().color = Color.yellow;
-            else myFill.GetComponent<Image>().color = Color.green;
+            if (mySlider.value < 0.3f) myFill.GetComponent<Image>().color = Color.gray;
+            else if (mySlider.value < 0.6f) myFill.GetComponent<Image>().color = Color.gray;
+            else myFill.GetComponent<Image>().color = Color.white;
             mySlider.value += Time.deltaTime;
             
             yield return null;
