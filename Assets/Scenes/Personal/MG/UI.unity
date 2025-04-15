@@ -127,29 +127,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1713557724069618397, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924691998952489199, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8477973604769344727, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8498919075333297874, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9105404322591405534, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 9105404322591405534, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9181587181072597761, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_Pivot.x
