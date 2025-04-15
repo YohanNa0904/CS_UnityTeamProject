@@ -17,7 +17,10 @@ public class DragState : StopState
         dragStartRot = transform.eulerAngles; // 드래그 시작할 때의 위치와 회전 정보를 저장 
         transform.position += Vector3.up * floatDist; // 드래그한 오브젝트를 띄움
         //floatYpos = transform.position.y; // 띄운 y좌표를 저장함
-        myCol.enabled = false;
+        for(int i = 0; i < myCols.Length; i++)
+        {
+            myCols[i].enabled = false;
+        }
         if (!GameManager.isDrag) GameManager.isDrag = true;
         // static 변수 GameManager.isDrag를 변경, drag 상태로 설정.
         //if (floatDist != standardFloatDist) floatDist = standardFloatDist;
