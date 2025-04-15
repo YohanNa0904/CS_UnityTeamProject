@@ -2,15 +2,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
 
 public class LoadSystem : MonoBehaviour
 {
-    public GameObject infoText;
+    public GameObject[] infoText;
     public GameObject endText;
     public Slider mySlider;
     public GameObject myFill;
     static int targetScene;
 
+    int a;
     public static void LoadScene(int n)
     {
         targetScene = n;
@@ -20,6 +22,8 @@ public class LoadSystem : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadingScene());
+        a = (int)Random.Range(0, 10f);
+        infoText[a].SetActive(true);
     }
 
     IEnumerator LoadingScene()
@@ -34,7 +38,7 @@ public class LoadSystem : MonoBehaviour
             yield return StartCoroutine(UpdateSlider(ao.progress));
         }
 
-        infoText.SetActive(false);
+
         endText.SetActive(true);
 
         while (true)
