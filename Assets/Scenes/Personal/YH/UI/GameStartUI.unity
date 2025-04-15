@@ -6637,6 +6637,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 9082922979832755784}
+    - target: {fileID: 6498319895523042628, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+    - target: {fileID: 6498319895523042628, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7763268864622821475, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
