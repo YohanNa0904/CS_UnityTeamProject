@@ -1,7 +1,7 @@
 using UnityEngine;
 using static DollInteraction;
 
-public class IronSpring : MonoBehaviour, IDollInteraction
+public class Spring2 : MonoBehaviour, IDollInteraction
 {
     public LayerMask pushLayer;
     [SerializeField] float pushPowar = 900.0f;

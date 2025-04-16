@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Spring 2 On
+  m_Name: Spring 2
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -505,7 +505,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: "\uC6D0\uD615"
+    path: Spring
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -691,7 +691,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: "\uC6D0\uD615"
+    path: Spring
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 24
@@ -711,7 +711,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1393928661
+      path: 1821512031
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -729,7 +729,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1393928661
+      path: 1821512031
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -1748,7 +1748,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: "\uC6D0\uD615"
+    path: Spring
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2003,7 +2003,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: "\uC6D0\uD615"
+    path: Spring
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2258,7 +2258,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: "\uC6D0\uD615"
+    path: Spring
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2675,7 +2675,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: "\uC6D0\uD615"
+    path: Spring
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2759,7 +2759,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: "\uC6D0\uD615"
+    path: Spring
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2843,7 +2843,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: "\uC6D0\uD615"
+    path: Spring
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2851,7 +2851,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.33333334
+  - time: 0.25
     functionName: OnPush
     data: 
     objectReferenceParameter: {fileID: 0}
