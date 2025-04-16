@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 5440
   pushPowar: 45
 --- !u!95 &5930921517284309019
 Animator:

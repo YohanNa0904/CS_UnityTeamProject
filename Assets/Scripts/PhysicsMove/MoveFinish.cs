@@ -7,14 +7,14 @@ public class MoveFinish : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        this.enabled = false;
     }
     // Update is called once per frame
-    void LateUpdate()
+
+    private void OnCollisionStay(Collision collision)
     {
-        if (rb.isKinematic) return;
-        
-        if (!GameManager.isPuzzle && Mathf.Approximately(rb.linearVelocity.magnitude, 0f)
-            && Physics.Raycast(transform.position, Vector3.down,out RaycastHit hit, pivotYpos + 0.1f))
+        if (Mathf.Approximately(rb.linearVelocity.magnitude, 0f)
+            && Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, pivotYpos + 0.1f))
         {
             Rigidbody[] rbArray = GetComponentsInChildren<Rigidbody>();
 
@@ -33,11 +33,12 @@ public class MoveFinish : MonoBehaviour
                 BoxCollider boxCol = GetComponent<BoxCollider>();
                 if (boxCol != null) boxCol.size = new Vector3(1.0f, 1.0f, 1.0f);
             }
-                
+
             transform.parent = hit.transform;
             Vector3 finalPos = transform.position;
             finalPos.y = hit.transform.position.y + 0.5f + pivotYpos;
             transform.position = finalPos;
+            this.enabled = false;
         }
     }
 }
