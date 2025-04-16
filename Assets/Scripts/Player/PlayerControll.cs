@@ -10,7 +10,6 @@ public class PlayerControll : AnimProperty
     [SerializeField]
     Animator playerAnim;
 
-
     bool onGround = false;
     void Start()
     {

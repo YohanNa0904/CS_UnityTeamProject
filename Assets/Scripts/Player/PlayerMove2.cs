@@ -18,8 +18,8 @@ public class PlayerMove2 : AnimProperty
     Rigidbody rb = null;
     float maxSpeed = 1.0f;
     [SerializeField] float jumpPower = 6.0f;
-    [SerializeField] AudioSource JumpAudio;
-    [SerializeField] AudioSource StepAudio;
+    [SerializeField] public AudioSource JumpAudio;
+    [SerializeField] public AudioSource StepAudio;
     bool isMove = false;
     private void Start()
     {
@@ -56,6 +56,11 @@ public class PlayerMove2 : AnimProperty
                 jumpDir += myModel.forward;
             }
             jumpDir.Normalize();
+        }
+        if(Input.GetKey(KeyCode.LeftControl))
+        {
+            StepAudio.Stop();
+            JumpAudio.Stop();
         }
     }
     private void Move()

@@ -22,13 +22,17 @@ public class Interaction : AnimProperty
     GameObject WallSlot;
     [SerializeField]
     GameObject wallObj;
-
-
+    PlayerMove2 playerMove;
+    AudioSource StepAudio;
     public interface IPlayerInteraction
     {
         void Interact();
     }
-
+    void Start()
+    {
+        playerMove = GetComponentInParent<PlayerMove2>();
+        StepAudio = playerMove.StepAudio;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -43,6 +47,7 @@ public class Interaction : AnimProperty
                     IPlayerInteraction Key = col.GetComponent<IPlayerInteraction>();
                     if ( Key != null )
                     {
+                        StepAudio.Stop();
                         InteractTarget = col.gameObject;
                         Key.Interact();
                     }
@@ -70,6 +75,7 @@ public class Interaction : AnimProperty
                         IPlayerInteraction Door = col.GetComponent<IPlayerInteraction>();
                         //if (Door != null)
                         {
+                            StepAudio.Stop();
                             Door.Interact();
                         }
                     }
@@ -78,6 +84,7 @@ public class Interaction : AnimProperty
 
                     {
                         GrowSlot = col.gameObject;
+                        StepAudio.Stop();
                         myAnim.SetTrigger("UseKey"); // 열쇠를 쓰는 애니메이션 실행
                     }
                 }
@@ -85,6 +92,7 @@ public class Interaction : AnimProperty
                 {
                     if ((1 << col.gameObject.layer & Wall) != 0)
                     {
+                        StepAudio.Stop();
                         WallSlot = col.gameObject;
                         myAnim.SetTrigger("UseKey");
                     }
