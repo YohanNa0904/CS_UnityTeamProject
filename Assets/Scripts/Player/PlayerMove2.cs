@@ -29,19 +29,7 @@ public class PlayerMove2 : AnimProperty
     {
         inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Ű���� �Է�
         Move();
-        if(inputDir.magnitude != 0)
-        {
-            if (!isMove)
-            {
-                StepAudio.Play();
-                isMove = true;
-            }
-        }
-        else
-        {
-            StepAudio.Stop();
-            isMove = false;
-        }
+    
         if (jumpCount != 0 && Input.GetKeyDown(KeyCode.Space))
         {
             JumpAudio.Play();
@@ -83,8 +71,12 @@ public class PlayerMove2 : AnimProperty
             Quaternion viewRot = Quaternion.LookRotation(moveDir.normalized); //�̵� �������� ȸ��
 
             myModel.rotation = Quaternion.Lerp(myModel.rotation, viewRot, Time.deltaTime * 20.0f); //�� ȸ�� 
-
+            
+            if(!StepAudio.isPlaying && onGround) StepAudio.Play();
+            else if (!onGround) StepAudio.Stop();
         }
+        else StepAudio.Stop();
+        
         float rootMotionSpeed = moveDir.magnitude;
         rootMotionSpeed = Mathf.Clamp(rootMotionSpeed, 0, maxSpeed);
         myAnim.SetFloat("Speed", rootMotionSpeed); //�ִϸ��̼� �ӵ� ����

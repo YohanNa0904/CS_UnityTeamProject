@@ -18,6 +18,7 @@ public class IronSpring : MonoBehaviour, IDollInteraction
     {
         if (!rb.isKinematic && rb.transform.parent != null) return;
         GetComponent<Animator>()?.SetTrigger("Using");
+        audioSource.Play();
     }
 
     public void OnPush() // 애니메이션 이벤트로 호출하는 함수
