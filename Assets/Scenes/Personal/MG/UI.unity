@@ -215,19 +215,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4169595298075150443, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891065446441347673, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
-      propertyPath: m_AnchorMax.y
+    - target: {fileID: 6901252160356605301, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8488369504620681955, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8728585634722473874, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092230239182532881, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6901252160356605301, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -46553,6 +46553,8 @@ MonoBehaviour:
   moveSpeed: 2
   cameraTransform: {fileID: 1614463360}
   jumpPower: 5
+  JumpAudio: {fileID: 0}
+  StepAudio: {fileID: 0}
 --- !u!4 &1955192702
 Transform:
   m_ObjectHideFlags: 0
