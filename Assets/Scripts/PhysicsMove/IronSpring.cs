@@ -68,8 +68,9 @@ public class IronSpring : MonoBehaviour, IDollInteraction
                     jointArray[0].connectedBody = rbArray[1];
                 }
             }
+            
             rbArray[0].AddForce(transform.up * pushPowar,ForceMode.Impulse);  // 찾아진 오브젝트에 릿지드 바디가 있으면 해당 오브젝트를 밈
-             
+            if(rbArray[0].GetComponent<MoveFinish>() != null) rbArray[0].GetComponent<MoveFinish>().enabled = true;
         }
     }
 }
