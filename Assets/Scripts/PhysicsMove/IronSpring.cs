@@ -7,8 +7,10 @@ public class IronSpring : MonoBehaviour, IDollInteraction
     [SerializeField] float pushPowar = 900.0f;
     Rigidbody rb;
     LayerMask playerMask;
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponentInParent<Rigidbody>();
         playerMask = LayerMask.GetMask("Player");
     }
