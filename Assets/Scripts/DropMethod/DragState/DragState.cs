@@ -25,6 +25,7 @@ public class DragState : StopState
         // static 변수 GameManager.isDrag를 변경, drag 상태로 설정.
         //if (floatDist != standardFloatDist) floatDist = standardFloatDist;
         // 띄울 높이가 기준 높이와 다르다면 띄울 높이를 기준 높이로 변경
+        Debug.Log("Drag");
     }
 
     protected override void OnDragPro()
