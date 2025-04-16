@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerMove2 : AnimProperty
 {
-    //------Á¡ÇÁÇÒ ¶§ ¾²´Â º¯¼ö---------
+    //------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½---------
     public bool onGround { get; set; } = true; // 
-    bool jumpForce = false; //Á¡ÇÁÇÏ´Â ÈûÀ» °¡ÇÒÁö °áÁ¤ÇÏ´Â º¯¼ö
+    bool jumpForce = false; //ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     //-------------------------------
     public Transform myModel;
@@ -18,23 +18,26 @@ public class PlayerMove2 : AnimProperty
     Rigidbody rb = null;
     float maxSpeed = 1.0f;
     [SerializeField] float jumpPower = 6.0f;
+    [SerializeField] AudioSource JumpAudio;
+    [SerializeField] AudioSource StepAudio;
+    bool isMove = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
-        inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Å°º¸µå ÀÔ·Â
-
+        inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Å°ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
         Move();
-
+    
         if (jumpCount != 0 && Input.GetKeyDown(KeyCode.Space))
         {
+            JumpAudio.Play();
             jumpForce = true;
             jumpCount--;
         }
 
-        if (!onGround) // °øÁß¿¡ ÀÖÀ» ¶§µµ Á¶±Ý¾¿ ÀÌµ¿ÇÒ ¼ö ÀÖ°Ô
+        if (!onGround) // ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¾ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -54,26 +57,29 @@ public class PlayerMove2 : AnimProperty
             }
             jumpDir.Normalize();
         }
-        
     }
-
     private void Move()
     {
-        bool isMove = inputDir.magnitude != 0; //ÀÌµ¿ÁßÀÎÁö È®ÀÎ
+        bool isMove = inputDir.magnitude != 0; //ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         Vector3 moveDir = Vector3.zero;
         if (isMove)
         {
-            Vector3 lookForward = new Vector3(cameraTransform.forward.x, 0f, cameraTransform.forward.z).normalized; //Ä«¸Þ¶óÀÇ Àü¹æ º¤ÅÍ
-            Vector3 lookRight = new Vector3(cameraTransform.right.x, 0f, cameraTransform.right.z).normalized;   //Ä«¸Þ¶óÀÇ ¿À¸¥ÂÊ º¤ÅÍ
-            moveDir = lookForward * inputDir.y + lookRight * inputDir.x; //ÀÌµ¿ ¹æÇâ ¼³Á¤
+            Vector3 lookForward = new Vector3(cameraTransform.forward.x, 0f, cameraTransform.forward.z).normalized; //Ä«ï¿½Þ¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            Vector3 lookRight = new Vector3(cameraTransform.right.x, 0f, cameraTransform.right.z).normalized;   //Ä«ï¿½Þ¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            moveDir = lookForward * inputDir.y + lookRight * inputDir.x; //ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-            Quaternion viewRot = Quaternion.LookRotation(moveDir.normalized); //ÀÌµ¿ ¹æÇâÀ¸·Î È¸Àü
+            Quaternion viewRot = Quaternion.LookRotation(moveDir.normalized); //ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½
 
-            myModel.rotation = Quaternion.Lerp(myModel.rotation, viewRot, Time.deltaTime * 20.0f); //¸ðµ¨ È¸Àü            
+            myModel.rotation = Quaternion.Lerp(myModel.rotation, viewRot, Time.deltaTime * 20.0f); //ï¿½ï¿½ È¸ï¿½ï¿½ 
+            
+            if(!StepAudio.isPlaying && onGround) StepAudio.Play();
+            else if (!onGround) StepAudio.Stop();
         }
+        else StepAudio.Stop();
+        
         float rootMotionSpeed = moveDir.magnitude;
         rootMotionSpeed = Mathf.Clamp(rootMotionSpeed, 0, maxSpeed);
-        myAnim.SetFloat("Speed", rootMotionSpeed); //¾Ö´Ï¸ÞÀÌ¼Ç ¼Óµµ ¼³Á¤
+        myAnim.SetFloat("Speed", rootMotionSpeed); //ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
     }
     public void SetMaxSpeed(float speed)
     {
@@ -101,8 +107,8 @@ public class PlayerMove2 : AnimProperty
         if (onGround) return;
         if (collision.GetContact(0).normal.y > 0.5f)
         {
-            onGround = true; //ÂøÁö »óÅÂ·Î ÆÇÁ¤            
-            myAnim.SetTrigger("OnLanding"); // jump3 ¾Ö´Ï¸ÞÀÌ¼Ç ½ÇÇà
+            onGround = true; //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½            
+            myAnim.SetTrigger("OnLanding"); // jump3 ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½ï¿½
             jumpCount = 2;
         }
     }
@@ -113,11 +119,12 @@ public class PlayerMove2 : AnimProperty
         float veloY = rb.linearVelocity.y;
         if (Mathf.Abs(veloY) > 0.1f && jumpCount == 2)
         {
-            // ÂøÁö »óÅÂÀÏ ¶§ yÃàÀ¸·Î ¶³¾îÁø´Ù¸é
-            onGround = false; // Ã¼°ø »óÅÂ·Î ÆÇÁ¤
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½
+            onGround = false; // Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½
             myAnim.SetTrigger("OnAir");
-            // Á¡ÇÁ »óÅÂ(Á¡ÇÁÅ°¸¦ ´©¸¥ °æ¿ì)°¡ ¾Æ´Ï¶ó¸é jump2 ¾Ö´Ï¸ÞÀÌ¼Ç ½ÇÇà
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½ jump2 ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½ï¿½
             jumpCount--;
         }
     }
+    
 }
