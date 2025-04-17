@@ -6607,6 +6607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartUiCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1446246069825411434, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1499802475781008935, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
