@@ -15,7 +15,6 @@ public class StopState : StateSet
         }
         if (GameManager.isDrag) GameManager.isDrag = false;
         // static 변수 GameManager.isDrag를 변경, drag 상태가 아닌 것으로 설정.
-        Debug.Log("Drag End");
         DollStandby();
     }
 

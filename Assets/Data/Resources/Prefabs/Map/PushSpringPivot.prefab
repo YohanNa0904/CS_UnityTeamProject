@@ -48,12 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf32cf31945d6542ae256f13d98d2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatDist: 1
+  floatDist: 0
   dropAble:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 2097920
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+  dollLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &4801666214894719191
 MonoBehaviour:
   m_ObjectHideFlags: 0

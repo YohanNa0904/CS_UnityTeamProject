@@ -9,6 +9,7 @@ public class DragState : StopState
     protected bool canDrop = false;
     protected float pivotDist { get; set; } = 0.0f;
     protected Transform canDropTrans = null;
+    protected Vector3 preMousePos = Vector3.forward;
 
     protected override void OnDragSet()
     {
@@ -25,11 +26,19 @@ public class DragState : StopState
         // static 변수 GameManager.isDrag를 변경, drag 상태로 설정.
         //if (floatDist != standardFloatDist) floatDist = standardFloatDist;
         // 띄울 높이가 기준 높이와 다르다면 띄울 높이를 기준 높이로 변경
-        Debug.Log("Drag");
+        
     }
 
     protected override void OnDragPro()
     {
+        if (preMousePos != Vector3.forward)
+        {
+            Vector3 mouseMoveDist = Input.mousePosition - preMousePos;
+            if (!Mathf.Approximately(mouseMoveDist.magnitude, 0.0f))
+            {
+                Debug.Log("MouseMove");
+            }
+        }
         Ray ray = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);
         
         if (Physics.Raycast(ray, out RaycastHit rayHit, Mathf.Infinity, dropAble))
@@ -39,7 +48,7 @@ public class DragState : StopState
             terminalPos.y = canDropTrans.position.y + 0.5f + floatDist + pivotDist;
             transform.position = terminalPos;
 
-             if (Physics.BoxCast(terminalPos + Vector3.up * 2.0f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
+             if (Physics.BoxCast(terminalPos + Vector3.up * 1.5f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
                     out RaycastHit boxHit, Quaternion.identity, Mathf.Infinity)) 
                         
              {
@@ -50,6 +59,7 @@ public class DragState : StopState
              }
         }
         else DropJudge(false);
+        preMousePos = Input.mousePosition;
     }
     private void DropJudge(bool tf)
     {

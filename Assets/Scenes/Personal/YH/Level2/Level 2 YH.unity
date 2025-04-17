@@ -2198,9 +2198,12 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 8712
+    m_Bits: 8704
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+  dollLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!4 &83220521
 Transform:
   m_ObjectHideFlags: 0
@@ -9100,6 +9103,9 @@ MonoBehaviour:
     m_Bits: 139776
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+  dollLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!4 &380698424
 Transform:
   m_ObjectHideFlags: 0
@@ -26358,9 +26364,12 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 8712
+    m_Bits: 8704
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+  dollLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!4 &1128976131
 Transform:
   m_ObjectHideFlags: 0
@@ -33186,9 +33195,12 @@ MonoBehaviour:
   floatDist: 1
   dropAble:
     serializedVersion: 2
-    m_Bits: 8200
+    m_Bits: 8192
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+  dollLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!4 &1390900142
 Transform:
   m_ObjectHideFlags: 0
@@ -45141,6 +45153,8 @@ MonoBehaviour:
   moveSpeed: 2
   cameraTransform: {fileID: 1614463360}
   jumpPower: 5
+  JumpAudio: {fileID: 0}
+  StepAudio: {fileID: 0}
 --- !u!4 &1955192702
 Transform:
   m_ObjectHideFlags: 0

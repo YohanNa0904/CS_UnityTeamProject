@@ -11437,6 +11437,10 @@ PrefabInstance:
       propertyPath: dropAble.m_Bits
       value: 2097920
       objectReference: {fileID: 0}
+    - target: {fileID: 4212962030664805230, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
+      propertyPath: dollLayer.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 5990276609833439816, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8

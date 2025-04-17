@@ -54,6 +54,9 @@ MonoBehaviour:
     m_Bits: 1049344
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
+  dollLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &5663378835349218001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,10 +126,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5990276609833439816}
     m_Modifications:
-    - target: {fileID: 7451386714616358562, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
-      propertyPath: pushPowar
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 2469563151033307735, guid: c536855c5eaf2478da1f8f4688ca299b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -174,6 +173,10 @@ PrefabInstance:
     - target: {fileID: 3679309572295190246, guid: c536855c5eaf2478da1f8f4688ca299b, type: 3}
       propertyPath: pushPowar
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451386714616358562, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
+      propertyPath: pushPowar
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
