@@ -8,7 +8,8 @@ public class Door : MonoBehaviour, IPlayerInteraction
     public GameObject DoorKeySlot;
 
     public GameObject Player;
-
+    [SerializeField]
+    AudioSource DoorOpenAudio;
     public void Interact()
     {
         StartCoroutine(UsingKey());
@@ -29,19 +30,19 @@ public class Door : MonoBehaviour, IPlayerInteraction
 
     IEnumerator UsingKey()
     {
-        Key.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // ¹®°ú »óÈ£ÀÛ¿ë ½Ã ¿­¼è¸¦ ´Ù½Ã ¿òÁ÷ÀÏ ¼ö ÀÖ°Ô ÇÔ
+        Key.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½è¸¦ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½
 
 
-        Player.GetComponentInParent<PlayerMove2>().enabled = false; // ¸ð¼Ç Áß¿£ ÇÃ·¹ÀÌ¾î°¡ ¿òÁ÷ÀÌÁö ¸øÇÏ°Ô
+        Player.GetComponentInParent<PlayerMove2>().enabled = false; // ï¿½ï¿½ï¿½ ï¿½ß¿ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½
         Player.GetComponent<Animator>()?.SetFloat("Speed", 0.0f);
-        Player.GetComponent<Animator>()?.SetTrigger("UseKey"); // ¿­¼è¸¦ ¾²´Â ¾Ö´Ï¸ÞÀÌ¼Ç ½ÇÇà    
+        Player.GetComponent<Animator>()?.SetTrigger("UseKey"); // ï¿½ï¿½ï¿½è¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½ï¿½    
 
         yield return new WaitForSeconds(1.5f);
 
-        Key.transform.SetParent(null); // ¿­¼è°¡ ´õÀÌ»ó ÇÃ·¹ÀÌ¾î¸¦ ¾È µû¶ó¿À°Ô
+        Key.transform.SetParent(null); // ï¿½ï¿½ï¿½è°¡ ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Vector3 dir = (DoorKeySlot.transform.position - Key.transform.position).normalized;
         float dist = Vector3.Distance(DoorKeySlot.transform.position, Key.transform.position);
-        while (dist > 0.01f) // 0ÀÌ ¾Æ´Ï¶ó ÃÖ´ëÇÑ ±ÙÁ¢ÇÒ ¶§ ±îÁö ÀÌµ¿
+        while (dist > 0.01f) // 0ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
         {
             float targetDist = Time.deltaTime * 1.4f;
             Key.transform.position = Vector3.Lerp(Key.transform.position, DoorKeySlot.transform.position, targetDist);
@@ -49,15 +50,16 @@ public class Door : MonoBehaviour, IPlayerInteraction
             dist = Vector3.Distance(DoorKeySlot.transform.position, Key.transform.position);
             yield return null;
         }
-        Key.transform.position = DoorKeySlot.transform.position; // ´ë·«ÀûÀÎ ÀÌµ¿ÀÌ ³¡³­ ÈÄ Á¤È®ÇÑ À§Ä¡¿¡ ½º³À
+        Key.transform.position = DoorKeySlot.transform.position; // ï¿½ë·«ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Key.transform.rotation = DoorKeySlot.transform.rotation;
-        Player.GetComponentInParent<PlayerMove2>().enabled = true; // ¸ð¼ÇÀÌ ³¡³ª¸é ¿òÁ÷ÀÏ ¼ö ÀÖ°Ô
+        Player.GetComponentInParent<PlayerMove2>().enabled = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½
 
         //----------------------------------------------
-        // ¿­¼è¸¦ µç Ã¤·Î ¹®°ú »óÈ£ÀÛ¿ë ½Ã ÇØ¾ß ÇÒ µ¿ÀÛ
-        // ¹®ÀÌ ¿­¸°´Ù´ø°¡ ÇÏ´Â ±×·±°Íµé ½ÇÇà
+        // ï¿½ï¿½ï¿½è¸¦ ï¿½ï¿½ Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½×·ï¿½ï¿½Íµï¿½ ï¿½ï¿½ï¿½ï¿½
         yield return GameTime.GetWait(2.0f);
         gameObject.GetComponent<Animator>().SetTrigger("Open");
+        DoorOpenAudio.Play();
         Key.transform.SetParent(DoorKeySlot.transform);
         Key = null;
         DoorKeySlot = null;

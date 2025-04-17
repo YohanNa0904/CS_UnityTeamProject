@@ -6,6 +6,6 @@ public class NewGameS : MonoBehaviour
     {
         DataManager.instance.nowMap.isFirst = false;
         DataManager.instance.SaveData(3);
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene("tutorial MG");
     }
 }

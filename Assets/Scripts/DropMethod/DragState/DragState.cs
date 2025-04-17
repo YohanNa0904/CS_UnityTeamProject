@@ -2,34 +2,47 @@ using UnityEngine;
 
 public class DragState : StopState
 {
-    protected Vector3 dragStartPos = Vector3.zero; //µå·¡±× ½ÃÀÛÇÒ ¶§ À§Ä¡ Á¤º¸
-    protected Vector3 dragStartRot = Vector3.zero; //µå·¡±× ½ÃÀÛÇÒ ¶§ È¸Àü Á¤º¸
-    public LayerMask dropAble; // µå¶øÇÒ ¼ö ÀÖ´Â ¹Ù´Ú ·¹ÀÌ¾î
-    //protected float floatYpos = 0.0f; //µå·¡±× ½Ã ¶ç¿ï y ÁÂÇ¥
+    protected Vector3 dragStartPos = Vector3.zero; //ë“œë˜ê·¸ ì‹œì‘í•  ë•Œ ìœ„ì¹˜ ì •ë³´
+    protected Vector3 dragStartRot = Vector3.zero; //ë“œë˜ê·¸ ì‹œì‘í•  ë•Œ íšŒì „ ì •ë³´
+    public LayerMask dropAble; // ë“œëí•  ìˆ˜ ìˆëŠ” ë°”ë‹¥ ë ˆì´ì–´
+    //protected float floatYpos = 0.0f; //ë“œë˜ê·¸ ì‹œ ë„ìš¸ y ì¢Œí‘œ
     protected bool canDrop = false;
     protected float pivotDist { get; set; } = 0.0f;
     protected Transform canDropTrans = null;
+    protected Vector3 preMousePos = Vector3.forward;
 
     protected override void OnDragSet()
     {
         if (transform.parent != null) transform.parent = null;
         dragStartPos = transform.position;
-        dragStartRot = transform.eulerAngles; // µå·¡±× ½ÃÀÛÇÒ ¶§ÀÇ À§Ä¡¿Í È¸Àü Á¤º¸¸¦ ÀúÀå 
-        transform.position += Vector3.up * floatDist; // µå·¡±×ÇÑ ¿ÀºêÁ§Æ®¸¦ ¶ç¿ò
-        //floatYpos = transform.position.y; // ¶ç¿î yÁÂÇ¥¸¦ ÀúÀåÇÔ
+        dragStartRot = transform.eulerAngles; // ë“œë˜ê·¸ ì‹œì‘í•  ë•Œì˜ ìœ„ì¹˜ì™€ íšŒì „ ì •ë³´ë¥¼ ì €ì¥ 
+        transform.position += Vector3.up * floatDist; // ë“œë˜ê·¸í•œ ì˜¤ë¸Œì íŠ¸ë¥¼ ë„ì›€
+        //floatYpos = transform.position.y; // ë„ìš´ yì¢Œí‘œë¥¼ ì €ì¥í•¨
         for(int i = 0; i < myCols.Length; i++)
         {
             myCols[i].enabled = false;
         }
         if (!GameManager.isDrag) GameManager.isDrag = true;
-        // static º¯¼ö GameManager.isDrag¸¦ º¯°æ, drag »óÅÂ·Î ¼³Á¤.
+        // static ë³€ìˆ˜ GameManager.isDragë¥¼ ë³€ê²½, drag ìƒíƒœë¡œ ì„¤ì •.
         //if (floatDist != standardFloatDist) floatDist = standardFloatDist;
+<<<<<<< HEAD
+        // ë„ìš¸ ë†’ì´ê°€ ê¸°ì¤€ ë†’ì´ì™€ ë‹¤ë¥´ë‹¤ë©´ ë„ìš¸ ë†’ì´ë¥¼ ê¸°ì¤€ ë†’ì´ë¡œ ë³€ê²½
+=======
         // ¶ç¿ï ³ôÀÌ°¡ ±âÁØ ³ôÀÌ¿Í ´Ù¸£´Ù¸é ¶ç¿ï ³ôÀÌ¸¦ ±âÁØ ³ôÀÌ·Î º¯°æ
-        Debug.Log("Drag");
+>>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
+        
     }
 
     protected override void OnDragPro()
     {
+        if (preMousePos != Vector3.forward)
+        {
+            Vector3 mouseMoveDist = Input.mousePosition - preMousePos;
+            if (!Mathf.Approximately(mouseMoveDist.magnitude, 0.0f))
+            {
+                Debug.Log("MouseMove");
+            }
+        }
         Ray ray = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);
         
         if (Physics.Raycast(ray, out RaycastHit rayHit, Mathf.Infinity, dropAble))
@@ -39,7 +52,7 @@ public class DragState : StopState
             terminalPos.y = canDropTrans.position.y + 0.5f + floatDist + pivotDist;
             transform.position = terminalPos;
 
-             if (Physics.BoxCast(terminalPos + Vector3.up * 2.0f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
+             if (Physics.BoxCast(terminalPos + Vector3.up * 1.5f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
                     out RaycastHit boxHit, Quaternion.identity, Mathf.Infinity)) 
                         
              {
@@ -50,6 +63,7 @@ public class DragState : StopState
              }
         }
         else DropJudge(false);
+        preMousePos = Input.mousePosition;
     }
     private void DropJudge(bool tf)
     {

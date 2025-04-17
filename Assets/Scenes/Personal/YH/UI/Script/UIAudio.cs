@@ -2,9 +2,16 @@ using UnityEngine;
 
 public class UIAudio : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    AudioSource audioSource;
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+    }
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    public void PlayAudio()
+    {
+        audioSource.Play();
     }
 }

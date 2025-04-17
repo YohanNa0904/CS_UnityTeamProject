@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6745718911551492894
+--- !u!1 &1297561396683664223
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 252465903968691615}
-  - component: {fileID: 6522199649890929643}
-  - component: {fileID: 2624454632442559103}
+  - component: {fileID: 7500358806919001418}
+  - component: {fileID: 4221470252913222858}
   m_Layer: 0
-  m_Name: UIAudio
+  m_Name: DragAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &252465903968691615
+--- !u!4 &7500358806919001418
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6745718911551492894}
+  m_GameObject: {fileID: 1297561396683664223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalPosition: {x: 898.08453, y: 538.3659, z: -843.93475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6522199649890929643
+--- !u!82 &4221470252913222858
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6745718911551492894}
+  m_GameObject: {fileID: 1297561396683664223}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 211a2d06aa76b45aaa14368689317998, type: 3}
-  m_Resource: {fileID: 8300000, guid: 211a2d06aa76b45aaa14368689317998, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bbd1d295cae064b3690b64ce868a566d, type: 3}
+  m_Resource: {fileID: 8300000, guid: bbd1d295cae064b3690b64ce868a566d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -130,15 +129,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2624454632442559103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6745718911551492894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e1cb1b30e49ceb4eae4fc390399a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

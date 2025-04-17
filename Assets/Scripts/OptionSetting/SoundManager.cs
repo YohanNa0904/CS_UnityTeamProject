@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
+<<<<<<< HEAD
+   AudioSource myBGM;
+    float absoluteBGMSound; 
+    [SerializeField] float relativeSoundNum = 1.0f;
+=======
     AudioSource myBGM;
-    
+    //[SerializeField] float relativeSoundNum = 1.0f;
+>>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
     public float bgmVolume
     {
-        get => myBGM.volume;
+        get => absoluteBGMSound;
         set 
         {
-            myBGM.volume = Mathf.Clamp(value, 0f, 1f);
-            PlayerPrefs.SetFloat("BGM_VOLUME", myBGM.volume);
+            absoluteBGMSound = Mathf.Clamp(value, 0f, 1f);
+            PlayerPrefs.SetFloat("BGM_VOLUME", absoluteBGMSound);
+            myBGM.volume = absoluteBGMSound * relativeSoundNum;
         }
     }
     float _effect = 0f;
@@ -29,8 +36,15 @@ public class SoundManager : Singleton<SoundManager>
         myBGM = gameObject.AddComponent<AudioSource>();
         myBGM.loop = true;
         if (!PlayerPrefs.HasKey("BGM_VOLUME")) bgmVolume = 0.5f;
-        else myBGM.volume = PlayerPrefs.GetFloat("BGM_VOLUME");
-
+<<<<<<< HEAD
+        else
+        {
+             myBGM.volume = PlayerPrefs.GetFloat("BGM_VOLUME");
+        }
+=======
+        else bgmVolume = PlayerPrefs.GetFloat("BGM_VOLUME");
+       
+>>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
         if (!PlayerPrefs.HasKey("EFFECT_VOLUME")) _effect = 0.3f;
         else _effect = PlayerPrefs.GetFloat("EFFECT_VOLUME");
     }

@@ -2,75 +2,76 @@ using UnityEngine;
 
 public class DropStateGravity : DragRotate
 {
-    float targetDist = 0.0f; // µå¶øÇÒ °Å¸®¸¦ ÀúÀå
-    float preYpos = 0.0f; // ÀÌÀü y ÁÂÇ¥¸¦ ÀúÀå
-    float newYpos = 0.0f; // ÇöÀç y ÁÂÇ¥¸¦ ÀúÀå
-    float dropDist = 0.0f; // ¶³¾îÁø °Å¸®¸¦ ÀúÀå
-    float dropTerYpos = 0.0f; // µå¶øµÈ ¹°Ã¼ÀÇ ¸ñÇ¥ y ÁÂÇ¥ 
+    float targetDist = 0.0f; // ë“œëí•  ê±°ë¦¬ë¥¼ ì €ì¥
+    float preYpos = 0.0f; // ì´ì „ y ì¢Œí‘œë¥¼ ì €ì¥
+    float newYpos = 0.0f; // í˜„ì¬ y ì¢Œí‘œë¥¼ ì €ì¥
+    float dropDist = 0.0f; // ë–¨ì–´ì§„ ê±°ë¦¬ë¥¼ ì €ì¥
+    float dropTerYpos = 0.0f; // ë“œëëœ ë¬¼ì²´ì˜ ëª©í‘œ y ì¢Œí‘œ 
     
 
     protected override void EndDragSet()
     {
         if (IsRotation) IsRotation = false;
-        // È¸Àü »óÅÂ¸¦ ¾È Ç®¾ú´Ù¸é µå·¡±×°¡ ³¡³¯ ¶§ È¸Àü »óÅÂ°¡ ¾Æ´Ñ °ÍÀ¸·Î º¯°æ
+        // íšŒì „ ìƒíƒœë¥¼ ì•ˆ í’€ì—ˆë‹¤ë©´ ë“œë˜ê·¸ê°€ ëë‚  ë•Œ íšŒì „ ìƒíƒœê°€ ì•„ë‹Œ ê²ƒìœ¼ë¡œ ë³€ê²½
         if (camMove != null && !camMove.enabled) camMove.enabled = true;
-        // È¸Àü »óÅÂ¸¦ ¾È Ç®¾ú´Ù¸é µå·¡±×°¡ ³¡³¯ ¶§ puzzleCam¿¡ ÀúÀåÇÑ ÄÄÆ÷³ÍÆ®¸¦ È°¼ºÈ­
+        // íšŒì „ ìƒíƒœë¥¼ ì•ˆ í’€ì—ˆë‹¤ë©´ ë“œë˜ê·¸ê°€ ëë‚  ë•Œ puzzleCamì— ì €ì¥í•œ ì»´í¬ë„ŒíŠ¸ë¥¼ í™œì„±í™”
 
         if (canDrop)
         {
             ChildFall();
             if(!rb.useGravity) rb.useGravity = true;
             if(rb.isKinematic) rb.isKinematic = false;
-            //Áß·ÂÀ» È°¼ºÈ­ÇÏ±â À§ÇØ isKinematicÀ» ºñÈ°¼ºÈ­
+            //ì¤‘ë ¥ì„ í™œì„±í™”í•˜ê¸° ìœ„í•´ isKinematicì„ ë¹„í™œì„±í™”
             dropTerYpos = canDropTrans.position.y + 0.5f + pivotDist;
-            //¸ñÇ¥ y°ªÀ» ¼³Á¤
+            //ëª©í‘œ yê°’ì„ ì„¤ì •
             targetDist = transform.position.y - dropTerYpos;
-            // ¶³¾îÁú °Å¸® ÀúÀå
+            // ë–¨ì–´ì§ˆ ê±°ë¦¬ ì €ì¥
             //floatDist = targetDist;
-            // ´Ù½Ã µå·¡±×ÇßÀ» ¶§ ¶ç¿ï ³ôÀÌ ¼³Á¤
+            // ë‹¤ì‹œ ë“œë˜ê·¸í–ˆì„ ë•Œ ë„ìš¸ ë†’ì´ ì„¤ì •
             preYpos = newYpos = transform.position.y;
-            //ÇöÀç ³ôÀÌ Á¤º¸ ÀúÀå
+            //í˜„ì¬ ë†’ì´ ì •ë³´ ì €ì¥
         }
         else
         {
-            //ÇöÀç ¸¶¿ì½º Ä¿¼­ÀÇ ÁöÁ¤ÇÑ °Å¸® ¾Æ·¡¿¡, ¼³Á¤ÇÑ ·¹ÀÌ¾î¸¦ °¡Áø ¿ÀºêÁ§Æ®°¡ ¾ø´Ù¸é
+            //í˜„ì¬ ë§ˆìš°ìŠ¤ ì»¤ì„œì˜ ì§€ì •í•œ ê±°ë¦¬ ì•„ë˜ì—, ì„¤ì •í•œ ë ˆì´ì–´ë¥¼ ê°€ì§„ ì˜¤ë¸Œì íŠ¸ê°€ ì—†ë‹¤ë©´
             transform.SetPositionAndRotation(dragStartPos, Quaternion.Euler(dragStartRot));
-            // µå·¡±× ½ÃÀÛÇÑ À§Ä¡¿Í È¸Àü °ªÀ¸·Î µÇµ¹¸²
+            // ë“œë˜ê·¸ ì‹œì‘í•œ ìœ„ì¹˜ì™€ íšŒì „ ê°’ìœ¼ë¡œ ë˜ëŒë¦¼
             //floatDist = floatYpos - transform.position.y;
-            // ´Ù½Ã µå·¡±×ÇßÀ» ¶§ ¶ç¿ï ³ôÀÌ ¼³Á¤
+            // ë‹¤ì‹œ ë“œë˜ê·¸í–ˆì„ ë•Œ ë„ìš¸ ë†’ì´ ì„¤ì •
             ChangeState(State.Stop);
         }
     }
     
-    protected virtual void ChildFall() //»ó¼ÓÇØ¼­ ³»¿ëÀ» Á¤ÇÒ °¡»óÇÔ¼ö
+    protected virtual void ChildFall() //ìƒì†í•´ì„œ ë‚´ìš©ì„ ì •í•  ê°€ìƒí•¨ìˆ˜
     {
 
     }
     protected override void EndDragPro()
     {
         newYpos = transform.position.y;
-        // ÇöÀç y ÁÂÇ¥ °ªÀ» ÀÔ·Â
+        // í˜„ì¬ y ì¢Œí‘œ ê°’ì„ ì…ë ¥
         dropDist = preYpos - newYpos;
-        // y ÁÂÇ¥ÀÇ Â÷ÀÌ·Î ¶³¾îÁø °Å¸®¸¦ ±¸ÇÔ
+        // y ì¢Œí‘œì˜ ì°¨ì´ë¡œ ë–¨ì–´ì§„ ê±°ë¦¬ë¥¼ êµ¬í•¨
         preYpos = newYpos;
         targetDist -= dropDist;
-        //µå¶øÇÒ ¸ñÇ¥ °Å¸®¿¡¼­ ¶³¾îÁø °Å¸®¸¦ »­
+        //ë“œëí•  ëª©í‘œ ê±°ë¦¬ì—ì„œ ë–¨ì–´ì§„ ê±°ë¦¬ë¥¼ ëºŒ
 
         if (Mathf.Approximately(targetDist, 0.0f) || targetDist < 0.0f)
         {
-            //µå¶øÇÒ ¸ñÇ¥ °Å¸®°¡ 0ÀÇ ±Ù»çÄ¡°Å³ª 0º¸´Ù ÀÛÀ¸¸é
+            //ë“œëí•  ëª©í‘œ ê±°ë¦¬ê°€ 0ì˜ ê·¼ì‚¬ì¹˜ê±°ë‚˜ 0ë³´ë‹¤ ì‘ìœ¼ë©´
             rb.useGravity = false;
             rb.isKinematic = true;
             transform.position = new(transform.position.x, dropTerYpos, transform.position.z);
-            //Áß·ÂÀ¸·Î ÀÌµ¿ÇØ¼­ ¸ñÇ¥ÇÑ yÁÂÇ¥¿¡ Á¤È®È÷ µµÂøÇÏÁö ¾Ê±â ¶§¹®¿¡ yÁÂÇ¥¸¦ Á÷Á¢ ¼³Á¤ÇØÁÜ
+            //ì¤‘ë ¥ìœ¼ë¡œ ì´ë™í•´ì„œ ëª©í‘œí•œ yì¢Œí‘œì— ì •í™•íˆ ë„ì°©í•˜ì§€ ì•Šê¸° ë•Œë¬¸ì— yì¢Œí‘œë¥¼ ì§ì ‘ ì„¤ì •í•´ì¤Œ
             transform.parent = canDropTrans;
-            LandingTrigger();
+<<<<<<< HEAD
+            //ì¸í˜• ì• ë‹ˆë©”ì´í„° íŠ¸ë¦¬ê±° ìš© ê°€ìƒí•¨ìˆ˜
+=======
             //ÀÎÇü ¾Ö´Ï¸ŞÀÌÅÍ Æ®¸®°Å ¿ë °¡»óÇÔ¼ö
+>>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
+            preMousePos = Vector3.forward;
+            Debug.Log("MoveEnd");
             ChangeState(State.Stop);
         }
-    }
-    protected virtual void LandingTrigger()
-    {
-
     }
 }
