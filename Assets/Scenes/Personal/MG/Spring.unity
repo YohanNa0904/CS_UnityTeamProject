@@ -7482,6 +7482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pivotYpos: 0
 --- !u!1001 &533601448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29070,6 +29071,8 @@ MonoBehaviour:
   moveSpeed: 3
   cameraTransform: {fileID: 956501881}
   jumpPower: 4.7
+  JumpAudio: {fileID: 0}
+  StepAudio: {fileID: 0}
 --- !u!1001 &1985422699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31395,6 +31398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pivotYpos: 0
 --- !u!4 &2135621003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5849077449960974431, guid: 79fa7a2255798e845a77519233daef64, type: 3}

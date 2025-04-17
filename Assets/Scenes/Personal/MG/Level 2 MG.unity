@@ -41162,6 +41162,8 @@ MonoBehaviour:
   moveSpeed: 2
   cameraTransform: {fileID: 1614463360}
   jumpPower: 5
+  JumpAudio: {fileID: 0}
+  StepAudio: {fileID: 0}
 --- !u!4 &1955192702
 Transform:
   m_ObjectHideFlags: 0
@@ -45211,6 +45213,10 @@ PrefabInstance:
       propertyPath: dropAble.m_Bits
       value: 768
       objectReference: {fileID: 0}
+    - target: {fileID: 2010936016317801775, guid: 2a328e094940037478ccc9238ae1c9d3, type: 3}
+      propertyPath: dollLayer.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 3135808655399599496, guid: 2a328e094940037478ccc9238ae1c9d3, type: 3}
       propertyPath: m_Name
       value: PushSpringPivot 1
@@ -45312,6 +45318,18 @@ PrefabInstance:
     - target: {fileID: 1968290121669942460, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToWorldmap
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437978371528941142, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437978371528941142, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437978371528941142, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2686420219812954556, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_Pivot.x
@@ -45452,6 +45470,10 @@ PrefabInstance:
     - target: {fileID: 8488369504620681955, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493286358212608719, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
