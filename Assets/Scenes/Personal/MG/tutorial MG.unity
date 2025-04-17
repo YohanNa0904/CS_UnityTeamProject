@@ -62200,17 +62200,25 @@ PrefabInstance:
       propertyPath: DragAudio
       value: 
       objectReference: {fileID: 1448204351}
+    - target: {fileID: 1823784776217036757, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2235566453548967886, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: DragAudio
       value: 
       objectReference: {fileID: 1448204351}
+    - target: {fileID: 2271789378714927667, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2414098332582618195, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2437978371528941142, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2686420219812954556, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_Pivot.x
@@ -62292,6 +62300,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2933336861844224294, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061230909115399514, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109360688525757770, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3142063762121738099, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: DragAudio
       value: 
@@ -62312,6 +62332,10 @@ PrefabInstance:
       propertyPath: DragAudio
       value: 
       objectReference: {fileID: 1448204351}
+    - target: {fileID: 6419181851443219884, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6519437417376617627, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

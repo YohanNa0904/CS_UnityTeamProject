@@ -59,7 +59,7 @@ public class Door : MonoBehaviour, IPlayerInteraction
         // ���� �����ٴ��� �ϴ� �׷��͵� ����
         yield return GameTime.GetWait(2.0f);
         gameObject.GetComponent<Animator>().SetTrigger("Open");
-        //DoorOpenAudio.Play();
+        if(DoorOpenAudio.clip != null) DoorOpenAudio.Play();
         Key.transform.SetParent(DoorKeySlot.transform);
         Key = null;
         DoorKeySlot = null;
