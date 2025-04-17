@@ -118048,10 +118048,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 363362157}
-    - target: {fileID: 8621722208625444877, guid: fc78bf1210246f54fb650a00004a23a4, type: 3}
-      propertyPath: DoorKeySlot
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

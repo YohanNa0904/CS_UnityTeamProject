@@ -12504,6 +12504,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorSet
       objectReference: {fileID: 0}
+    - target: {fileID: 6260908982911321371, guid: fc78bf1210246f54fb650a00004a23a4, type: 3}
+      propertyPath: Key
+      value: 
+      objectReference: {fileID: 593569995}
+    - target: {fileID: 6260908982911321371, guid: fc78bf1210246f54fb650a00004a23a4, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 828482614}
     - target: {fileID: 1652856491859929313, guid: 475d3773bca40534f8eebb479cab7a97, type: 3}
       propertyPath: goalCol
       value: 

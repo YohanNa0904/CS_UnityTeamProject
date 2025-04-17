@@ -17,12 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Personal/MG/tutorial MG.unity
     guid: 605e3cb248ba9344fb939d58a8d17595
-  - enabled: 1
-    path: Assets/Scenes/Personal/MG/Level 2 MG.unity
-    guid: 20a8039e89b7d91478b878e9dcd591fc
-  - enabled: 1
-    path: Assets/Scenes/Main Stage/Level 2.unity
-    guid: 8ee50f7701c51a84a87d1d15b823423d
   - enabled: 0
     path: Assets/Scenes/Main Stage/tutorial.unity
     guid: 1b3344515baca444da9e26acf2af7863
