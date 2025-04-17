@@ -10,6 +10,13 @@ public class DragState : StopState
     protected float pivotDist { get; set; } = 0.0f;
     protected Transform canDropTrans = null;
     protected Vector3 preMousePos = Vector3.forward;
+    protected AudioSource audioSo;
+
+    protected override void Start()
+    {
+        base.Start();
+        audioSo = GetComponent<AudioSource>();
+    }
 
     protected override void OnDragSet()
     {
@@ -36,7 +43,7 @@ public class DragState : StopState
             Vector3 mouseMoveDist = Input.mousePosition - preMousePos;
             if (!Mathf.Approximately(mouseMoveDist.magnitude, 0.0f))
             {
-                Debug.Log("MouseMove");
+                DragAudioManager.Instance.DragSound(audioSo);
             }
         }
         Ray ray = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);
