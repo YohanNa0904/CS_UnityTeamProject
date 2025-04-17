@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-<<<<<<< HEAD
    AudioSource myBGM;
     float absoluteBGMSound; 
     [SerializeField] float relativeSoundNum = 1.0f;
-=======
-    AudioSource myBGM;
-    //[SerializeField] float relativeSoundNum = 1.0f;
->>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
     public float bgmVolume
     {
         get => absoluteBGMSound;
@@ -36,15 +31,10 @@ public class SoundManager : Singleton<SoundManager>
         myBGM = gameObject.AddComponent<AudioSource>();
         myBGM.loop = true;
         if (!PlayerPrefs.HasKey("BGM_VOLUME")) bgmVolume = 0.5f;
-<<<<<<< HEAD
         else
         {
              myBGM.volume = PlayerPrefs.GetFloat("BGM_VOLUME");
         }
-=======
-        else bgmVolume = PlayerPrefs.GetFloat("BGM_VOLUME");
-       
->>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
         if (!PlayerPrefs.HasKey("EFFECT_VOLUME")) _effect = 0.3f;
         else _effect = PlayerPrefs.GetFloat("EFFECT_VOLUME");
     }

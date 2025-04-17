@@ -25,11 +25,7 @@ public class DragState : StopState
         if (!GameManager.isDrag) GameManager.isDrag = true;
         // static ë³€ìˆ˜ GameManager.isDragë¥¼ ë³€ê²½, drag ìƒíƒœë¡œ ì„¤ì •.
         //if (floatDist != standardFloatDist) floatDist = standardFloatDist;
-<<<<<<< HEAD
         // ë„ìš¸ ë†’ì´ê°€ ê¸°ì¤€ ë†’ì´ì™€ ë‹¤ë¥´ë‹¤ë©´ ë„ìš¸ ë†’ì´ë¥¼ ê¸°ì¤€ ë†’ì´ë¡œ ë³€ê²½
-=======
-        // ¶ç¿ï ³ôÀÌ°¡ ±âÁØ ³ôÀÌ¿Í ´Ù¸£´Ù¸é ¶ç¿ï ³ôÀÌ¸¦ ±âÁØ ³ôÀÌ·Î º¯°æ
->>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
         
     }
 

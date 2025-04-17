@@ -64,11 +64,7 @@ public class DropStateGravity : DragRotate
             transform.position = new(transform.position.x, dropTerYpos, transform.position.z);
             //중력으로 이동해서 목표한 y좌표에 정확히 도착하지 않기 때문에 y좌표를 직접 설정해줌
             transform.parent = canDropTrans;
-<<<<<<< HEAD
             //인형 애니메이터 트리거 용 가상함수
-=======
-            //���� �ִϸ����� Ʈ���� �� �����Լ�
->>>>>>> 9cc0d81795ff9b03470f0a181e1efea608611616
             preMousePos = Vector3.forward;
             Debug.Log("MoveEnd");
             ChangeState(State.Stop);
