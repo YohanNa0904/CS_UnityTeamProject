@@ -14,7 +14,7 @@ public class Spring : AnimProperty, IDollInteraction
 
     public void Interact()
     {
-        GetComponentInParent<Animator>()?.SetBool("Spring1On", !GetComponentInParent<Animator>().GetBool("Spring1On"));
+        GetComponent<Animator>()?.SetBool("Spring1On", !GetComponent<Animator>().GetBool("Spring1On"));
     }
 
     public void OnPush()

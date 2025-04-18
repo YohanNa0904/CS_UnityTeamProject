@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00368c41e6ff041d8b14ec4c14d9a5e6
+guid: 10bd90358b3df4188be4101fac01ae5d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,7 +31,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Spring1Off
+      name: Spring 1 Off
       takeName: Scene
       internalID: -623603649343465320
       firstFrame: 0
