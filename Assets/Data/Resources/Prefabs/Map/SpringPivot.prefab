@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3679309572295190246, guid: c536855c5eaf2478da1f8f4688ca299b, type: 3}
       propertyPath: pushPowar
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7451386714616358562, guid: 6c2276a76f5a144bd9ee1373a4f829d0, type: 3}
       propertyPath: pushPowar
