@@ -24,7 +24,6 @@ public class DragState : StopState
         dragStartPos = transform.position;
         dragStartRot = transform.eulerAngles; // 드래그 시작할 때의 위치와 회전 정보를 저장 
         transform.position += Vector3.up * floatDist; // 드래그한 오브젝트를 띄움
-        //floatYpos = transform.position.y; // 띄운 y좌표를 저장함
         for(int i = 0; i < myCols.Length; i++)
         {
             myCols[i].enabled = false;
@@ -60,7 +59,6 @@ public class DragState : StopState
                 transform.position = terminalPos;
                 DragAudioManager.Instance.DragSound(audioSo);
 
-
                 if (Physics.BoxCast(terminalPos + Vector3.up * 1.5f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
                        out RaycastHit boxHit, Quaternion.identity, Mathf.Infinity))
 
@@ -71,6 +69,7 @@ public class DragState : StopState
 
                 }
             }
+            else DropJudge(true);
         }
         else DropJudge(false);
         //preMousePos = Input.mousePosition;

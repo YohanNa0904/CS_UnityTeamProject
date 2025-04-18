@@ -62,6 +62,7 @@ public class DragRotate : DragState
         Vector3 rotKeyDown = dir;
         RotateAngleSet(ref rotKeyDown.x, ref rotKeyDown.y, ref rotKeyDown.z);
         transform.Rotate(rotKeyDown * 90.0f, Space.World);
+        DragAudioManager.Instance.RotateSound(audioSo);
     }
 
     void RotateAngleSet(ref float x, ref float y, ref float z)
