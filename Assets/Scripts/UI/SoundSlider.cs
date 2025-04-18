@@ -13,7 +13,12 @@ public class SoundSlider : MonoBehaviour
         {
             case Type.BGM:
                 mySlider.value = SoundManager.Instance.bgmVolume;
-                mySlider.onValueChanged.AddListener(v => SoundManager.Instance.bgmVolume = v);
+                mySlider.onValueChanged.AddListener(v => 
+                    {
+                        SoundManager.Instance.bgmVolume = v;
+                        SoundManager.Instance.SetRelativeBGM();
+                    }
+                );
                 break;
 
             case Type.EFFECT:

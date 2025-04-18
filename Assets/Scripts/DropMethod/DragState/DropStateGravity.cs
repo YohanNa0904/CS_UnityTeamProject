@@ -66,7 +66,6 @@ public class DropStateGravity : DragRotate
             transform.parent = canDropTrans;
             //인형 애니메이터 트리거 용 가상함수
             preMousePos = Vector3.forward;
-            DragAudioManager.Instance.StopClip(audioSo);
             ChangeState(State.Stop);
         }
     }

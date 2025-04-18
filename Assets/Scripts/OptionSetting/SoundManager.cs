@@ -1,10 +1,11 @@
+using Unity.Profiling;
 using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-   AudioSource myBGM;
+    AudioSource myBGM;
     float absoluteBGMSound; 
-    [SerializeField] float relativeSoundNum = 1.0f;
+    float relativeBGMVolume { get; set; }
     public float bgmVolume
     {
         get => absoluteBGMSound;
@@ -12,7 +13,6 @@ public class SoundManager : Singleton<SoundManager>
         {
             absoluteBGMSound = Mathf.Clamp(value, 0f, 1f);
             PlayerPrefs.SetFloat("BGM_VOLUME", absoluteBGMSound);
-            myBGM.volume = absoluteBGMSound * relativeSoundNum;
         }
     }
     float _effect = 0f;
@@ -33,15 +33,22 @@ public class SoundManager : Singleton<SoundManager>
         if (!PlayerPrefs.HasKey("BGM_VOLUME")) bgmVolume = 0.5f;
         else
         {
-             myBGM.volume = PlayerPrefs.GetFloat("BGM_VOLUME");
+             bgmVolume = PlayerPrefs.GetFloat("BGM_VOLUME");
         }
         if (!PlayerPrefs.HasKey("EFFECT_VOLUME")) _effect = 0.3f;
         else _effect = PlayerPrefs.GetFloat("EFFECT_VOLUME");
     }
 
-    public void PlayBGM(AudioClip clip)
+    public void PlayBGM(AudioClip clip, float relatve)
     {
         myBGM.clip = clip;
+        relativeBGMVolume = relatve;
+        SetRelativeBGM();
         myBGM.Play();
+    }
+
+    public void SetRelativeBGM()
+    {
+        myBGM.volume = absoluteBGMSound * relativeBGMVolume;
     }
 }
