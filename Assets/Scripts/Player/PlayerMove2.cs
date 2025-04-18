@@ -21,6 +21,7 @@ public class PlayerMove2 : AnimProperty
     [SerializeField] public AudioSource JumpAudio;
     [SerializeField] public AudioSource StepAudio;
     bool isMove = false;
+    bool audioPlay = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -57,10 +58,19 @@ public class PlayerMove2 : AnimProperty
             }
             jumpDir.Normalize();
         }
-        if(Input.GetKey(KeyCode.LeftControl))
+        if(audioPlay && Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.Escape))
         {
             StepAudio.Stop();
             JumpAudio.Stop();
+            StepAudio.mute = true;
+            JumpAudio.mute = true;
+            audioPlay = false;
+        }
+        if(!audioPlay && Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.Escape))
+        {
+            StepAudio.mute = false;
+            JumpAudio.mute = false;
+            audioPlay = true;
         }
     }
     private void Move()

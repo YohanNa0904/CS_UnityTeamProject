@@ -91334,8 +91334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2621610f91316f64781e2f362c6ef950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectDragCilp: {fileID: 8300000, guid: bbd1d295cae064b3690b64ce868a566d, type: 3}
-  ObjectRotateCilp: {fileID: 0}
+  ObjectDragCilp: {fileID: 8300000, guid: 77b11434571f5441b8a7c0330419f022, type: 3}
+  ObjectRotateCilp: {fileID: 8300000, guid: 7b6a9cd8f9ad4476e830701fd0527a3b, type: 3}
 --- !u!1001 &1650458964
 PrefabInstance:
   m_ObjectHideFlags: 0
