@@ -8,8 +8,9 @@ public class DollCase : AnimProperty, IDollInteraction
 
     public void Interact()
     {
-        if (Physics.Raycast(door.transform.position - new Vector3(0, 1, 0), door.transform.forward, 1.0f))
+        if (!Physics.Raycast(door.transform.position - new Vector3(0, 1, 0), -door.transform.up, 1.0f))
         {
+            Debug.Log("DollCase");
             Doll.transform.SetParent(null);
             myAnim.SetTrigger("DollCaseOpen");
 

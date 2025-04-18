@@ -6725,6 +6725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: 02f2664b02187ce4588c598c2cc4d109, type: 3}
+  relativeVolume: 0.5
 --- !u!1001 &74323535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36047,6 +36048,18 @@ PrefabInstance:
     - target: {fileID: 8277490570075527202, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91357,6 +91370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectDragCilp: {fileID: 8300000, guid: 77b11434571f5441b8a7c0330419f022, type: 3}
   ObjectRotateCilp: {fileID: 8300000, guid: 7b6a9cd8f9ad4476e830701fd0527a3b, type: 3}
+  relativeDragVolume: 1
+  relativeRotateVolume: 1
 --- !u!1001 &1650458964
 PrefabInstance:
   m_ObjectHideFlags: 0
