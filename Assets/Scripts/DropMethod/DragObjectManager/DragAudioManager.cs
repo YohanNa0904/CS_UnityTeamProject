@@ -14,7 +14,7 @@ public class DragAudioManager : MonoBehaviour
     {
         if (audio.clip != ObjectDragCilp) audio.clip = ObjectDragCilp;
         if (audio.volume != SoundManager.Instance.effectVolume) audio.volume = SoundManager.Instance.effectVolume;
-        if (!audio.isPlaying) audio.Play();
+        audio.Play();
     }
 
     public void StopClip(AudioSource audio)

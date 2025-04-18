@@ -38,6 +38,7 @@ public class DragState : StopState
 
     protected override void OnDragPro()
     {
+        /*
         if (preMousePos != Vector3.forward)
         {
             Vector3 mouseMoveDist = Input.mousePosition - preMousePos;
@@ -46,6 +47,7 @@ public class DragState : StopState
                 DragAudioManager.Instance.DragSound(audioSo);
             }
         }
+        */
         Ray ray = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);
         
         if (Physics.Raycast(ray, out RaycastHit rayHit, Mathf.Infinity, dropAble))
@@ -53,20 +55,25 @@ public class DragState : StopState
             canDropTrans = rayHit.transform;
             Vector3 terminalPos = rayHit.transform.position;
             terminalPos.y = canDropTrans.position.y + 0.5f + floatDist + pivotDist;
-            transform.position = terminalPos;
+            if (transform.position != terminalPos)
+            {
+                transform.position = terminalPos;
+                DragAudioManager.Instance.DragSound(audioSo);
 
-             if (Physics.BoxCast(terminalPos + Vector3.up * 1.5f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
-                    out RaycastHit boxHit, Quaternion.identity, Mathf.Infinity)) 
-                        
-             {
-                if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0 ) DropJudge(true);
 
-                else DropJudge(false);
-                    
-             }
+                if (Physics.BoxCast(terminalPos + Vector3.up * 1.5f, new Vector3(0.4f, 0.4f, 0.4f), Vector3.down,
+                       out RaycastHit boxHit, Quaternion.identity, Mathf.Infinity))
+
+                {
+                    if ((1 << boxHit.transform.gameObject.layer & dropAble) != 0) DropJudge(true);
+
+                    else DropJudge(false);
+
+                }
+            }
         }
         else DropJudge(false);
-        preMousePos = Input.mousePosition;
+        //preMousePos = Input.mousePosition;
     }
     private void DropJudge(bool tf)
     {
