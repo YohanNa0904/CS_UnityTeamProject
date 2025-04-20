@@ -15,7 +15,7 @@ public class UIMouseCheck : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
     
     private void OnEnable()
     {
-        anim.SetBool("OnMouse", false);
+        anim.SetTrigger("OpenMenu");
     }
     
     public void OnPointerEnter(PointerEventData eventData)

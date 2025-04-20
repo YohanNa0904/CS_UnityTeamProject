@@ -7,7 +7,7 @@ public class DropStateGravity : DragRotate
     float newYpos = 0.0f; // 현재 y 좌표를 저장
     float dropDist = 0.0f; // 떨어진 거리를 저장
     float dropTerYpos = 0.0f; // 드랍된 물체의 목표 y 좌표 
-    
+    [SerializeField] LayerMask dontParentMask;
 
     protected override void EndDragSet()
     {
@@ -63,8 +63,8 @@ public class DropStateGravity : DragRotate
             rb.isKinematic = true;
             transform.position = new(transform.position.x, dropTerYpos, transform.position.z);
             //중력으로 이동해서 목표한 y좌표에 정확히 도착하지 않기 때문에 y좌표를 직접 설정해줌
-            transform.parent = canDropTrans;
-            //인형 애니메이터 트리거 용 가상함수
+            if((1 << canDropTrans.gameObject.layer & dontParentMask) == 0 )transform.parent = canDropTrans;
+            
             preMousePos = Vector3.forward;
             ChangeState(State.Stop);
         }

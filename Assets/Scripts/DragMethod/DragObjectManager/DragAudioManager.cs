@@ -26,19 +26,19 @@ public class DragAudioManager : MonoBehaviour
 
     void RelativeVolume(AudioSource audio, AudioClip audioClip, float relativeVol)
     {
-        bool cilpChange = false, volumeChange = false;
+        bool volChange = false;
         if (audio.clip != audioClip)
         { 
             audio.clip = audioClip;
-            cilpChange = true;
+            volChange = true;
         }
         if (absoulteEffVoi != SoundManager.Instance.effectVolume)
         {
             absoulteEffVoi = SoundManager.Instance.effectVolume;
-            volumeChange = true;
+            volChange = true;
         }
         
-        if(cilpChange || volumeChange) audio.volume = absoulteEffVoi * relativeVol;
+        if(volChange) audio.volume = absoulteEffVoi * relativeVol;
         
         audio.Play();
     }
