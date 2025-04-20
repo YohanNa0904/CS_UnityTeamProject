@@ -201,6 +201,9 @@ MonoBehaviour:
   dropAble:
     serializedVersion: 2
     m_Bits: 2097920
+  dontParentMask:
+    serializedVersion: 2
+    m_Bits: 0
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!136 &1833922585034650133
@@ -265,7 +268,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
