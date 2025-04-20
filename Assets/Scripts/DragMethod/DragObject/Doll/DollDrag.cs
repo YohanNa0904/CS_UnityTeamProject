@@ -8,10 +8,15 @@ public class DollDrag : DragAlpha
     {
         if (IsRotation)
         {
-            if (Input.GetKeyDown(KeyCode.A)) transform.Rotate(0, 90.0f, 0, Space.World);
-            else if (Input.GetKeyDown(KeyCode.D)) transform.Rotate(0, -90.0f, 0, Space.World);
-            
+            if (Input.GetKeyDown(KeyCode.A)) DollRotateOper(90f);
+            else if (Input.GetKeyDown(KeyCode.D)) DollRotateOper(-90f);
         }
+    }
+
+    void DollRotateOper(float Yangle)
+    {
+        transform.Rotate(0, Yangle, 0, Space.World);
+        DragAudioManager.Instance.RotateSound(audioSo);
     }
     protected override void DollStandby()
     {

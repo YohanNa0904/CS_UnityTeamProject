@@ -31,7 +31,7 @@ public class Interaction : AnimProperty
     void Start()
     {
         playerMove = GetComponentInParent<PlayerMove2>();
-        StepAudio = playerMove.StepAudio;
+        StepAudio = GetComponentInParent<PlayerSound>().getStepAudio;
     }
     private void Update()
     {

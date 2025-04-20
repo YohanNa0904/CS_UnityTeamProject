@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2608085299233595322}
   - component: {fileID: 2528363113975988445}
-  m_Layer: 0
+  - component: {fileID: 745566970518164563}
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,6 +54,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 1.84, z: 1}
   m_Center: {x: 0, y: 0.92, z: -0.49}
+--- !u!114 &745566970518164563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156509882408860323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da90d04f4f4bb764f8be56fb6401e596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: {fileID: 0}
+  DoorKeySlot: {fileID: 8448045893874410841}
+  Player: {fileID: 0}
+  DoorOpenAudio: {fileID: 0}
 --- !u!1 &8448045893874410841
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,9 +173,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e62d297b950e74ba7a7a8048e3fa7666, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8023048971923270794}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e62d297b950e74ba7a7a8048e3fa7666, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4868128421360512593}
   m_SourcePrefab: {fileID: 100100000, guid: e62d297b950e74ba7a7a8048e3fa7666, type: 3}
 --- !u!1 &6626577905290878981 stripped
 GameObject:
@@ -200,22 +214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalCol: {fileID: 0}
---- !u!114 &4868128421360512593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6626577905290878981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da90d04f4f4bb764f8be56fb6401e596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: {fileID: 0}
-  DoorKeySlot: {fileID: 8448045893874410841}
-  Player: {fileID: 0}
-  DoorOpenAudio: {fileID: 0}
 --- !u!4 &8842709618091739621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5944574336247245647, guid: e62d297b950e74ba7a7a8048e3fa7666, type: 3}

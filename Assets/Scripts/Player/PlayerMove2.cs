@@ -18,13 +18,13 @@ public class PlayerMove2 : AnimProperty
     Rigidbody rb = null;
     float maxSpeed = 1.0f;
     [SerializeField] float jumpPower = 6.0f;
-    [SerializeField] public AudioSource JumpAudio;
-    [SerializeField] public AudioSource StepAudio;
+    PlayerSound playerSound;
     bool isMove = false;
     bool audioPlay = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerSound = GetComponent<PlayerSound>();
     }
     void Update()
     {
@@ -33,7 +33,7 @@ public class PlayerMove2 : AnimProperty
     
         if (jumpCount != 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            JumpAudio.Play();
+            playerSound.JumpRelativeVol();
             jumpForce = true;
             jumpCount--;
         }
@@ -60,16 +60,20 @@ public class PlayerMove2 : AnimProperty
         }
         if(audioPlay && Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.Escape))
         {
-            StepAudio.Stop();
-            JumpAudio.Stop();
-            StepAudio.mute = true;
-            JumpAudio.mute = true;
+            
+            playerSound.getJumpAudio.Stop();
+            playerSound.getStepAudio.Stop();
+            playerSound.getJumpAudio.mute = true;
+            playerSound.getStepAudio.mute = true;
+            
             audioPlay = false;
         }
         if(!audioPlay && Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.Escape))
         {
-            StepAudio.mute = false;
-            JumpAudio.mute = false;
+
+            playerSound.getJumpAudio.mute = false;
+            playerSound.getStepAudio.mute = false;
+            
             audioPlay = true;
         }
     }
@@ -86,11 +90,13 @@ public class PlayerMove2 : AnimProperty
             Quaternion viewRot = Quaternion.LookRotation(moveDir.normalized); //�̵� �������� ȸ��
 
             myModel.rotation = Quaternion.Lerp(myModel.rotation, viewRot, Time.deltaTime * 20.0f); //�� ȸ�� 
+
+            if (!playerSound.getStepAudio.isPlaying && onGround)
+                playerSound.StepRelativeVol();
+            else if (!onGround) playerSound.getStepAudio.Stop();
             
-            if(!StepAudio.isPlaying && onGround) StepAudio.Play();
-            else if (!onGround) StepAudio.Stop();
         }
-        else StepAudio.Stop();
+        else playerSound.getStepAudio.Stop();
         
         float rootMotionSpeed = moveDir.magnitude;
         rootMotionSpeed = Mathf.Clamp(rootMotionSpeed, 0, maxSpeed);

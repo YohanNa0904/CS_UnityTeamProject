@@ -7,7 +7,7 @@ public class UIMouseCheck : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
     [SerializeField]Animator anim;
     [SerializeField]AudioSource DragAudio;
     float abosouluteEffVolume;
-    [SerializeField, Range(0f, 1f)] float relativeEffVolume = 1f;
+    [SerializeField, Range(0f, 1f)] float relativeEffVolume = 0.5f;
     void Awake()
     {
         anim.SetBool("OnMouse", false);
@@ -21,10 +21,11 @@ public class UIMouseCheck : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         anim.SetBool("OnMouse", true);
-        
-        abosouluteEffVolume = SoundManager.Instance.effectVolume;
-        DragAudio.volume = abosouluteEffVolume * relativeEffVolume;
-        
+        if (abosouluteEffVolume != SoundManager.Instance.effectVolume)
+        {
+            abosouluteEffVolume = SoundManager.Instance.effectVolume;
+            DragAudio.volume = abosouluteEffVolume * relativeEffVolume;
+        }
         DragAudio.Play();
     }
 

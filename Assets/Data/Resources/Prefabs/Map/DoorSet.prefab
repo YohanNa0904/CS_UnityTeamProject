@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7156509882408860323, guid: e563ef8a856064881ba83019a825e94b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7536251558970556974, guid: e563ef8a856064881ba83019a825e94b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.003
@@ -211,13 +215,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 89.98021
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4868128421360512593, guid: e563ef8a856064881ba83019a825e94b, type: 3}
+    - {fileID: 745566970518164563, guid: e563ef8a856064881ba83019a825e94b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5133907247269629881, guid: e563ef8a856064881ba83019a825e94b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6687106466470915968}
+    - targetCorrespondingSourceObject: {fileID: 7156509882408860323, guid: e563ef8a856064881ba83019a825e94b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7929019066484666114}
   m_SourcePrefab: {fileID: 100100000, guid: e563ef8a856064881ba83019a825e94b, type: 3}
 --- !u!4 &5030981889695322613 stripped
 Transform:
@@ -331,3 +340,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8448045893874410841, guid: e563ef8a856064881ba83019a825e94b, type: 3}
   m_PrefabInstance: {fileID: 1543651163161127754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8520002765615469033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7156509882408860323, guid: e563ef8a856064881ba83019a825e94b, type: 3}
+  m_PrefabInstance: {fileID: 1543651163161127754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7929019066484666114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520002765615469033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da90d04f4f4bb764f8be56fb6401e596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: {fileID: 0}
+  DoorKeySlot: {fileID: 6940427967696899603}
+  Player: {fileID: 0}
+  DoorOpenAudio: {fileID: 6687106466470915968}

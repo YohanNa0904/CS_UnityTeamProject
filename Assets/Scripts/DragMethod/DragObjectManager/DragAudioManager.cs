@@ -16,19 +16,30 @@ public class DragAudioManager : MonoBehaviour
 
     public void DragSound(AudioSource audio)
     {
-        if (audio.clip != ObjectDragCilp) audio.clip = ObjectDragCilp;
-        if (absoulteEffVoi != SoundManager.Instance.effectVolume) 
-            absoulteEffVoi = SoundManager.Instance.effectVolume;
-            audio.volume = absoulteEffVoi * relativeDragVolume;
-        audio.Play();
+        RelativeVolume(audio, ObjectDragCilp, relativeDragVolume);
     }
 
     public void RotateSound(AudioSource audio)
     {
-        if (audio.clip != ObjectRotateCilp) audio.clip = ObjectRotateCilp;
+        RelativeVolume(audio, ObjectRotateCilp, relativeRotateVolume);
+    }
+
+    void RelativeVolume(AudioSource audio, AudioClip audioClip, float relativeVol)
+    {
+        bool cilpChange = false, volumeChange = false;
+        if (audio.clip != audioClip)
+        { 
+            audio.clip = audioClip;
+            cilpChange = true;
+        }
         if (absoulteEffVoi != SoundManager.Instance.effectVolume)
+        {
             absoulteEffVoi = SoundManager.Instance.effectVolume;
-        audio.volume = absoulteEffVoi * relativeRotateVolume;
+            volumeChange = true;
+        }
+        
+        if(cilpChange || volumeChange) audio.volume = absoulteEffVoi * relativeVol;
+        
         audio.Play();
     }
     public void StopClip(AudioSource audio)

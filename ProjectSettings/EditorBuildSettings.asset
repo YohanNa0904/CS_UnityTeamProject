@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Personal/YH/UI/GameStartUI.unity
+    path: Assets/Scenes/FinalPPT/GameStartUI.unity
     guid: 9e8db6e29038a44f4a6bb884236c7944
   - enabled: 1
-    path: Assets/Scenes/Personal/MG/Loading.unity
+    path: Assets/Scenes/FinalPPT/Loading.unity
     guid: 890bbb0fe4f590b4b8f98e9336954f3f
   - enabled: 1
-    path: Assets/Scenes/Main Stage/WorldMap.unity
+    path: Assets/Scenes/FinalPPT/WorldMap.unity
     guid: 020cab57a6f5c48518d55d0a7f5d04db
   - enabled: 1
-    path: Assets/Scenes/Personal/MG/tutorial MG.unity
+    path: Assets/Scenes/FinalPPT/tutorial MG.unity
     guid: 605e3cb248ba9344fb939d58a8d17595
   - enabled: 1
-    path: Assets/Scenes/Personal/MG/Level 2 MG block1.unity
+    path: Assets/Scenes/FinalPPT/Level 2 MG block1.unity
     guid: 4c4c0e4b1bd47df43b98f0d2b17a519a
   - enabled: 1
-    path: Assets/Scenes/Personal/MG/Level 3 MG.unity
+    path: Assets/Scenes/FinalPPT/Level 3 MG.unity
     guid: b80fa49d5300207428ef7f5f8cdff1ea
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f167c02085b3a4068bc70e966434661a, type: 2}

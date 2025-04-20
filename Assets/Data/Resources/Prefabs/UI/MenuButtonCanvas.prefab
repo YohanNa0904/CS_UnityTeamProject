@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC2A4\uD14C\uC774\uC9C0 \uC7AC\uC2DC\uC791"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd24c4934b61a524785df313859a9e13, type: 2}
-  m_sharedMaterial: {fileID: 4729927602646184492, guid: bd24c4934b61a524785df313859a9e13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+  m_sharedMaterial: {fileID: 8007992794006766544, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -146,8 +146,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5759853925314399834}
   - component: {fileID: 6411261825401729877}
+  - component: {fileID: 8601276684159289122}
   - component: {fileID: 8475798058831090464}
   - component: {fileID: 641793314555912206}
+  - component: {fileID: 6735772218766392767}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -183,6 +185,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790023471957748244}
   m_CullTransparentMesh: 1
+--- !u!114 &8601276684159289122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790023471957748244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8777d2d1d609d20469c94629a8125243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 6735772218766392767}
+  DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
 --- !u!114 &8475798058831090464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +216,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -258,6 +275,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageMenuUI, Assembly-CSharp
         m_MethodName: CloseMenu
         m_Mode: 1
@@ -269,6 +298,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &6735772218766392767
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790023471957748244}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2288688122761388942
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,8 +387,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uACC4\uC18D\uD558\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd24c4934b61a524785df313859a9e13, type: 2}
-  m_sharedMaterial: {fileID: 4729927602646184492, guid: bd24c4934b61a524785df313859a9e13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+  m_sharedMaterial: {fileID: 8007992794006766544, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -417,6 +468,8 @@ GameObject:
   - component: {fileID: 3140240244479711291}
   - component: {fileID: 5399911516065948084}
   - component: {fileID: 1134423426986245009}
+  - component: {fileID: 3079077938975868016}
+  - component: {fileID: 7726548258628587625}
   m_Layer: 5
   m_Name: Reset
   m_TagString: Untagged
@@ -468,7 +521,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -527,6 +580,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageMenuUI, Assembly-CSharp
         m_MethodName: ResetScean
         m_Mode: 1
@@ -538,6 +603,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3079077938975868016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314555493119418369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8777d2d1d609d20469c94629a8125243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7726548258628587625}
+  DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
+--- !u!95 &7726548258628587625
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314555493119418369}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3959676771288917194
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,8 +707,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC124\uC815"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd24c4934b61a524785df313859a9e13, type: 2}
-  m_sharedMaterial: {fileID: 4729927602646184492, guid: bd24c4934b61a524785df313859a9e13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+  m_sharedMaterial: {fileID: 8007992794006766544, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -799,7 +901,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8560566244432436707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,6 +931,8 @@ GameObject:
   - component: {fileID: 3573400762423750616}
   - component: {fileID: 5965410862896724326}
   - component: {fileID: 5817715367016754644}
+  - component: {fileID: 6738007957966487767}
+  - component: {fileID: 713192266904526223}
   m_Layer: 5
   m_Name: ToStart
   m_TagString: Untagged
@@ -880,7 +984,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -939,6 +1043,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageMenuUI, Assembly-CSharp
         m_MethodName: ToStartScean
         m_Mode: 1
@@ -950,6 +1066,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6738007957966487767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219614378780752699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8777d2d1d609d20469c94629a8125243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 713192266904526223}
+  DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
+--- !u!95 &713192266904526223
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219614378780752699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8133533720877772918
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +1115,8 @@ GameObject:
   - component: {fileID: 1255940596287627127}
   - component: {fileID: 7309444038702377921}
   - component: {fileID: 3756284975661641829}
+  - component: {fileID: 3826315932465629510}
+  - component: {fileID: 6574442115290621011}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -1013,7 +1168,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1072,6 +1227,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageMenuUI, Assembly-CSharp
         m_MethodName: OpenOption
         m_Mode: 1
@@ -1083,6 +1250,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3826315932465629510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8133533720877772918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8777d2d1d609d20469c94629a8125243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 6574442115290621011}
+  DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
+--- !u!95 &6574442115290621011
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8133533720877772918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8298854629628187004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,6 +1299,8 @@ GameObject:
   - component: {fileID: 4132796385261539788}
   - component: {fileID: 4250330070089417865}
   - component: {fileID: 1856283137210774376}
+  - component: {fileID: 2725171234168024841}
+  - component: {fileID: 3989719705211264810}
   m_Layer: 5
   m_Name: ToWorldmap
   m_TagString: Untagged
@@ -1146,7 +1352,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1205,6 +1411,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageMenuUI, Assembly-CSharp
         m_MethodName: ToWorldmap
         m_Mode: 1
@@ -1216,6 +1434,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2725171234168024841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298854629628187004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8777d2d1d609d20469c94629a8125243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 3989719705211264810}
+  DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
+--- !u!95 &3989719705211264810
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298854629628187004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8319395367170264106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,8 +1538,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uAC8C\uC784 \uC885\uB8CC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd24c4934b61a524785df313859a9e13, type: 2}
-  m_sharedMaterial: {fileID: 4729927602646184492, guid: bd24c4934b61a524785df313859a9e13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+  m_sharedMaterial: {fileID: 8007992794006766544, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1419,8 +1674,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD0C0\uC774\uD2C0 \uD654\uBA74"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd24c4934b61a524785df313859a9e13, type: 2}
-  m_sharedMaterial: {fileID: 4729927602646184492, guid: bd24c4934b61a524785df313859a9e13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+  m_sharedMaterial: {fileID: 8007992794006766544, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1555,8 +1810,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC6D4\uB4DC\uB9F5"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd24c4934b61a524785df313859a9e13, type: 2}
-  m_sharedMaterial: {fileID: 4729927602646184492, guid: bd24c4934b61a524785df313859a9e13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
+  m_sharedMaterial: {fileID: 8007992794006766544, guid: 6b3892616b8e6174e920bd5e34238d74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1636,6 +1891,8 @@ GameObject:
   - component: {fileID: 177617138009212251}
   - component: {fileID: 3462060263284643461}
   - component: {fileID: 6114482337819232017}
+  - component: {fileID: 4727659018582485896}
+  - component: {fileID: 7107057148480513324}
   m_Layer: 5
   m_Name: GameExit
   m_TagString: Untagged
@@ -1687,7 +1944,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1744,4 +2001,65 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3462060263284643461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
+        m_MethodName: GameExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4727659018582485896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133658424677600846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8777d2d1d609d20469c94629a8125243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7107057148480513324}
+  DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
+--- !u!95 &7107057148480513324
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133658424677600846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

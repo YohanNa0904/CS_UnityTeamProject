@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951044941691307304, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1035538184375016479, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -345,12 +345,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029056184328075669, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478697624471576788, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 1823784776217036757}
+    - target: {fileID: 3478697624471576788, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+      propertyPath: relativeEffVolume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5125239987367117475, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -445,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151845119031068110, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9181587181072597761, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
       propertyPath: m_Pivot.x
@@ -527,7 +531,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5713403251608269209, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+    - {fileID: 243304027373367580, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+    - {fileID: 2269341305251043907, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+    - {fileID: 8877604200124079810, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+    - {fileID: 7780983351029266573, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+    - {fileID: 8383802699929220539, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+    - {fileID: 3008275505006900969, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -627,6 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 4699805272967860669}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &4699805272967860669
 Animator:
   serializedVersion: 7
@@ -673,6 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8700738200950500755}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &8700738200950500755
 Animator:
   serializedVersion: 7
@@ -719,6 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 696820162473746949}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &696820162473746949
 Animator:
   serializedVersion: 7
@@ -760,6 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9016581482706120381}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &9016581482706120381
 Animator:
   serializedVersion: 7
@@ -801,6 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8128907269427287434}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &8128907269427287434
 Animator:
   serializedVersion: 7
@@ -842,6 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5088550758962436134}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &5088550758962436134
 Animator:
   serializedVersion: 7

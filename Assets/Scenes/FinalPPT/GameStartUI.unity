@@ -639,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: 02f2664b02187ce4588c598c2cc4d109, type: 3}
+  relativeVolume: 0.15
 --- !u!1001 &459160536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6607,14 +6608,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartUiCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1446246069825411434, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
-      propertyPath: m_UpdateMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499802475781008935, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2908330270188078216, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6695,10 +6688,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3364116277081525778, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6038033860958060226, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
       propertyPath: DragAudio
       value: 
@@ -6715,10 +6704,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 9082922979832755784}
-    - target: {fileID: 7993239178254470165, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8552416915980312621, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6731,6 +6716,10 @@ PrefabInstance:
       propertyPath: DragAudio
       value: 
       objectReference: {fileID: 47344091}
+    - target: {fileID: 8950537524450402863, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
+      propertyPath: relativeEffVolume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

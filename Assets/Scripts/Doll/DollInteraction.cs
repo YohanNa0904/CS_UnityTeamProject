@@ -21,7 +21,6 @@ public class DollInteraction : AnimProperty
         foreach (Collider col in list)
         {
             //----------------------------------------------------------------------------------------------------------------------------------------------------------
-            Debug.Log(col);
             if ((1 << col.gameObject.layer & Spring1_Button) != 0)
             // ��ȣ�ۿ� ����� 'Button1' �� ��
             {
@@ -46,13 +45,10 @@ public class DollInteraction : AnimProperty
             if ((1 << col.gameObject.layer & DollCaseMask) != 0)
             // ��ȣ�ۿ� ����� 'dollcase' �� ��
             { 
-                Debug.Log("Hello");
                 IDollInteraction dollCase = col.GetComponent<IDollInteraction>();
                 if (dollCase != null)
                 {
-                    Debug.Log("HI");
-                    dollCase.Interact();
-                    
+                    dollCase.Interact();                    
                 }
             }
         }

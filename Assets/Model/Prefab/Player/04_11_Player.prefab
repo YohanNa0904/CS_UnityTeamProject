@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4417343590210758943}
   - component: {fileID: 4463068671622866992}
   - component: {fileID: 6285324181298650270}
+  - component: {fileID: 3640138955789787361}
   - component: {fileID: 3290275459740727330}
   - component: {fileID: 3080596235572712564}
   m_Layer: 6
@@ -85,8 +86,6 @@ MonoBehaviour:
   moveSpeed: 2
   cameraTransform: {fileID: 3740558081577918726}
   jumpPower: 12.5
-  JumpAudio: {fileID: 6686934690508250063}
-  StepAudio: {fileID: 1997982764870211753}
 --- !u!114 &4463068671622866992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +114,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e28be9299bb31946a9edc7f67cdc2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 8300000, guid: 02f2664b02187ce4588c598c2cc4d109, type: 3}
+  bgmClip: {fileID: 8300000, guid: 281954e697fb875499d8ddc6dc9264c5, type: 3}
+  relativeVolume: 0.15
+--- !u!114 &3640138955789787361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373855086597645604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3f460522356f749be73579a3508a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpAudio: {fileID: 6686934690508250063}
+  stepAudio: {fileID: 1997982764870211753}
+  relativeJumpVolume: 1
+  relativeStepVolume: 0.4
 --- !u!54 &3290275459740727330
 Rigidbody:
   m_ObjectHideFlags: 0

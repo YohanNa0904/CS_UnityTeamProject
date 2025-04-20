@@ -152,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5521241219017180444}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!114 &6237767756722965240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,6 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8158016639262618161}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &8158016639262618161
 Animator:
   serializedVersion: 7
@@ -1751,6 +1753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3316917434016636347}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &3316917434016636347
 Animator:
   serializedVersion: 7
@@ -2270,6 +2273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 314913762952332142}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.2
 --- !u!95 &314913762952332142
 Animator:
   serializedVersion: 7
@@ -2346,11 +2350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1920
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2370,15 +2374,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2386,7 +2390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2469,6 +2473,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9008678932642487697, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 9008678932642487697, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
       objectReference: {fileID: 0}
@@ -2488,7 +2496,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6549471995695243409, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2528,6 +2537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1446246069825411434}
   DragAudio: {fileID: 0}
+  relativeEffVolume: 0.5
 --- !u!95 &1446246069825411434
 Animator:
   serializedVersion: 7
@@ -2538,9 +2548,9 @@ Animator:
   m_GameObject: {fileID: 6922524250072760806}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e8bbfe7430980440ca0a75c899a0ed99, type: 2}
+  m_Controller: {fileID: 9100000, guid: 88e118b1402754bf2ab3c8bdd76dc7a3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

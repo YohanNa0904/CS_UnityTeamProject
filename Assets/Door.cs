@@ -15,19 +15,6 @@ public class Door : MonoBehaviour, IPlayerInteraction
         StartCoroutine(UsingKey());
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-
     IEnumerator UsingKey()
     {
         Key.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // ���� ��ȣ�ۿ� �� ���踦 �ٽ� ������ �� �ְ� ��
@@ -58,7 +45,7 @@ public class Door : MonoBehaviour, IPlayerInteraction
         // ���踦 �� ä�� ���� ��ȣ�ۿ� �� �ؾ� �� ����
         // ���� �����ٴ��� �ϴ� �׷��͵� ����
         yield return GameTime.GetWait(2.0f);
-        gameObject.GetComponent<Animator>().SetTrigger("Open");
+        gameObject.GetComponentInParent<Animator>().SetTrigger("Open");
         if(DoorOpenAudio.clip != null) DoorOpenAudio.Play();
         Key.transform.SetParent(DoorKeySlot.transform);
         Key = null;
