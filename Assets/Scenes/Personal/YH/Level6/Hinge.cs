@@ -3,7 +3,7 @@ using UnityEngine;
 public class Hinge : MonoBehaviour
 {
     [SerializeField] LayerMask crashMask;
-    HingeJoint hingeJoint;
+    new HingeJoint hingeJoint;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
