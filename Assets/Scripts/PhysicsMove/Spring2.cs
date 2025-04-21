@@ -52,7 +52,7 @@ public class Spring2 : MonoBehaviour, IDollInteraction
                         BoxCollider boxCol = rb.GetComponent<BoxCollider>();
                         if (boxCol != null && boxCol.size == new Vector3(1f, 1f, 1f))
                         {
-                            boxCol.size *= 0.95f;
+                            boxCol.size *= 0.9f;
                         }
                     }
                 }

@@ -3,42 +3,53 @@
 public class MoveFinish : MonoBehaviour
 {
     Rigidbody rb;
+    Collider myCol;
     [SerializeField] float pivotYpos;
+    [SerializeField] LayerMask dropableMask;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        myCol = GetComponent<Collider>();
         this.enabled = false;
     }
     // Update is called once per frame
 
     private void OnCollisionStay(Collision collision)
     {
-        if (Mathf.Approximately(rb.linearVelocity.magnitude, 0f)
-            && Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, pivotYpos + 0.1f))
+        if (Mathf.Approximately(rb.linearVelocity.magnitude, 0f))
         {
-            Rigidbody[] rbArray = GetComponentsInChildren<Rigidbody>();
-
-            foreach (Rigidbody rbEle in rbArray)
+            Collider[] overlap = Physics.OverlapSphere(transform.position - new Vector3(0, pivotYpos, 0), 0.1f, dropableMask); 
+            if(overlap.Length > 1)
             {
-                FixedJoint joint = rbEle.GetComponent<FixedJoint>();
-                if (joint != null) joint.connectedBody = null;
-                Destroy(joint);
+                    Rigidbody[] rbArray = GetComponentsInChildren<Rigidbody>();
 
-                rbEle.useGravity = false;
-                rbEle.isKinematic = true;
+                foreach (Rigidbody rbEle in rbArray)
+                {
+                    FixedJoint joint = rbEle.GetComponent<FixedJoint>();
+                    if (joint != null) joint.connectedBody = null;
+                    Destroy(joint);
 
-                Collider rbCol = rbEle.GetComponent<Collider>();
-                if (rbCol.isTrigger) rbCol.isTrigger = false;
+                    rbEle.useGravity = false;
+                    rbEle.isKinematic = true;
 
-                BoxCollider boxCol = GetComponent<BoxCollider>();
-                if (boxCol != null) boxCol.size = new Vector3(1.0f, 1.0f, 1.0f);
+                    Collider rbCol = rbEle.GetComponent<Collider>();
+                    if (rbCol.isTrigger) rbCol.isTrigger = false;
+
+                    BoxCollider boxCol = GetComponent<BoxCollider>();
+                    if (boxCol != null) boxCol.size = new Vector3(1.0f, 1.0f, 1.0f);
+                }
+                for(int i = 0; i < overlap.Length; i++)
+                {
+                    if (overlap[i] != myCol)
+                    {
+                        transform.parent = overlap[i].transform;
+                        Vector3 finalPos = transform.position;
+                        finalPos.y = overlap[i].transform.position.y + 0.5f + pivotYpos;
+                        transform.position = finalPos;
+                        this.enabled = false;
+                    }
+                }
             }
-
-            transform.parent = hit.transform;
-            Vector3 finalPos = transform.position;
-            finalPos.y = hit.transform.position.y + 0.5f + pivotYpos;
-            transform.position = finalPos;
-            this.enabled = false;
         }
     }
 }

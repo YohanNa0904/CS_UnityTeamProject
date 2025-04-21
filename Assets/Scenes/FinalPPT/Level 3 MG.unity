@@ -3919,6 +3919,10 @@ PrefabInstance:
       propertyPath: dropAble.m_Bits
       value: 1049344
       objectReference: {fileID: 0}
+    - target: {fileID: 5663378835349218001, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
+      propertyPath: dropableMask.m_Bits
+      value: 7340800
+      objectReference: {fileID: 0}
     - target: {fileID: 5990276609833439816, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -6359,6 +6363,10 @@ PrefabInstance:
     - target: {fileID: 4212962030664805230, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
       propertyPath: dropAble.m_Bits
       value: 1049344
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663378835349218001, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
+      propertyPath: dropableMask.m_Bits
+      value: 7340800
       objectReference: {fileID: 0}
     - target: {fileID: 5990276609833439816, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13530,15 +13538,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 80
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 80
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 80
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8760729970324472472, guid: 51ebce54dbd268445bfbb05b10fb01f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33142,6 +33150,10 @@ PrefabInstance:
       propertyPath: dropAble.m_Bits
       value: 1049344
       objectReference: {fileID: 0}
+    - target: {fileID: 5663378835349218001, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
+      propertyPath: dropableMask.m_Bits
+      value: 7340800
+      objectReference: {fileID: 0}
     - target: {fileID: 5990276609833439816, guid: 74c674522c35cdf488ccca21148d15a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -44709,6 +44721,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3060484081639482616, guid: 3bf88164e2f834bce8c05a8448691953, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661244476852029239, guid: 3bf88164e2f834bce8c05a8448691953, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6038638403215472412, guid: 3bf88164e2f834bce8c05a8448691953, type: 3}
