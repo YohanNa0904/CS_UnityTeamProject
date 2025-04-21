@@ -16,6 +16,7 @@ public class MoveFinish : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        
         if (Mathf.Approximately(rb.linearVelocity.magnitude, 0f))
         {
             Collider[] overlap = Physics.OverlapSphere(transform.position - new Vector3(0, pivotYpos, 0), 0.1f, dropableMask); 

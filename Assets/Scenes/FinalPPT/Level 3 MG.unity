@@ -43471,6 +43471,10 @@ PrefabInstance:
       propertyPath: dropAble.m_Bits
       value: 1049344
       objectReference: {fileID: 0}
+    - target: {fileID: 3847757073813868686, guid: e2e2c00f1e9cd444e8661eace9e537dc, type: 3}
+      propertyPath: dropableMask.m_Bits
+      value: 7340800
+      objectReference: {fileID: 0}
     - target: {fileID: 8239163587324140053, guid: e2e2c00f1e9cd444e8661eace9e537dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.19
@@ -44358,6 +44362,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.528825
       objectReference: {fileID: 0}
+    - target: {fileID: 7072780068554280515, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
+      propertyPath: dropableMask.m_Bits
+      value: 7340800
+      objectReference: {fileID: 0}
     - target: {fileID: 7383363341291073760, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.00039401648
@@ -44872,6 +44880,10 @@ PrefabInstance:
     - target: {fileID: 6059300434783152470, guid: 8ee28f5bd9da041729b8a08a01d4a83f, type: 3}
       propertyPath: dropAble.m_Bits
       value: 1049344
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592194556884033039, guid: 8ee28f5bd9da041729b8a08a01d4a83f, type: 3}
+      propertyPath: dropableMask.m_Bits
+      value: 7340800
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

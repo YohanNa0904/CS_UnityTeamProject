@@ -53,6 +53,9 @@ MonoBehaviour:
   dropAble:
     serializedVersion: 2
     m_Bits: 2097920
+  dontParentMask:
+    serializedVersion: 2
+    m_Bits: 0
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
   dollLayer:
@@ -71,6 +74,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivotYpos: 0.5
+  dropableMask:
+    serializedVersion: 2
+    m_Bits: 7340800
 --- !u!65 &1684954887778967421
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -525,6 +525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivotYpos: 0
+  dropableMask:
+    serializedVersion: 2
+    m_Bits: 7340800
 --- !u!114 &8416444398357933833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +559,9 @@ MonoBehaviour:
   dropAble:
     serializedVersion: 2
     m_Bits: 1048832
+  dontParentMask:
+    serializedVersion: 2
+    m_Bits: 0
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
 --- !u!114 &223137540274683101
