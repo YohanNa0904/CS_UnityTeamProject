@@ -4,12 +4,11 @@ using System;
 
 public class DropdownSetSave : MonoBehaviour
 {
-    private TMP_Dropdown resoulDropdown;
+    [SerializeField]private TMP_Dropdown resoulDropdown;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        resoulDropdown = GetComponent<TMP_Dropdown>();
         resoulDropdown.value = GraphicManager.Instance.resoulIdx;
         Screen.SetResolution(GraphicManager.Instance.resoulFig[0],
             GraphicManager.Instance.resoulFig[1], true);

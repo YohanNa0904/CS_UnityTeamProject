@@ -6716,10 +6716,6 @@ PrefabInstance:
       propertyPath: DragAudio
       value: 
       objectReference: {fileID: 47344091}
-    - target: {fileID: 8950537524450402863, guid: 4420eaf247e5e425996d11b7c5b81d6f, type: 3}
-      propertyPath: relativeEffVolume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

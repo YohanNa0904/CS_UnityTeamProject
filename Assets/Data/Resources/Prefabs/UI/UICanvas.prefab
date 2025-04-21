@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7420144742415641179}
   - component: {fileID: 5252927767576139866}
+  - component: {fileID: 5057312587446776433}
   m_Layer: 5
   m_Name: MenuManager
   m_TagString: Untagged
@@ -51,6 +52,19 @@ MonoBehaviour:
   <MenuUiCanvas>k__BackingField: {fileID: 3061230909115399514}
   <OptionCanvas>k__BackingField: {fileID: 2271789378714927667}
   <MenuButtonCanvas>k__BackingField: {fileID: 6419181851443219884}
+--- !u!114 &5057312587446776433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879811327441316477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e7f8aff3ed26844ba0df3bd5188e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resoulDropdown: {fileID: 8891036863301554075}
 --- !u!1 &2688378354391104104
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,3 +895,14 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8891036863301554075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3405855311945729823, guid: aad2d0461f97020488e8c61a1a15c327, type: 3}
+  m_PrefabInstance: {fileID: 6063896477247801476}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

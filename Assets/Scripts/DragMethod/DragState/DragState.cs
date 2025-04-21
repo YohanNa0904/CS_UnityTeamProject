@@ -37,16 +37,6 @@ public class DragState : StopState
 
     protected override void OnDragPro()
     {
-        /*
-        if (preMousePos != Vector3.forward)
-        {
-            Vector3 mouseMoveDist = Input.mousePosition - preMousePos;
-            if (!Mathf.Approximately(mouseMoveDist.magnitude, 0.0f))
-            {
-                DragAudioManager.Instance.DragSound(audioSo);
-            }
-        }
-        */
         Ray ray = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);
         
         if (Physics.Raycast(ray, out RaycastHit rayHit, Mathf.Infinity, dropAble))

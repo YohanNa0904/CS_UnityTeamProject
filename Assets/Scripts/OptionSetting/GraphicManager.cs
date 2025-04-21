@@ -31,7 +31,7 @@ public class GraphicManager : Singleton<GraphicManager>
         if (!PlayerPrefs.HasKey("RESOUL_INDEX")) _resoulIndex = 1;
         else _resoulIndex = PlayerPrefs.GetInt("RESOUL_INDEX");
 
-        if (!PlayerPrefs.HasKey("RESOUL_INDEX")) 
+        if (!PlayerPrefs.HasKey("RESOUL_WIDTH")) 
             _resoulFigure = new int[] { 1920, 1080 };
         else
         {

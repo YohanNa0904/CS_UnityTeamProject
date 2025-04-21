@@ -487,6 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3939824005521359558}
   - component: {fileID: 3862677856421121587}
+  - component: {fileID: 615292131868569897}
   m_Layer: 5
   m_Name: OptionManager
   m_TagString: Untagged
@@ -528,6 +529,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MenuUiCanvas>k__BackingField: {fileID: 8526583597810670780}
   <OptionCanvas>k__BackingField: {fileID: 5239889910553396813}
+--- !u!114 &615292131868569897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472077087307199361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e7f8aff3ed26844ba0df3bd5188e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resoulDropdown: {fileID: 3194070903784819685}
 --- !u!1 &1958290723383887401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2527,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1775098164571557836, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
   m_PrefabInstance: {fileID: 1637597383087021554}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3194070903784819685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4245333918003467799, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
+  m_PrefabInstance: {fileID: 1637597383087021554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5239889910553396813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6777422900765039551, guid: a5c55976f1b5ad2458dbffbf918067cf, type: 3}
@@ -2537,7 +2562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1446246069825411434}
   DragAudio: {fileID: 0}
-  relativeEffVolume: 0.5
+  relativeEffVolume: 0.2
 --- !u!95 &1446246069825411434
 Animator:
   serializedVersion: 7
