@@ -796,6 +796,8 @@ PrefabInstance:
     - {fileID: -167584287598251194, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
     - {fileID: 1833922585034650133, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
     - {fileID: -4972191135787634329, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
+    - {fileID: 110852577928873083, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
+    - {fileID: 5289040787409717176, guid: 3f49fdd910d75418690f2f3c044a595b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7807,6 +7809,14 @@ PrefabInstance:
       propertyPath: DragAudio
       value: 
       objectReference: {fileID: 769315525}
+    - target: {fileID: 2414098332582618195, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437978371528941142, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2462522384959466433, guid: fecb84fc807d1ea47beaf0fccd578b26, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -77,14 +77,12 @@ public class WorldMapPlayerMove : MonoBehaviour
     }
     IEnumerator UnLockStage()
 {
-    while (true)
+    for(int i = 3; i <= DataManager.instance.nowMap.clear; i++)
     {
-        if (temp <= DataManager.instance.nowMap.clear)
-        {
-                stageTextList[temp-3].enabled = true;
-                stageLock[temp-3].SetActive(false);
-        }
-        yield return new WaitForSeconds(0.1f);
+        stageTextList[i - 3].enabled = true;
+        stageLock[i - 3].SetActive(false);
+        
+        yield return GameTime.GetWait(0.1f);
     }
 }
 }

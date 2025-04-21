@@ -1564,6 +1564,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivotYpos: 0
+  dropableMask:
+    serializedVersion: 2
+    m_Bits: 7340800
 --- !u!114 &1520930303194271964
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -73,7 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivotYpos: 0
+  pivotYpos: 0.5
+  dropableMask:
+    serializedVersion: 2
+    m_Bits: 7340800
 --- !u!65 &5515725786589612330
 BoxCollider:
   m_ObjectHideFlags: 0

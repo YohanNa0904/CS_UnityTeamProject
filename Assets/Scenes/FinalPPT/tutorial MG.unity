@@ -11258,7 +11258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e186c96bdb0334d80ae031bdfe6216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivotYpos: 0
+  pivotYpos: 0.5
+  dropableMask:
+    serializedVersion: 2
+    m_Bits: 7340800
 --- !u!114 &149151540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11275,6 +11278,9 @@ MonoBehaviour:
   dropAble:
     serializedVersion: 2
     m_Bits: 1048576
+  dontParentMask:
+    serializedVersion: 2
+    m_Bits: 0
   dragAlpha: {fileID: 2100000, guid: c10dd3c49e4740a4fa57825e93b56eb6, type: 2}
   alphaValue: 0.4
   dollLayer:
@@ -64670,6 +64676,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivotYpos: 0
+  dropableMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1156222106
 PrefabInstance:
   m_ObjectHideFlags: 0
