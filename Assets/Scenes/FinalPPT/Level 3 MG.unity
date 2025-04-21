@@ -824,6 +824,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8822680864503503231, guid: c22226b5fc64d544f8ef54477da58a6b, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1074,6 +1078,10 @@ PrefabInstance:
     - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_Name
       value: Ground_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1713,6 +1721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1230894658052002380, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.196168
@@ -1896,7 +1908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66831925}
   - component: {fileID: 66831924}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3675,6 +3687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm3
       objectReference: {fileID: 0}
+    - target: {fileID: 7714441738996144815, guid: 2c610027744c00740ac082101ba71d40, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3822,6 +3838,10 @@ PrefabInstance:
     - target: {fileID: 8612419659826746767, guid: 4f46f06206c9b324c9ee9089d1b45e21, type: 3}
       propertyPath: m_Name
       value: Cactus6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612419659826746767, guid: 4f46f06206c9b324c9ee9089d1b45e21, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4145,6 +4165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.69
@@ -4272,6 +4296,10 @@ PrefabInstance:
     - target: {fileID: 2172471636107800588, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
       propertyPath: m_Name
       value: Cactus1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172471636107800588, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7805478365047987287, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4624,6 +4652,10 @@ PrefabInstance:
     - target: {fileID: 1577900651635755405, guid: 1afba03b96442e94483637e075919ebd, type: 3}
       propertyPath: m_Name
       value: Cactus2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577900651635755405, guid: 1afba03b96442e94483637e075919ebd, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3860013859972170135, guid: 1afba03b96442e94483637e075919ebd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5534,6 +5566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus.005
       objectReference: {fileID: 0}
+    - target: {fileID: 3252471215262533267, guid: 83742298e20f86143a0ab9eed9820d31, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5916,7 +5952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319191194}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6434,6 +6470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1230894658052002380, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.202425
@@ -6597,6 +6637,10 @@ PrefabInstance:
     - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
       propertyPath: m_Name
       value: Cactus4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7305,6 +7349,10 @@ PrefabInstance:
     - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_Name
       value: Ground_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9008,6 +9056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.72
@@ -9072,7 +9124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498766034}
   - component: {fileID: 498766033}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9460,6 +9512,10 @@ PrefabInstance:
     - target: {fileID: 2172471636107800588, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
       propertyPath: m_Name
       value: Cactus1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172471636107800588, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7805478365047987287, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10378,6 +10434,10 @@ PrefabInstance:
     - target: {fileID: 76881797611610635, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
       propertyPath: m_Name
       value: Rock4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 76881797611610635, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 746176122859108529, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12729,6 +12789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruins6
       objectReference: {fileID: 0}
+    - target: {fileID: 6223919236092602174, guid: 1118526e2bbb1014caf1b3207a346fe5, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7109068390862551569, guid: 1118526e2bbb1014caf1b3207a346fe5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.538124
@@ -14539,6 +14603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 76881797611610635, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 746176122859108529, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.062
@@ -15467,6 +15535,10 @@ PrefabInstance:
     - target: {fileID: 76881797611610635, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
       propertyPath: m_Name
       value: Rock4
+      objectReference: {fileID: 0}
+    - target: {fileID: 76881797611610635, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 746176122859108529, guid: bc78c7ec5924f9849a1ac512e4181b9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16454,6 +16526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palm1
       objectReference: {fileID: 0}
+    - target: {fileID: 140492000370432750, guid: 9fb4ef7fb64dc4c408964e74ed2fe396, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2852613428691503126, guid: 9fb4ef7fb64dc4c408964e74ed2fe396, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.250712
@@ -16640,6 +16716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.27
@@ -16823,7 +16903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880894955}
   - component: {fileID: 880894954}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17467,6 +17547,10 @@ PrefabInstance:
     - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_Name
       value: Cactus5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1230894658052002380, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18369,6 +18453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 6683593567786249267, guid: 09efb443539372945a0a24d4195b1210, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18668,6 +18756,10 @@ PrefabInstance:
     - target: {fileID: 2172471636107800588, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
       propertyPath: m_Name
       value: Cactus1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172471636107800588, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7805478365047987287, guid: 9f00871d1f1463b4ab58cd6bc7ef0b37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18990,6 +19082,10 @@ PrefabInstance:
     - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
       propertyPath: m_Name
       value: Ruins4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19528,6 +19624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.3
@@ -19760,6 +19860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19908,6 +20012,10 @@ PrefabInstance:
     - target: {fileID: 4818764101993711798, guid: c7d8b5f41e0959c48bf00d10e779c62b, type: 3}
       propertyPath: m_Name
       value: Ruins5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818764101993711798, guid: c7d8b5f41e0959c48bf00d10e779c62b, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20515,6 +20623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruins2
       objectReference: {fileID: 0}
+    - target: {fileID: 1239679686346599296, guid: 29d14d81739277544976c1c0fad6c8c2, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20964,6 +21076,10 @@ PrefabInstance:
     - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
       propertyPath: m_Name
       value: Ruins4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22652,6 +22768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus5
       objectReference: {fileID: 0}
+    - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1230894658052002380, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.575
@@ -22863,6 +22983,10 @@ PrefabInstance:
     - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
       propertyPath: m_Name
       value: Ruins4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24247,6 +24371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 6683593567786249267, guid: 09efb443539372945a0a24d4195b1210, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24763,6 +24891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25073,6 +25205,10 @@ PrefabInstance:
     - target: {fileID: 4818764101993711798, guid: c7d8b5f41e0959c48bf00d10e779c62b, type: 3}
       propertyPath: m_Name
       value: Ruins5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818764101993711798, guid: c7d8b5f41e0959c48bf00d10e779c62b, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25533,6 +25669,10 @@ PrefabInstance:
     - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
       propertyPath: m_Name
       value: Cactus4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26367,6 +26507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus.005 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3252471215262533267, guid: 83742298e20f86143a0ab9eed9820d31, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26744,6 +26888,10 @@ PrefabInstance:
     - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
       propertyPath: m_Name
       value: Ruins4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28065,6 +28213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.72
@@ -28170,6 +28322,10 @@ PrefabInstance:
     - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
       propertyPath: m_Name
       value: Cactus4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30059,6 +30215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus3
       objectReference: {fileID: 0}
+    - target: {fileID: 8822680864503503231, guid: c22226b5fc64d544f8ef54477da58a6b, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30799,6 +30959,10 @@ PrefabInstance:
     - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
       propertyPath: m_Name
       value: Ruins4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32993,6 +33157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1686021177304871604, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1686021177305034388, guid: ebee340de387f334f9ac44e044abd8fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.4
@@ -35096,6 +35264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruins5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4818764101993711798, guid: c7d8b5f41e0959c48bf00d10e779c62b, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36166,6 +36338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37083,6 +37259,10 @@ PrefabInstance:
     - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_Name
       value: Cactus5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1230894658052002380, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38328,6 +38508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus.001
       objectReference: {fileID: 0}
+    - target: {fileID: 2659927329805041569, guid: 4442298d70ff92748bff47f5c0997109, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5823037892029394473, guid: 4442298d70ff92748bff47f5c0997109, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -39278,6 +39462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8822680864503503231, guid: c22226b5fc64d544f8ef54477da58a6b, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39532,7 +39720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941743824}
   - component: {fileID: 1941743823}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40660,6 +40848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus5
       objectReference: {fileID: 0}
+    - target: {fileID: 1090054125417444430, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1230894658052002380, guid: 30bd39f54d732064c8891c4afbcad3bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.365303
@@ -40761,6 +40953,10 @@ PrefabInstance:
     - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
       propertyPath: m_Name
       value: Cactus4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41013,6 +41209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruins6 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6223919236092602174, guid: 1118526e2bbb1014caf1b3207a346fe5, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7109068390862551569, guid: 1118526e2bbb1014caf1b3207a346fe5, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -41181,6 +41381,10 @@ PrefabInstance:
     - target: {fileID: 8822680864503503231, guid: c22226b5fc64d544f8ef54477da58a6b, type: 3}
       propertyPath: m_Name
       value: Cactus3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822680864503503231, guid: c22226b5fc64d544f8ef54477da58a6b, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41463,6 +41667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruins4
       objectReference: {fileID: 0}
+    - target: {fileID: 8019462622708141387, guid: 1496c843ff50fd245afcb63247a1b541, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41620,6 +41828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2700383331269722212, guid: 529a852129302f546ab376325a050b2f, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41743,6 +41955,10 @@ PrefabInstance:
     - target: {fileID: 5335472702154139955, guid: ddb38b23b1fc63a479540a85ad753b8c, type: 3}
       propertyPath: m_Name
       value: Ruins1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335472702154139955, guid: ddb38b23b1fc63a479540a85ad753b8c, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42910,6 +43126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus6
       objectReference: {fileID: 0}
+    - target: {fileID: 8612419659826746767, guid: 4f46f06206c9b324c9ee9089d1b45e21, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43317,6 +43537,10 @@ PrefabInstance:
       propertyPath: puzzleCam
       value: 
       objectReference: {fileID: 1377613071}
+    - target: {fileID: 5182524638089139625, guid: 022139bb318774c2e8de4b709274e2f4, type: 3}
+      propertyPath: crashMask.m_Bits
+      value: 7398144
+      objectReference: {fileID: 0}
     - target: {fileID: 7373855086597645604, guid: 022139bb318774c2e8de4b709274e2f4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -44725,7 +44949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4661244476852029239, guid: 3bf88164e2f834bce8c05a8448691953, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6038638403215472412, guid: 3bf88164e2f834bce8c05a8448691953, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

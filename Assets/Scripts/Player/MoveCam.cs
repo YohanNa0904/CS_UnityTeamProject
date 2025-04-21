@@ -50,7 +50,6 @@ public class PlayerCam : MonoBehaviour
             targetDist = Mathf.Clamp(targetDist + delta * zoomSpeed, zoomRange.x, zoomRange.y);
             camDist = Mathf.Lerp(camDist, targetDist, Time.deltaTime * smoothSpeed);
             myCam.localPosition = new Vector3( 0, 0, -camDist );
-        
 
         float offset = 0.5f;
         if(Physics.Raycast(transform.position, -transform.forward, out RaycastHit hit,
@@ -58,6 +57,7 @@ public class PlayerCam : MonoBehaviour
         {
             myCam.position = hit.point+ transform.forward * offset;
             camDist = hit.distance - offset;
-        }        
+        }   
+        
     }
 }

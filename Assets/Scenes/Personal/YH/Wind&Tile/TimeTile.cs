@@ -11,7 +11,6 @@ public class TimeTile : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Vector3 pos = this.gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -37,6 +36,7 @@ public class TimeTile : MonoBehaviour
         this.GetComponent<MeshRenderer>().enabled = false;
         this.GetComponent<Collider>().enabled = false;
         isOntile = false;
+        
     }
     IEnumerator OnTile()
     {

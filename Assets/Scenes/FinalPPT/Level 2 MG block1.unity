@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 55e64e617a8bfff4ba846574e2651eb9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -20250,7 +20250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doll: {fileID: 1467717936}
-  dollCase: {fileID: 171273555}
 --- !u!1001 &802937419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25735,7 +25734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f77099f921944c396b72c60e682fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 10
+  rotSpeed: 20
   smoothSpeed: 10
   Setting: 90
   moveSpeed: 4

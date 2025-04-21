@@ -19,7 +19,6 @@ public class PlayerMove2 : AnimProperty
     float maxSpeed = 1.0f;
     [SerializeField] float jumpPower = 6.0f;
     PlayerSound playerSound;
-    bool isMove = false;
     bool audioPlay = true;
     private void Start()
     {
