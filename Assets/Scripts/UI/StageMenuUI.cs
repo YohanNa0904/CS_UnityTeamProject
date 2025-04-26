@@ -33,6 +33,7 @@ public class StageMenuUI : MenuUI
         MenuUiCanvas.SetActive(true);
         isMenuUI = true;
         Time.timeScale = 0f;
+        //메뉴 창을 열면 게임 내 시간 흐름을 멈춤
     }
     public void OpenMenu()
     {
@@ -56,24 +57,28 @@ public class StageMenuUI : MenuUI
             isOption = false;
         }
         Time.timeScale = 1.0f;
+        //메뉴 창을 열면 게임 내 시간 흐름을 되돌림
     }
 
     public void ResetScean()
     {
         LoadSystem.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1.0f;
+        //게임 내 시간 흐름을 되돌림
     }
 
     public void ToWorldmap()
     {
         LoadSystem.LoadScene(2);
         Time.timeScale = 1.0f;
+        //게임 내 시간 흐름을 되돌림
     }
 
     public void ToStartScean()
     {
         LoadSystem.LoadScene(0);
         Time.timeScale = 1.0f;
+        //게임 내 시간 흐름을 되돌림
     }
 
     public override void OpenOption()

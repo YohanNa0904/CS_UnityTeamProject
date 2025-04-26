@@ -7,10 +7,11 @@ public class DropStateGravity : DragRotate
     float newYpos = 0.0f; // 현재 y 좌표를 저장
     float dropDist = 0.0f; // 떨어진 거리를 저장
     float dropTerYpos = 0.0f; // 드랍된 물체의 목표 y 좌표 
-    [SerializeField] LayerMask dontParentMask;
+    [SerializeField] LayerMask dontParentMask; // 한칸 미는 스프링이 자식으로 안 들어갈 레이어를 저장하는 변수
 
     protected override void EndDragSet()
     {
+        //원래 높은 곳에서 떨어지는 것으로 코드를 짰다가, 안 띄우는 것으로 변경한 뒤 코드를 안 고쳤습니다.
         if (IsRotation) IsRotation = false;
         // 회전 상태를 안 풀었다면 드래그가 끝날 때 회전 상태가 아닌 것으로 변경
         if (camMove != null && !camMove.enabled) camMove.enabled = true;
@@ -18,7 +19,6 @@ public class DropStateGravity : DragRotate
 
         if (canDrop)
         {
-            ChildFall();
             if(!rb.useGravity) rb.useGravity = true;
             if(rb.isKinematic) rb.isKinematic = false;
             //중력을 활성화하기 위해 isKinematic을 비활성화
@@ -42,10 +42,6 @@ public class DropStateGravity : DragRotate
         }
     }
     
-    protected virtual void ChildFall() //상속해서 내용을 정할 가상함수
-    {
-
-    }
     protected override void EndDragPro()
     {
         newYpos = transform.position.y;
@@ -63,9 +59,9 @@ public class DropStateGravity : DragRotate
             rb.isKinematic = true;
             transform.position = new(transform.position.x, dropTerYpos, transform.position.z);
             //중력으로 이동해서 목표한 y좌표에 정확히 도착하지 않기 때문에 y좌표를 직접 설정해줌
-            if((1 << canDropTrans.gameObject.layer & dontParentMask) == 0 )transform.parent = canDropTrans;
-            
-            preMousePos = Vector3.forward;
+            if((1 << canDropTrans.gameObject.layer & dontParentMask) == 0)transform.parent = canDropTrans;
+            // 드랍할 위치에 도착했을 때, 드랍할 수 있는 오브젝트(canDropTrans.gameObject)가 부모로 설정하지 않는 레이어를 가지지 않았다면,
+            // 드래그한 오브젝트를 드랍할 수 있는 오브젝트(canDropTrans.gameObject)의 자식으로 설정 
             ChangeState(State.Stop);
         }
     }

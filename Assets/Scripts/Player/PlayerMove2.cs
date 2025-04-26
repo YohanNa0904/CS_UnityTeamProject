@@ -1,19 +1,17 @@
-
 using UnityEngine;
-
 
 public class PlayerMove2 : AnimProperty
 {
     //------������ �� ���� ����---------
     public bool onGround { get; set; } = true; // 
-    bool jumpForce = false; //�����ϴ� ���� ������ �����ϴ� ����
+    bool jumpForce = false; // 뛰는 힘을 가할 지 판별하는 변수
 
     //-------------------------------
-    public Transform myModel;
+    public Transform myModel; 
     public float moveSpeed = 3.0f;
     Vector3 jumpDir = Vector3.zero;
     public Transform cameraTransform;
-    public Vector3 inputDir { get; private set; } = Vector3.zero;
+    Vector3 inputDir = Vector3.zero;
     int jumpCount = 2;
     Rigidbody rb = null;
     float maxSpeed = 1.0f;
@@ -32,12 +30,11 @@ public class PlayerMove2 : AnimProperty
     
         if (jumpCount != 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            playerSound.JumpRelativeVol();
             jumpForce = true;
             jumpCount--;
         }
 
-        if (!onGround) // ���߿� ���� ���� ���ݾ� �̵��� �� �ְ�
+        if (!onGround) // 점프 중일 때
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -59,7 +56,6 @@ public class PlayerMove2 : AnimProperty
         }
         if(audioPlay && Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.Escape))
         {
-            
             playerSound.getJumpAudio.Stop();
             playerSound.getStepAudio.Stop();
             playerSound.getJumpAudio.mute = true;
@@ -69,7 +65,6 @@ public class PlayerMove2 : AnimProperty
         }
         if(!audioPlay && Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.Escape))
         {
-
             playerSound.getJumpAudio.mute = false;
             playerSound.getStepAudio.mute = false;
             
@@ -92,6 +87,7 @@ public class PlayerMove2 : AnimProperty
 
             if (!playerSound.getStepAudio.isPlaying && onGround)
                 playerSound.StepRelativeVol();
+            //걷는 소리 재생
             else if (!onGround) playerSound.getStepAudio.Stop();
             
         }
@@ -111,7 +107,10 @@ public class PlayerMove2 : AnimProperty
         {
             myAnim.SetTrigger("OnJump");
             rb.linearVelocity = Vector3.zero;
+            //균일하게 점프하기 위해서 Velocity를 초기화함
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            playerSound.JumpRelativeVol();
+            //점프 소리 재생
             jumpForce = false;
             onGround = false;
         }
@@ -127,6 +126,7 @@ public class PlayerMove2 : AnimProperty
         if (onGround) return;
         if (collision.GetContact(0).normal.y > 0.5f)
         {
+            //충돌한 콜라이더의 노말벡터의 y 값이 0.5보다 크면(수직에 가깝게 충돌했다면)
             onGround = true; //���� ���·� ����            
             myAnim.SetTrigger("OnLanding"); // jump3 �ִϸ��̼� ����
             jumpCount = 2;
@@ -139,10 +139,10 @@ public class PlayerMove2 : AnimProperty
         float veloY = rb.linearVelocity.y;
         if (Mathf.Abs(veloY) > 0.1f && jumpCount == 2)
         {
-            // ���� ������ �� y������ �������ٸ�
-            onGround = false; // ü�� ���·� ����
+            // 점프를 안 했는데 벨로시티의 y값이 일정 값 이상으로 크면 떨어지는 것으로 판정
+            onGround = false; 
             myAnim.SetTrigger("OnAir");
-            // ���� ����(����Ű�� ���� ���)�� �ƴ϶�� jump2 �ִϸ��̼� ����
+            //떨어지는 애니메이션 재생
             jumpCount--;
         }
     }

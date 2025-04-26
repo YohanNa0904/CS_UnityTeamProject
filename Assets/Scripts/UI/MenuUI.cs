@@ -12,15 +12,13 @@ public class MenuUI : MonoBehaviour
         UIStart();
     }
 
-    protected virtual void UIStart()
-    {
-
-    }
+    protected virtual void UIStart() { }
     public virtual void OpenOption()
     {
         MenuUiCanvas.SetActive(true);
         OptionCanvas.SetActive(true);
         Time.timeScale = 0f;
+        //메뉴 창을 열면 게임 내 시간 흐름을 멈춤
     }
 
     public virtual void CloseMenu() 
@@ -28,6 +26,7 @@ public class MenuUI : MonoBehaviour
         MenuUiCanvas.SetActive(false);
         OptionCanvas.SetActive(false);
         Time.timeScale = 1.0f;
+        //메뉴 창을 닫으면 게임 내 시간 흐름을 되돌림
     }
     public void GameExit()
     {

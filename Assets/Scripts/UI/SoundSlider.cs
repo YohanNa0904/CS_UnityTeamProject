@@ -17,6 +17,7 @@ public class SoundSlider : MonoBehaviour
                     {
                         SoundManager.Instance.bgmVolume = v;
                         SoundManager.Instance.SetRelativeBGM();
+                        // 배경음 크기를 상대적으로 조절해서 설정함
                     }
                 );
                 break;
@@ -27,11 +28,5 @@ public class SoundSlider : MonoBehaviour
                 break;
 
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

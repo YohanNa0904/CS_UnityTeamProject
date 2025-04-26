@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 // 드래그로 이동하는 스크립트의 부모 스크립트
 public class StateSet : MonoBehaviour
@@ -57,7 +56,8 @@ public class StateSet : MonoBehaviour
         ChangeState(State.Stop);
         if (rb == null) rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
-        rb.isKinematic = true; 
+        rb.isKinematic = true;
+        // 시작했을 때 useGravity를 끄고, isKinematic을 켜서 오브젝트가 충돌해도 안 움직이게 해줌
     }
 
     private void Update() 
@@ -80,48 +80,18 @@ public class StateSet : MonoBehaviour
         if (myState == State.Drag) ChangeState(State.Drop);
 
     }
-    protected virtual void StopSet()
-    {
-        
-    }
-    protected virtual void OnDragSet()
-    {
-        
-    }
-
-    protected virtual void EndDragSet()
-    {
-        
-    }
-
-    protected virtual void Reset()
-    {
-   
-    }
+    protected virtual void StopSet() { } //StopState 스크립트에서 override할 가상 함수
+    protected virtual void OnDragSet() { } //DragState 스크립트에서 override할 가상 함수
+    protected virtual void EndDragSet() { }//DropStateGravity 스크립트에서 override할 가상 함수
+    
     void Rotate()
     {
         EnterRotate();
         RotateMove();
     }
 
-    protected virtual void EnterRotate()
-    {
-        
-    }
-
-    protected virtual void RotateMove()
-    {
-        
-    }
-
-    
-    protected virtual void OnDragPro()
-    {
-        
-    }
-
-    protected virtual void EndDragPro() //상속해서 내용을 정할 가상함수 
-    {
-
-    }
+    protected virtual void EnterRotate() { } //DragRotate 스크팁트에서 override할 가상 함수
+    protected virtual void RotateMove() { }//DragRotate 스크팁트에서 override할 가상 함수
+    protected virtual void OnDragPro() { }//DragState 스크립트에서 override할 가상 함수
+    protected virtual void EndDragPro() { }//DropStateGravity 스크립트에서 override할 가상 함수 
 }

@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,10 +7,6 @@ public class UIMouseCheck : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
     [SerializeField]AudioSource DragAudio;
     float abosouluteEffVolume;
     [SerializeField, Range(0f, 1f)] float relativeEffVolume = 0.5f;
-    void Awake()
-    {
-        anim.SetBool("OnMouse", false);
-    }
     
     private void OnEnable()
     {
@@ -25,6 +20,7 @@ public class UIMouseCheck : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
         {
             abosouluteEffVolume = SoundManager.Instance.effectVolume;
             DragAudio.volume = abosouluteEffVolume * relativeEffVolume;
+            //효과음의 크기를 설정창에서 저장한 크기로 맞춤
         }
         DragAudio.Play();
     }
